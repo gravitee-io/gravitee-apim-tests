@@ -1,0 +1,344 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Gravitee.io-Test.Suite-Create.And.Start.Api",
+		"_postman_id": "abeead05-28dc-c7b0-c2b3-e4d69f74c641",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create.api",
+			"description": "",
+			"item": [
+				{
+					"name": "Create API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
+									"tests[\"API is private\"] = jsonData.visibility === \"private\";",
+									"",
+									"",
+									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var uid = (\"0000\" + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4);",
+									"postman.setEnvironmentVariable(\"RANDOM_NUMBER\", uid);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contextPath\": \"/api{{RANDOM_NUMBER}}\",\n\t\"description\": \"The API {{RANDOM_NUMBER}}\",\n\t\"endpoint\": \"http://api/{{RANDOM_NUMBER}}\",\n\t\"name\": \"API {{RANDOM_NUMBER}}\",\n\t\"version\": \"{{RANDOM_NUMBER}}\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update API view",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
+									"tests[\"API is private\"] = jsonData.visibility === \"private\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"version\":\"{{RANDOM_NUMBER}}\",\n\t\"description\":\"The API {{RANDOM_NUMBER}}\",\n\t\"proxy\":{\n\t\t\"context_path\":\"/api{{RANDOM_NUMBER}}\",\n\t\t\"strip_context_path\":false,\"dumpRequest\":false,\n\t\t\"endpoints\":[\n\t\t\t{\n\t\t\t\t\"name\":\"default\",\"target\":\"http://api/{{RANDOM_NUMBER}}\",\n\t\t\t\t\"weight\":1,\n\t\t\t\t\"backup\":false,\n\t\t\t\t\"healthcheck\":true,\n\t\t\t\t\"http\":{\n\t\t\t\t\t\"connectTimeout\":5000,\n\t\t\t\t\t\"idleTimeout\":60000,\n\t\t\t\t\t\"keepAlive\":true,\n\t\t\t\t\t\"readTimeout\":10000,\n\t\t\t\t\t\"pipelining\":false,\n\t\t\t\t\t\"maxConcurrentConnections\":100,\n\t\t\t\t\t\"useCompression\":false\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"load_balancing\":{\n\t\t\t\"type\":\"ROUND_ROBIN\"\n\t\t}\n\t},\n\t\"paths\":{\n\t\t\"/\":[]\n\t\n\t},\n\t\"visibility\":\"private\",\n\t\"name\":\"API {{RANDOM_NUMBER}}\",\n\t\"services\":{},\n\t\"tags\":[],\n\t\"resources\":[],\n\t\"views\":[\"100-apis\"],\n\t\"group\":null\n\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;",
+									"",
+									"var plan = JSON.parse(responseBody);",
+									"tests[\"Plan has ID\"] = plan.id !== undefined;",
+									"tests[\"Plan with type API\"] = plan.type === \"api\";",
+									"",
+									"",
+									"postman.setGlobalVariable(\"PLAN_ID\", plan.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/plans",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check State - Not synchronized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var state = JSON.parse(responseBody);",
+									"tests[\"API is not synchronized\"] = state.is_synchronized === false;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/state",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
+									"tests[\"API is private\"] = jsonData.visibility === \"private\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/deploy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check State - Synchronized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var state = JSON.parse(responseBody);",
+									"tests[\"API is not synchronized\"] = state.is_synchronized === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/state",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start  API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 204\"] = responseCode.code === 204;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}?action=START",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create.view",
+			"description": "",
+			"item": [
+				{
+					"name": "Create a view",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/configuration/views",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}]\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

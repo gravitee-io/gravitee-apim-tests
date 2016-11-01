@@ -1,0 +1,438 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Gravitee.io Test Suite",
+		"_postman_id": "0ba245e3-4c3d-93e4-0281-aa414dd8e395",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Administration",
+			"description": "",
+			"item": [
+				{
+					"name": "Login admin SUCCESS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create a view",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/configuration/views",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"name\": \"view\",\"description\": \"a new view\"}]\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create and start a new API ",
+			"description": "",
+			"item": [
+				{
+					"name": "Login api1 SUCCESS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 201\"] = responseCode.code === 201;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"API is stopped\"] = jsonData.state === \"stopped\";\ntests[\"API is private\"] = jsonData.visibility === \"private\";\n\n\npostman.setGlobalVariable(\"API_ID\", jsonData.id);"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contextPath\": \"/swapi\",\n\t\"description\": \"The StarWars API\",\n\t\"endpoint\": \"http://swapi.co\",\n\t\"name\": \"StarWars API\",\n\t\"version\": \"1.0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 201\"] = responseCode.code === 201;\n\nvar plan = JSON.parse(responseBody);\ntests[\"Plan has ID\"] = plan.id !== undefined;\ntests[\"Plan with type API\"] = plan.type === \"api\";\n\n\npostman.setGlobalVariable(\"PLAN_ID\", plan.id);"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/plans",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check State - Not synchronized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar state = JSON.parse(responseBody);\ntests[\"API is not synchronized\"] = state.is_synchronized === false;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/state",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"API is stopped\"] = jsonData.state === \"stopped\";\ntests[\"API is private\"] = jsonData.visibility === \"private\";"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/deploy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check State - Synchronized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar state = JSON.parse(responseBody);\ntests[\"API is not synchronized\"] = state.is_synchronized === true;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/state",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start  API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 204\"] = responseCode.code === 204;\n"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}?action=START",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create applications",
+			"description": "",
+			"item": [
+				{
+					"name": "Login application1 SUCCESS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_APPLICATION1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 201\"] = responseCode.code === 201;\ntests[\"Location is present\"] = postman.getResponseHeader(\"Location\");\npostman.setGlobalVariable(\"APPLICATION_LOCATION\", postman.getResponseHeader(\"Location\"));"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/applications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_APPLICATION1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"A new awesome webapp\",\n\t\"name\": \"webapp 1\",\n\t\"type\": \"webapp\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Application",
+					"request": {
+						"url": "{{APPLICATION_LOCATION}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_APPLICATION1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Security tests",
+			"description": "",
+			"item": [
+				{
+					"name": "login admin ERROR",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "tests[\"Status code is 401\"] = responseCode.code === 401;"
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic error",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

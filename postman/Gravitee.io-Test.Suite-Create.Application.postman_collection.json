@@ -1,0 +1,100 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Gravitee.io-Test.Suite-Create.Application",
+		"_postman_id": "8de83ec8-e215-606d-308d-5edea0bea7de",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login application1 SUCCESS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{GRAVITEEIO_REST_URL}}/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTHORIZATION_APPLICATION1}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Application",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							"tests[\"Location is present\"] = postman.getResponseHeader(\"Location\");",
+							"postman.setGlobalVariable(\"APPLICATION_LOCATION\", postman.getResponseHeader(\"Location\"));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{GRAVITEEIO_REST_URL}}/applications",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "{{AUTHORIZATION_APPLICATION1}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"A new awesome webapp\",\n\t\"name\": \"webapp 1\",\n\t\"type\": \"webapp\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Application",
+			"request": {
+				"url": "{{APPLICATION_LOCATION}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTHORIZATION_APPLICATION1}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
