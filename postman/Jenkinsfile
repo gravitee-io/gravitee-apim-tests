@@ -1,34 +1,46 @@
 node() {
+    try {
+        def nodeHome = tool 'NodeJS7'
+        withEnv(["PATH+NODE=${nodeHome}/bin"]) {
+            stage("Prepare") {
+                checkout scm
+                sh "npm install newman"
+            }
+            //sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-TestSuite.json -e postman/env/Gravitee.io-Nightly-Environment.json"
 
-    def nodeHome = tool 'NodeJS7'
-    withEnv(["PATH+NODE=${nodeHome}/bin"]) {
-        stage("Prepare") {
-            checkout scm
-            sh "npm install newman"
+            stage("Clean mongodb") {
+                sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:3.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
+            }
+
+            stage("Create 100 applications") {
+                sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Test.Suite-Create.Application.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -n 100"
+            }
+
+            stage("Create 100 started apis") {
+                sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.view"
+                sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.api -n 100"
+            }
+
+            stage("Create Mongodb indexes") {
+                sh "wget -O /tmp/create-index.js https://raw.githubusercontent.com/gravitee-io/gravitee-repository-mongodb/master/src/main/resources/scripts/create-index.js"
+                sh "docker cp /tmp/create-index.js demo_nightly_mongodb_1:/tmp/create-index.js"
+                sh "docker exec -i demo_nightly_mongodb_1 mongo gravitee < /tmp/create-index.js"
+            }
+
+            stage("Run tests for issues") {
+                sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Issues.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json"
+            }
         }
-        //sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-TestSuite.json -e postman/env/Gravitee.io-Nightly-Environment.json"
+    } catch (e) {
+        currentBuild.result = "FAILED"
+        sh "git log --format=short -n1 HEAD > GIT_LOG"
+        def git_log = readFile encoding: 'UTF-8', file: 'GIT_LOG'
 
-        stage("Clean mongodb") {
-            sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:3.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
-        }
-
-        stage("Create 100 applications") {
-            sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Test.Suite-Create.Application.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -n 100"
-        }
-
-        stage("Create 100 started apis") {
-            sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.view"
-            sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.api -n 100"
-        }
-
-        stage("Create Mongodb indexes") {
-            sh "wget -O /tmp/create-index.js https://raw.githubusercontent.com/gravitee-io/gravitee-repository-mongodb/master/src/main/resources/scripts/create-index.js"
-            sh "docker cp /tmp/create-index.js demo_nightly_mongodb_1:/tmp/create-index.js"
-            sh "docker exec -i demo_nightly_mongodb_1 mongo gravitee < /tmp/create-index.js"
-        }
-
-	stage("Run tests for issues") {
-	    sh "node node_modules/newman/bin/newman.js run postman/Gravitee.io-Issues.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json"
-	}
+        slackSend (
+                color: '#FF0000',
+                message: ":poop: ${env.JOB_NAME} " +
+                        "<${env.BUILD_URL}console|[#${env.BUILD_NUMBER}]>\n\r" +
+                        "```${git_log}```")
+        throw e
     }
 }
