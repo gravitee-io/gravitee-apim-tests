@@ -19,6 +19,8 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
+									"tests[\"Status code should be 201 / found \" + responseCode.code] = responseCode.code === 201;",
+									"",
 									"var jsonData = JSON.parse(responseBody);",
 									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
 								]
@@ -49,7 +51,7 @@
 					"response": []
 				},
 				{
-					"name": "Update API policy",
+					"name": "Update API view and policy",
 					"request": {
 						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}",
 						"method": "PUT",
@@ -67,7 +69,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\":\"Gravitee.io features\",\"version\":\"v1\",\"description\":\"Gravitee.io features with HTML to JSON policy\",\"visibility\":\"PRIVATE\",\"proxy\":{\"context_path\":\"/gravitee.io/features\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\"],\"html-json\":{\"selectors\":[{\"array\":true,\"selector\":\".service-content h3\",\"jsonName\":\"features\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true}]}}"
+							"raw": "{\"version\":\"v1\",\"description\":\"Gravitee.io features with HTML to JSON policy\",\"proxy\":{\"context_path\":\"/gravitee.io/features\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\"],\"html-json\":{\"selectors\":[{\"array\":true,\"selector\":\".service-content h3\",\"jsonName\":\"features\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true}]},\"visibility\":\"private\",\"name\":\"Gravitee.io features\",\"services\":{},\"tags\":[],\"resources\":[],\"views\":[\"showcase-apis\"],\"group\":null}"
 						},
 						"description": ""
 					},
