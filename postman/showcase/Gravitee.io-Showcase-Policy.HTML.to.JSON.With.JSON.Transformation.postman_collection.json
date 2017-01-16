@@ -1,0 +1,184 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Gravitee.io-Showcase-Policy.HTML.to.JSON.With.JSON.Transformation",
+		"_postman_id": "Gravitee.io-Showcase-Policy.HTML.to.JSON.With.JSON.Transformation",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "showcase.api.html.to.json.with.json.transformation",
+			"description": "",
+			"item": [
+				{
+					"name": "Create API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code should be 201 / found \" + responseCode.code] = responseCode.code === 201;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\"contextPath\": \"/gravitee.io/workflow\",\t\"description\": \"Gravitee.io workflow with HTML to JSON policy and JSON to JSON tranformation\",\t\"endpoint\": \"https://gravitee.io\",\t\"name\": \"Gravitee.io workflow\",\t\"version\": \"v1\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update API view and policy",
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"version\":\"v1\",\"description\":\"Gravitee.io workflow with HTML to JSON policy and JSON to JSON tranformation\",\"proxy\":{\"context_path\":\"/gravitee.io/workflow\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\",\"POST\",\"PUT\",\"DELETE\",\"HEAD\",\"PATCH\",\"OPTIONS\",\"TRACE\",\"CONNECT\"],\"html-json\":{\"selectors\":[{\"array\":true,\"jsonName\":\"workflowName\",\"selector\":\"#process .item > h5\"},{\"array\":true,\"jsonName\":\"workflowDescription\",\"selector\":\"#process .item > p:nth-child(2)\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true},{\"methods\":[\"GET\",\"POST\",\"PUT\",\"DELETE\",\"HEAD\",\"PATCH\",\"OPTIONS\",\"TRACE\",\"CONNECT\"],\"json-to-json\":{\"scope\":\"RESPONSE\",\"specification\":\"[{\\\"operation\\\": \\\"shift\\\",\\\"spec\\\": {    \\\"workflowName\\\": {        \\\"*\\\": {            \\\"@\\\": \\\"workflow[&].name\\\",            \\\"@(2,workflowDescription[&])\\\": \\\"workflow[&].description\\\"        }    }}}]\"},\"description\":\"Description of the JSON to JSON Transformation Gravitee Policy\",\"enabled\":true}]},\"visibility\":\"private\",\"name\":\"Gravitee.io workflow\",\"services\":{},\"tags\":[],\"resources\":[],\"views\":[\"showcase-apis\"],\"group\":\"\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Keyless Plan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var plan = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"PLAN_ID\", plan.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/plans",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\"name\": \"Freemium\",\t\"description\": \"Free Plan\",\t\"security\": \"key_less\",\t\"validation\": \"auto\",\t\"characteristics\": [],\t\"paths\": {\t\t\"/\": []\t}}"
+
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Publish Plan",
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy API",
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/deploy",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start  API",
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}?action=START",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

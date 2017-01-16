@@ -1,0 +1,46 @@
+{
+	"info": {
+		"name": "Gravitee.io-Showcase-Create.View",
+		"_postman_id": "Gravitee.io-Showcase-Create.View",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create.view",
+			"item": [
+				{
+					"name": "Create Showcase view",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_REST_URL}}/configuration/views",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"name\": \"Showcase APIs\",\"description\": \"Some documented use cases of what you can do with Gravitee.io policies\"}]\n"
+						}
+					}
+				}
+			]
+		}
+	]
+}
