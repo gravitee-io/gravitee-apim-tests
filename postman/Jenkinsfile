@@ -11,6 +11,11 @@ node() {
                 sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:3.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
             }
 
+            stage("Restart the management-api") {
+                sh "docker restart demo_nightly_managementapi_1"
+                sleep 20
+            }
+
             stage("Create 100 applications") {
                 sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.Application.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -n 100 --bail"
             }
