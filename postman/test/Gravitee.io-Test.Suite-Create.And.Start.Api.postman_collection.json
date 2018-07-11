@@ -332,7 +332,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}]\n"
+							"raw": "{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}"
 						},
 						"description": ""
 					},
