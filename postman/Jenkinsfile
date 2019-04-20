@@ -2,11 +2,6 @@ node() {
     try {
         def nodeHome = tool 'NodeJS7'
         withEnv(["PATH+NODE=${nodeHome}/bin"]) {
-            stage("Prepare") {
-                checkout scm
-                sh "npm install newman"
-            }
-
             stage("Clean mongodb") {
                 sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:3.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
             }
@@ -14,6 +9,15 @@ node() {
             stage("Restart the management-api") {
                 sh "docker restart demo_nightly_managementapi_1"
                 sleep 20
+            }
+
+            stage("Prepare") {
+                checkout scm
+                sh "npm install newman"
+            }
+
+            stage("Restart the management-ui") {
+                sh "docker restart demo_nightly_managementui_1"
             }
 
             stage("Create 100 applications") {
