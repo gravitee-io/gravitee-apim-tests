@@ -7,6 +7,8 @@ node() {
             }
 
             stage("Restart the management-api") {
+//                 sleep to avoid to stop starting and creating default roles...etc
+                sleep 10
                 sh "docker restart demo_nightly_managementapi_1"
                 sleep 20
             }
