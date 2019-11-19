@@ -6,10 +6,11 @@ node() {
                 sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:3.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
             }
 
-            stage("Restart the management-api") {
-//                 sleep to avoid to stop starting and creating default roles...etc
-                sleep 10
+            stage("Restart the management-api and portal-api") {
+//                 sleep to avoid to stop the start and creation of default roles...etc
+                sleep 20
                 sh "docker restart demo_nightly_managementapi_1"
+                sh "docker restart demo_nightly_portalapi_1"
                 sleep 20
             }
 
@@ -18,8 +19,10 @@ node() {
                 sh "npm install newman"
             }
 
-            stage("Restart the management-ui") {
+            stage("Restart the management-ui and portal-ui") {
+//                restart to override traefik path prefix config of REST API
                 sh "docker restart demo_nightly_managementui_1"
+                sh "docker restart demo_nightly_portalui_1"
             }
 
             stage("Create 100 applications") {

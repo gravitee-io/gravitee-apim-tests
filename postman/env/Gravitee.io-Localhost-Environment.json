@@ -6,7 +6,7 @@
       "enabled": true,
       "key": "GRAVITEEIO_REST_URL",
       "type": "text",
-      "value": "http://localhost:8083/management"
+      "value": "http://localhost:8083/management/DEFAULT"
     },
     {
       "enabled": true,

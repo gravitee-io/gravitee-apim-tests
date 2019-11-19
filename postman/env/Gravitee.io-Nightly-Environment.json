@@ -4,7 +4,7 @@
   "values": [
     {
       "key": "GRAVITEEIO_REST_URL",
-      "value": "https://nightly.gravitee.io/management",
+      "value": "https://nightly.gravitee.io/management/DEFAULT",
       "type": "text",
       "enabled": true
     },
