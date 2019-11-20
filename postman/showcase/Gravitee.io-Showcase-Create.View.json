@@ -22,7 +22,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/configuration/views",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/views",
 						"method": "POST",
 						"header": [
 							{

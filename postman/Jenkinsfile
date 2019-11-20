@@ -8,7 +8,7 @@ node() {
 
             stage("Restart the management-api") {
 //                 sleep to avoid to stop the start and creation of default roles...etc
-                sleep 20
+                sleep 30
                 sh "docker restart demo_nightly_managementapi_1"
                 sleep 20
             }
@@ -38,13 +38,16 @@ node() {
 
             stage("Create showcase APIs") {
                 sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Policy.HTML.to.JSON.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
-                sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Policy.HTML.to.JSON.With.JSON.Transformation.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
                 sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-import-API-swagger.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
                 sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-import-API-OAI.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
             }
 
             stage("Create APIs by views") {
                 sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -d postman/showcase/views.json --folder create.api -n 100 --bail"
+            }
+
+            stage("Update admin avatar") {
+                sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Update.User.Avatar.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
             }
 
             stage("Run tests for issues") {

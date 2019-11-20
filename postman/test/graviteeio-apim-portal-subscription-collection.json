@@ -69,9 +69,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis"
@@ -138,9 +138,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/:apiId",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis",
@@ -206,9 +206,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/:apiId/plans",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis",
@@ -265,9 +265,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/:apiId/plans/:planId/_publish",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_publish",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis",
@@ -340,9 +340,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/applications",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"applications"
@@ -417,9 +417,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/auth/login",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/login",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_REST_URL}}"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"auth",
@@ -475,9 +475,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/apis",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_REST_URL}}"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"apis"
@@ -634,9 +634,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/applications?size=1000",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications?size=1000",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_REST_URL}}"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"applications"
@@ -690,9 +690,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/subscriptions",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_REST_URL}}"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"subscriptions"
@@ -721,9 +721,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/subscriptions/:subscriptionId",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_REST_URL}}"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"subscriptions",
@@ -763,9 +763,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/auth/logout",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/logout",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_REST_URL}}"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"auth",
@@ -824,9 +824,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis",
@@ -876,9 +876,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/applications/:applicationId",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"applications",
@@ -915,9 +915,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/:apiId/plans/:planId/_close",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_close",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis",
@@ -961,9 +961,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/:apiId",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
 							"host": [
-								"{{GRAVITEEIO_MGMT_REST_URL}}"
+								"{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT"
 							],
 							"path": [
 								"apis",
