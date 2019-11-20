@@ -1,7 +1,7 @@
 {
 	"info": {
-		"name": "Gravitee.io-Showcase-Create.View",
-		"_postman_id": "Gravitee.io-Showcase-Create.View",
+		"name": "Gravitee.io-Showcase-Create.Views",
+		"_postman_id": "Gravitee.io-Showcase-Create.Views",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -9,7 +9,7 @@
 			"name": "create.view",
 			"item": [
 				{
-					"name": "Create Showcase view",
+					"name": "Create view",
 					"event": [
 						{
 							"listen": "test",
@@ -36,7 +36,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\": \"Showcase APIs\",\"description\": \"Some documented use cases of what you can do with Gravitee.io policies\"}"
+							"raw": "{\"name\": \"{{name}}\",\"description\": \"{{description}}\"}"
 						}
 					}
 				}

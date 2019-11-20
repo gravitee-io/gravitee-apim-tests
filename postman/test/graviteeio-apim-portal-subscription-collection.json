@@ -22,6 +22,16 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var uid = (\"0000\" + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4);",
+									"postman.setEnvironmentVariable(\"RANDOM_NUMBER\", uid);"
+								]
+							}
 						}
 					],
 					"request": {
@@ -51,7 +61,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\":\"API_SUB\",\n\t\"version\":\"1.0\",\n\t\"description\":\"API for 'Subscription scenario'\",\n\t\"contextPath\":\"/apisub\",\n\t\"endpoint\":\"http://localhost\"\n}",
+							"raw": "{\n\t\"name\":\"API_SUB\",\n\t\"version\":\"1.0\",\n\t\"description\":\"API for 'Subscription scenario'\",\n\t\"contextPath\":\"/apisub-{{RANDOM_NUMBER}}\",\n\t\"endpoint\":\"http://localhost\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -624,12 +634,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/applications",
+							"raw": "{{GRAVITEEIO_PORTAL_REST_URL}}/applications?size=1000",
 							"host": [
 								"{{GRAVITEEIO_PORTAL_REST_URL}}"
 							],
 							"path": [
 								"applications"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": 1000
+								}
 							]
 						}
 					},

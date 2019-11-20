@@ -23,6 +23,23 @@ node() {
                 sh "docker restart demo_nightly_managementui_1"
             }
 
+            stage("Create 100 applications") {
+                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.Application.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -n 100 --bail"
+            }
+
+            stage("Create 100 started apis") {
+                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.view --bail"
+                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.api -n 100 --bail"
+            }
+
+            stage("Create showcase views") {
+                sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Create.View.json -e postman/env/Gravitee.io-Nightly-Environment.json -d postman/showcase/views.json --bail"
+            }
+
+            stage("Create showcase APIs") {
+                sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Policy.HTML.to.JSON.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
+            }
+
             stage("Run tests for issues") {
                 sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Issues.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
             }
@@ -39,27 +56,10 @@ node() {
                 sh "node node_modules/newman/bin/newman.js run postman/test/graviteeio-apim-portal-subscription-collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
             }
 
-            stage("Create 100 applications") {
-                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.Application.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -n 100 --bail"
-            }
-
-            stage("Create 100 started apis") {
-                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.view --bail"
-                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.api -n 100 --bail"
-            }
-
             stage("Create Mongodb indexes") {
                 sh "wget -O /tmp/create-index.js https://raw.githubusercontent.com/gravitee-io/gravitee-repository-mongodb/master/src/main/resources/scripts/create-index.js"
                 sh "docker cp /tmp/create-index.js demo_nightly_mongodb_1:/tmp/create-index.js"
                 sh "docker exec -i demo_nightly_mongodb_1 mongo gravitee < /tmp/create-index.js"
-            }
-
-            stage("Create showcase view") {
-                sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Create.View.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
-            }
-
-            stage("Create showcase APIs") {
-                sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Policy.HTML.to.JSON.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
             }
         }
     } catch (e) {
