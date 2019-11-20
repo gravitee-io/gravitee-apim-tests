@@ -3,6 +3,11 @@
   "name": "Gravitee.io Nightly Environment",
   "values": [
     {
+      "key": "GRAVITEEIO_MGMT_SWAGGER",
+      "value": "https://nightly.gravitee.io/management/swagger.json",
+      "enabled": true
+    },
+    {
       "key": "GRAVITEEIO_MGMT_REST_URL",
       "value": "https://nightly.gravitee.io/management/DEFAULT",
       "enabled": true
@@ -10,6 +15,11 @@
     {
       "key": "GRAVITEEIO_PORTAL_REST_URL",
       "value": "https://v3.nightly.gravitee.io/portal/DEFAULT",
+      "enabled": true
+    },
+    {
+      "key": "GRAVITEEIO_PORTAL_OAI",
+      "value": "https://v3.nightly.gravitee.io/portal/openapi",
       "enabled": true
     },
     {

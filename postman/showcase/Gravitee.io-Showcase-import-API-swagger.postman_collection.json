@@ -1,18 +1,18 @@
 {
 	"variables": [],
 	"info": {
-		"name": "Gravitee.io-Showcase-Policy.HTML.to.JSON",
-		"_postman_id": "Gravitee.io-Showcase-Policy.HTML.to.JSON",
+		"name": "Gravitee.io-Showcase-Policy.import-API-swagger",
+		"_postman_id": "Gravitee.io-Showcase-Policy.import-API-swagger",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "showcase.api.html.to.json",
+			"name": "showcase.api.import-API-swagger",
 			"description": "",
 			"item": [
 				{
-					"name": "Create API",
+					"name": "Import API from swagger",
 					"event": [
 						{
 							"listen": "test",
@@ -28,7 +28,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/import/swagger",
 						"method": "POST",
 						"header": [
 							{
@@ -44,17 +44,51 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"contextPath\": \"/gravitee.io/features\",\n\t\"description\": \"Gravitee.io features with HTML to JSON policy\",\n\t\"endpoint\": \"https://gravitee.io/products/apim/\",\n\t\"name\": \"Gravitee.io features\",\n\t\"version\": \"v1\"\n}"
+							"raw": "{\"with_documentation\":true,\"with_path_mapping\":true,\"with_policy_paths\":true,\"with_policy_mocks\":false,\"type\":\"URL\",\"payload\":\"{{GRAVITEEIO_MGMT_SWAGGER}}\"}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "Update API view and policy",
+					"name": "Get Page",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}",
-						"method": "PUT",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}/pages",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code should be 200 / found \" + responseCode.code] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"PAGE_ID\", jsonData[0].id);"
+								]
+							}
+						}
+					],
+					"response": []
+				},
+				{
+					"name": "Publish Page and enable try it",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}/pages/{{PAGE_ID}}",
+						"method": "PATCH",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -69,11 +103,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"version\":\"v1\",\"description\":\"Gravitee.io features with HTML to JSON policy\",\"proxy\":{\"context_path\":\"/gravitee.io/features\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io/products/apim/\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\"],\"html-json\":{\"selectors\":[{\"array\":true,\"selector\":\".feature .h05\",\"jsonName\":\"features\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true}]},\"visibility\":\"public\",\"name\":\"Gravitee.io features\",\"services\":{},\"tags\":[],\"resources\":[],\"views\":[\"showcase-apis\"]}"
-						},
-						"description": ""
-					},
-					"response": []
+							"raw": "{\"published\":true, \"configuration\": {\"tryIt\": \"true\", \"tryItAnonymous\": \"true\"}}"
+						}
+					}
 				},
 				{
 					"name": "Create Keyless Plan",

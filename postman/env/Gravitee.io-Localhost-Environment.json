@@ -3,6 +3,11 @@
   "name": "Gravitee.io Localhost Environment",
   "values": [
     {
+      "key": "GRAVITEEIO_MGMT_SWAGGER",
+      "value": "http://localhost:8083/management/swagger.json",
+      "enabled": true
+    },
+    {
       "enabled": true,
       "key": "GRAVITEEIO_REST_URL",
       "value": "http://localhost:8083/management/DEFAULT"
@@ -10,6 +15,11 @@
     {
       "key": "GRAVITEEIO_PORTAL_REST_URL",
       "value": "http://localhost:8084/portal/DEFAULT",
+      "enabled": true
+    },
+    {
+      "key": "GRAVITEEIO_PORTAL_OAI",
+      "value": "http://localhost:8084/portal/openapi",
       "enabled": true
     },
     {
