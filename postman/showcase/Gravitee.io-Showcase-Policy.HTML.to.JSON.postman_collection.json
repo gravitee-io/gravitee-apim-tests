@@ -28,7 +28,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_REST_URL}}/apis",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis",
 						"method": "POST",
 						"header": [
 							{
@@ -53,7 +53,7 @@
 				{
 					"name": "Update API view and policy",
 					"request": {
-						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -90,7 +90,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/plans",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}/plans",
 						"method": "POST",
 						"header": [
 							{
@@ -116,7 +116,7 @@
 				{
 					"name": "Publish Plan",
 					"request": {
-						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
 						"method": "POST",
 						"header": [
 							{
@@ -136,7 +136,7 @@
 				{
 					"name": "Deploy API",
 					"request": {
-						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}/deploy",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}/deploy",
 						"method": "POST",
 						"header": [
 							{
@@ -161,7 +161,7 @@
 				{
 					"name": "Start  API",
 					"request": {
-						"url": "{{GRAVITEEIO_REST_URL}}/apis/{{API_ID}}?action=START",
+						"url": "{{GRAVITEEIO_MGMT_REST_URL}}/apis/{{API_ID}}?action=START",
 						"method": "POST",
 						"header": [
 							{

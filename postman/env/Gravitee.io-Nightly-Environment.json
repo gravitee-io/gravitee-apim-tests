@@ -3,31 +3,31 @@
   "name": "Gravitee.io Nightly Environment",
   "values": [
     {
-      "key": "GRAVITEEIO_REST_URL",
+      "key": "GRAVITEEIO_MGMT_REST_URL",
       "value": "https://nightly.gravitee.io/management/DEFAULT",
-      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "GRAVITEEIO_PORTAL_REST_URL",
+      "value": "https://v3.nightly.gravitee.io/portal/DEFAULT",
       "enabled": true
     },
     {
       "key": "AUTHORIZATION_APPLICATION1",
       "value": "Basic YXBwbGljYXRpb24xOmFwcGxpY2F0aW9uMQ==",
-      "type": "text",
       "enabled": true
     },
     {
       "key": "AUTHORIZATION_API1",
       "value": "Basic YXBpMTphcGkx",
-      "type": "text",
       "enabled": true
     },
     {
       "key": "AUTHORIZATION_ADMIN",
       "value": "Basic YWRtaW46YWRtaW4=",
-      "type": "text",
       "enabled": true
     }
   ],
-  "timestamp": 1478455386929,
   "_postman_variable_scope": "environment",
   "_postman_exported_at": "2016-11-06T18:05:51.906Z",
   "_postman_exported_using": "Postman/4.8.1"

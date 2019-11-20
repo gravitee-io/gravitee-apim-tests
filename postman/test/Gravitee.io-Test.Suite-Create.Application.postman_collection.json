@@ -21,7 +21,7 @@
 				}
 			],
 			"request": {
-				"url": "{{GRAVITEEIO_REST_URL}}/user/login",
+				"url": "{{GRAVITEEIO_MGMT_REST_URL}}/user/login",
 				"method": "POST",
 				"header": [
 					{
@@ -54,7 +54,7 @@
 				}
 			],
 			"request": {
-				"url": "{{GRAVITEEIO_REST_URL}}/applications",
+				"url": "{{GRAVITEEIO_MGMT_REST_URL}}/applications",
 				"method": "POST",
 				"header": [
 					{
