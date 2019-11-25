@@ -45,6 +45,36 @@
 									"response": []
 								},
 								{
+									"name": "POST /apis/_search",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/_search",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+											],
+											"path": [
+												"apis",
+												"_search"
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "GET /apis/:apiId",
 									"event": [
 										{
@@ -2538,6 +2568,36 @@
 											"key": "apiId",
 											"value": "API"
 										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /apis/_search",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/_search",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+									],
+									"path": [
+										"apis",
+										"_search"
 									]
 								}
 							},
