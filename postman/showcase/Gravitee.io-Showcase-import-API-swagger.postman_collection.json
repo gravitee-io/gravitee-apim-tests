@@ -274,6 +274,27 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "Rate API",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/ratings",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"rate\": 5"
+						}
+					}
 				}
 			]
 		}

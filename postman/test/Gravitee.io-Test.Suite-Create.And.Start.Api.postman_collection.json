@@ -336,6 +336,70 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "Rate API by api1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"postman.setEnvironmentVariable(\"rate\", Math.round(Math.random() * 4 + 1));"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/ratings",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"rate\": {{rate}}}"
+						}
+					}
+				},
+				{
+					"name": "Rate API by admin",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"postman.setEnvironmentVariable(\"rate\", Math.round(Math.random() * 4 + 1));"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/ratings",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"rate\": {{rate}}}"
+						}
+					}
 				}
 			]
 		},
