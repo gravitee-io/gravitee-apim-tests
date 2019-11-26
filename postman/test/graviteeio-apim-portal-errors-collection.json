@@ -1260,6 +1260,51 @@
 									"response": []
 								},
 								{
+									"name": "GET /apis/:apiId/pages/:pageId/content - API not found",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId/content",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"pages",
+												":pageId",
+												"content"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "API"
+												},
+												{
+													"key": "pageId",
+													"value": "PAGE"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "GET /apis/:apiId/picture - API not found",
 									"event": [
 										{
@@ -1505,6 +1550,61 @@
 												":apiId",
 												"pages",
 												":pageId"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "{{created_api_id}}"
+												},
+												{
+													"key": "pageId",
+													"value": "PAGE"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /apis/:apiId/pages/:pageId/content - Page not found Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "b62db256-7f0e-4e31-8fb1-1d35bab83d68",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId/content",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"pages",
+												":pageId",
+												"content"
 											],
 											"variable": [
 												{
@@ -6580,6 +6680,52 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "GET /pages/:pageId/content - Unauthorized",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {",
+													"    pm.response.to.have.status(401);",
+													"});",
+													"",
+													"pm.test(\"Must be authenticated\", function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId/content",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"pages",
+												":pageId",
+												"content"
+											],
+											"variable": [
+												{
+													"key": "pageId",
+													"value": "{{created_page_id}}"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"protocolProfileBehavior": {},
@@ -6887,6 +7033,67 @@
 												"DEFAULT",
 												"pages",
 												":pageId"
+											],
+											"variable": [
+												{
+													"key": "pageId",
+													"value": "{{created_page_id}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /pages/:pageId/content - Page not published",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {",
+													"    pm.response.to.have.status(401);",
+													"});",
+													"",
+													"pm.test(\"Must be authenticated\", function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "application1",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "application1",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId/content",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"pages",
+												":pageId",
+												"content"
 											],
 											"variable": [
 												{
