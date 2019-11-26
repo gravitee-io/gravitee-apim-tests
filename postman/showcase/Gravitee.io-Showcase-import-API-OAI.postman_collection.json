@@ -22,7 +22,8 @@
 									"tests[\"Status code should be 201 / found \" + responseCode.code] = responseCode.code === 201;",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
+									"postman.setGlobalVariable(\"API_ID\", jsonData.id);",
+									"postman.setGlobalVariable(\"API\", responseBody);"
 								]
 							}
 						}
@@ -45,10 +46,49 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"with_documentation\":true,\"with_path_mapping\":true,\"with_policy_paths\":true,\"with_policy_mocks\":true,\"type\":\"URL\",\"payload\":\"{{GRAVITEEIO_PORTAL_URL}}/portal/openapi\"}"
-						},
-						"description": ""
+						}
 					},
 					"response": []
+				},
+				{
+					"name": "Publish API and make public",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(globals.API);",
+									"jsonData.lifecycle_state = 'published';",
+									"jsonData.visibility = 'public';",
+									"delete jsonData.id;",
+									"delete jsonData.state;",
+									"delete jsonData.created_at;",
+									"delete jsonData.updated_at;",
+									"delete jsonData.owner;",
+									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{API}}"
+						}
+					}
 				},
 				{
 					"name": "Get Page",

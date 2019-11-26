@@ -26,7 +26,8 @@
 									"tests[\"API is private\"] = jsonData.visibility === \"private\";",
 									"",
 									"",
-									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
+									"postman.setGlobalVariable(\"API_ID\", jsonData.id);",
+									"postman.setGlobalVariable(\"API\", responseBody);"
 								]
 							}
 						},
@@ -103,6 +104,46 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "Publish API and make public",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(globals.API);",
+									"jsonData.lifecycle_state = 'published';",
+									"jsonData.visibility = 'public';",
+									"delete jsonData.id;",
+									"delete jsonData.state;",
+									"delete jsonData.created_at;",
+									"delete jsonData.updated_at;",
+									"delete jsonData.owner;",
+									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{API}}"
+						}
+					}
 				},
 				{
 					"name": "Create Plan",
@@ -197,7 +238,7 @@
 									"",
 									"var jsonData = JSON.parse(responseBody);",
 									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
-									"tests[\"API is private\"] = jsonData.visibility === \"private\";"
+									"tests[\"API is public\"] = jsonData.visibility === \"public\";"
 								]
 							}
 						}

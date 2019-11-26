@@ -475,12 +475,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis?size=1000",
 							"host": [
 								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
 							"path": [
 								"apis"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": 1000
+								}
 							]
 						}
 					},
