@@ -239,6 +239,51 @@
 									"response": []
 								},
 								{
+									"name": "GET /apis/:apiId/pages/:pageId/content",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId/content",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"pages",
+												":pageId",
+												"content"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "API"
+												},
+												{
+													"key": "pageId",
+													"value": "PAGE"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "GET /apis/:apiId/picture",
 									"event": [
 										{
@@ -1781,6 +1826,45 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GET /pages/:pageI/content",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId/content",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"pages",
+										":pageId",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "pageId",
+											"value": "PAGE"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"description": "Anonymous requests to /pages/... should not return 401",
@@ -2873,6 +2957,51 @@
 										":apiId",
 										"pages",
 										":pageId"
+									],
+									"variable": [
+										{
+											"key": "apiId",
+											"value": "API"
+										},
+										{
+											"key": "pageId",
+											"value": "PAGE"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /apis/:apiId/pages/:pageId/content",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId/content",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"apis",
+										":apiId",
+										"pages",
+										":pageId",
+										"content"
 									],
 									"variable": [
 										{
@@ -4304,6 +4433,45 @@
 										"DEFAULT",
 										"pages",
 										":pageId"
+									],
+									"variable": [
+										{
+											"key": "pageId",
+											"value": "PAGE"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /pages/:pageId/content",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId/content",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"pages",
+										":pageId",
+										"content"
 									],
 									"variable": [
 										{
