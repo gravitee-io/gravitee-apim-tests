@@ -291,7 +291,7 @@
 											"});",
 											"pm.test(\"Input must not be null.\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 											"});"
 										]
 									}
@@ -440,7 +440,7 @@
 											"});",
 											"pm.test(\"Rating already exists\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Rating already exists for api [\"+pm.environment.get(\"created_api_id\")+\"] and user [\"+pm.environment.get(\"created_api_owner_id\")+\"].\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Rating already exists for api [\"+pm.environment.get(\"created_api_id\")+\"] and user [\"+pm.environment.get(\"created_api_owner_id\")+\"].\");",
 											"});"
 										]
 									}
@@ -744,7 +744,7 @@
 												"exec": [
 													"pm.test(\"Unsufficient rights\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You do not have sufficient rights to access this resource\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"You do not have sufficient rights to access this resource\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -1367,7 +1367,7 @@
 											"});",
 											"pm.test(\"API not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Api [API] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Api [API] can not be found.\");",
 											"});"
 										]
 									}
@@ -1454,7 +1454,7 @@
 											"});",
 											"pm.test(\"Page not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Page [PAGE] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Page [PAGE] can not be found.\");",
 											"});"
 										]
 									}
@@ -1730,7 +1730,7 @@
 											"});",
 											"pm.test(\"API not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Api [\"+pm.environment.get(\"created_api_id\")+\"] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Api [\"+pm.environment.get(\"created_api_id\")+\"] can not be found.\");",
 											"});"
 										]
 									}
@@ -2004,7 +2004,7 @@
 												"exec": [
 													"pm.test(\"Rating service disabled\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"API rating service is unavailable.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"API rating service is unavailable.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -2716,7 +2716,7 @@
 											"});",
 											"pm.test(\"Input must not be null.\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 											"});"
 										]
 									}
@@ -2803,7 +2803,7 @@
 											"});",
 											"pm.test(\"'applicationId' is not the same that the application in payload\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"'applicationId' is not the same that the application in payload\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"'applicationId' is not the same that the application in payload\");",
 											"});"
 										]
 									}
@@ -2875,7 +2875,7 @@
 											"});",
 											"pm.test(\"Client secret for application [404Application] can not be renew.\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Client secret for application [404Application] can not be renew.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Client secret for application [404Application] can not be renew.\");",
 											"});"
 										]
 									}
@@ -2897,7 +2897,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'from' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'from' is not valid\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'from' is not valid\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -2944,7 +2944,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'to' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'to' is not valid\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'to' is not valid\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -2991,7 +2991,7 @@
 												"exec": [
 													"pm.test(\"'from' query parameter value must be greater than 'to'\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"'from' query parameter value must be greater than 'to'\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"'from' query parameter value must be greater than 'to'\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3042,7 +3042,7 @@
 												"exec": [
 													"pm.test(\"'order' query parameter value must be 'ASC' or 'DESC'\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"'order' query parameter value must be 'ASC' or 'DESC'\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"'order' query parameter value must be 'ASC' or 'DESC'\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3128,7 +3128,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'type' must be present and one of : GROUP_BY, DATE_HISTO, COUNT\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'type' must be present and one of : GROUP_BY, DATE_HISTO, COUNT\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'type' must be present and one of : GROUP_BY, DATE_HISTO, COUNT\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3168,7 +3168,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'from' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'from' is not valid\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'from' is not valid\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3218,7 +3218,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'to' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'to' is not valid\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'to' is not valid\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3268,7 +3268,7 @@
 												"exec": [
 													"pm.test(\"'from' query parameter value must be greater than 'to'\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"'from' query parameter value must be greater than 'to'\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"'from' query parameter value must be greater than 'to'\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3322,7 +3322,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'interval' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'interval' is not valid\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'interval' is not valid\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3380,7 +3380,7 @@
 												"exec": [
 													"pm.test(\"Query parameter 'interval' is not valid. 'interval' must be >= 1000 and <= 1000000000\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Query parameter 'interval' is not valid. 'interval' must be >= 1000 and <= 1000000000\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Query parameter 'interval' is not valid. 'interval' must be >= 1000 and <= 1000000000\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3442,7 +3442,7 @@
 												"exec": [
 													"pm.test(\"'field' query parameter is required for 'group_by' request\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"'field' query parameter is required for 'group_by' request\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"'field' query parameter is required for 'group_by' request\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4639,7 +4639,7 @@
 											"",
 											"pm.test(\"You do not have sufficient rights to access this resource\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"You do not have sufficient rights to access this resource\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"You do not have sufficient rights to access this resource\");",
 											"});"
 										]
 									}
@@ -5525,7 +5525,7 @@
 											"});",
 											"pm.test(\"Application not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Application [APPLICATION] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Application [APPLICATION] can not be found.\");",
 											"});"
 										]
 									}
@@ -5660,7 +5660,7 @@
 											"});",
 											"pm.test(\"Notification not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"No NotificationCofing can be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"No NotificationCofing can be found.\");",
 											"});"
 										]
 									}
@@ -5837,7 +5837,7 @@
 											"});",
 											"pm.test(\"Member not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"User [MEMBER] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"User [MEMBER] can not be found.\");",
 											"});"
 										]
 									}
@@ -5914,7 +5914,7 @@
 											"});",
 											"pm.test(\"Log not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Log [LOG] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Log [LOG] can not be found.\");",
 											"});"
 										]
 									}
@@ -6128,7 +6128,7 @@
 											"});",
 											"pm.test(\"Identity provider not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Identity provider [IDENTITY] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Identity provider [IDENTITY] can not be found.\");",
 											"});"
 										]
 									}
@@ -6269,7 +6269,7 @@
 													"",
 													"pm.test(\"Must be authenticated\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"You must be authenticated to access this resource\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -6561,7 +6561,7 @@
 													"",
 													"pm.test(\"Must be authenticated\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"You must be authenticated to access this resource\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -6787,7 +6787,7 @@
 											"});",
 											"pm.test(\"Page not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Page [PAGE] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Page [PAGE] can not be found.\");",
 											"});"
 										]
 									}
@@ -6848,7 +6848,7 @@
 													"",
 													"pm.test(\"At least an api or an application must be provided.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"At least an api or an application must be provided.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"At least an api or an application must be provided.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -6885,7 +6885,7 @@
 													"",
 													"pm.test(\"Input must not be null.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -8464,7 +8464,7 @@
 											"",
 											"pm.test(\"You do not have sufficient rights to access this resource\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"You do not have sufficient rights to access this resource\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"You do not have sufficient rights to access this resource\");",
 											"});"
 										]
 									}
@@ -9111,7 +9111,7 @@
 											"});",
 											"pm.test(\"Subscription not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Subscription [SUBSCRIPTION] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Subscription [SUBSCRIPTION] can not be found.\");",
 											"});"
 										]
 									}
@@ -9189,7 +9189,7 @@
 											"});",
 											"pm.test(\"Subscription not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"No API Key can be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"No API Key can be found.\");",
 											"});"
 										]
 									}
@@ -9397,7 +9397,7 @@
 									"",
 									"pm.test(\"Input must not be null.\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+									"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 									"});"
 								]
 							}
@@ -9504,7 +9504,7 @@
 															"",
 															"pm.test(\"Invalid email.\", function () {",
 															"    var jsonData = pm.response.json();",
-															"    pm.expect(jsonData.errors[0].detail).to.eql(\"A user [postman-test@example.com] already exists for environment DEFAULT.\");",
+															"    pm.expect(jsonData.errors[0].message).to.eql(\"A user [postman-test@example.com] already exists for environment DEFAULT.\");",
 															"});"
 														],
 														"type": "text/javascript"
@@ -9621,7 +9621,7 @@
 													"",
 													"pm.test(\"Input must not be null.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9672,7 +9672,7 @@
 													"",
 													"pm.test(\"Input must not be null.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9725,7 +9725,7 @@
 													"",
 													"pm.test(\"Invalid email.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].title).to.eql(\"registerUser.arg0.email\");",
+													"    pm.expect(jsonData.errors[0].code).to.eql(\"registerUser.arg0.email\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9778,7 +9778,7 @@
 													"",
 													"pm.test(\"Invalid email.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Value [DUMMY EMAIL] is not a valid email.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Value [DUMMY EMAIL] is not a valid email.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9831,7 +9831,7 @@
 													"",
 													"pm.test(\"Input must not be null.\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"Input must not be null.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9888,17 +9888,17 @@
 													"    pm.expect(jsonData.errors.length).to.eql(4);",
 													"    ",
 													"    var sortedErrors = jsonData.errors.sort(compare);",
-													"    pm.expect(sortedErrors[0].title).to.eql('finalizeRegistration.arg0.firstname');",
-													"    pm.expect(sortedErrors[1].title).to.eql('finalizeRegistration.arg0.lastname');",
-													"    pm.expect(sortedErrors[2].title).to.eql('finalizeRegistration.arg0.password');",
-													"    pm.expect(sortedErrors[3].title).to.eql('finalizeRegistration.arg0.token');",
+													"    pm.expect(sortedErrors[0].code).to.eql('finalizeRegistration.arg0.firstname');",
+													"    pm.expect(sortedErrors[1].code).to.eql('finalizeRegistration.arg0.lastname');",
+													"    pm.expect(sortedErrors[2].code).to.eql('finalizeRegistration.arg0.password');",
+													"    pm.expect(sortedErrors[3].code).to.eql('finalizeRegistration.arg0.token');",
 													"});",
 													"",
 													"",
 													"function compare(a, b) {",
 													"    // Use toUpperCase() to ignore character casing",
-													"  const titleA = a.title.toUpperCase();",
-													"  const titleB = b.title.toUpperCase();",
+													"  const titleA = a.code.toUpperCase();",
+													"  const titleB = b.code.toUpperCase();",
 													"",
 													"  let comparison = 0;",
 													"  if (titleA > titleB) {",
@@ -9971,7 +9971,7 @@
 											"",
 											"pm.test(\"You must be authenticated to access this resource\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"You must be authenticated to access this resource\");",
 											"});"
 										],
 										"type": "text/javascript"
@@ -10044,7 +10044,7 @@
 											"});",
 											"pm.test(\"You do not have sufficient rights to access this resource\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"You do not have sufficient rights to access this resource\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"You do not have sufficient rights to access this resource\");",
 											"});"
 										],
 										"type": "text/javascript"
@@ -10145,7 +10145,7 @@
 													"",
 													"pm.test(\"Registration service disabled\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"User registration service is unavailable.\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"User registration service is unavailable.\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -10342,7 +10342,7 @@
 											"});",
 											"pm.test(\"Notification not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"Portal notification [NOTIFICATION] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Portal notification [NOTIFICATION] can not be found.\");",
 											"});"
 										]
 									}
@@ -10507,7 +10507,7 @@
 											"});",
 											"pm.test(\"View not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].detail).to.eql(\"View [VIEW] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"View [VIEW] can not be found.\");",
 											"});",
 											""
 										]
