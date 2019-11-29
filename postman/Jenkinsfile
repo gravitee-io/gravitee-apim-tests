@@ -7,8 +7,8 @@ node() {
             }
 
             stage("Restart the management-api") {
-//                 sleep to avoid to stop the start and creation of default roles...etc
                 sh "docker restart demo_nightly_managementapi_1"
+//              sleep to avoid to stop the start and creation of default roles...etc
                 sleep 30
                 sh "docker restart demo_nightly_portalapi_1"
                 sleep 30
@@ -20,9 +20,8 @@ node() {
             }
 
             stage("Restart the management-ui and portal-ui") {
-//                restart to override traefik path prefix config of REST API
-                sh "docker restart demo_nightly_managementui_1"
-                sh "docker restart demo_nightly_portalui_1"
+//              restart to override traefik path prefix config of REST API
+                sh "docker restart demo_nightly_managementui_1 demo_nightly_portalui_1"
             }
 
             stage("Run tests for issues") {
