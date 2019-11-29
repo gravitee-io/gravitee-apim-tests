@@ -475,7 +475,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis?size=1000",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis?size=-1",
 							"host": [
 								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
@@ -485,7 +485,7 @@
 							"query": [
 								{
 									"key": "size",
-									"value": 1000
+									"value": -1
 								}
 							]
 						}
@@ -640,7 +640,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications?size=1000",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications?size=-1",
 							"host": [
 								"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
 							],
@@ -650,7 +650,7 @@
 							"query": [
 								{
 									"key": "size",
-									"value": 1000
+									"value": -1
 								}
 							]
 						}
