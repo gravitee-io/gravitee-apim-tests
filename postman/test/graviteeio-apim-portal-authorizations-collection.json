@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e4ab7e9a-27a5-4200-83da-9add4d191a52",
+		"_postman_id": "98ad3f2d-381f-4477-82e4-392340ed0e61",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -35,9 +35,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis"
 											]
 										}
@@ -64,9 +66,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/_search",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												"_search"
 											]
@@ -94,11 +98,52 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "API"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /apis/:apiId/metrics",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "04387e67-11a5-495f-8da0-724b396e697a",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/metrics",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"metrics"
 											],
 											"variable": [
 												{
@@ -130,9 +175,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId",
 												"pages"
@@ -167,9 +214,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId",
 												"pages",
@@ -209,9 +258,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/picture",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId",
 												"picture"
@@ -246,9 +297,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/plans",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId",
 												"plans"
@@ -283,9 +336,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId",
 												"ratings"
@@ -341,9 +396,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"apis",
 												":apiId",
 												"ratings"
@@ -435,9 +492,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications"
 									]
 								}
@@ -464,9 +523,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications"
 									]
 								}
@@ -493,9 +554,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId"
 									],
@@ -529,9 +592,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId"
 									],
@@ -565,9 +630,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId"
 									],
@@ -601,9 +668,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/picture",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"picture"
@@ -638,9 +707,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications"
@@ -675,9 +746,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications"
@@ -712,9 +785,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications"
@@ -749,9 +824,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications",
@@ -791,9 +868,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications",
@@ -833,9 +912,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members"
@@ -870,9 +951,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members"
@@ -907,9 +990,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/_transfer_ownership",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -945,9 +1030,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -987,9 +1074,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -1029,9 +1118,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -1071,9 +1162,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"analytics"
@@ -1108,9 +1201,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"logs"
@@ -1145,9 +1240,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"logs",
@@ -1183,9 +1280,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/:logId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"logs",
@@ -1225,9 +1324,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/_renew_secret",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"_renew_secret"
@@ -1297,9 +1398,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/oauth2/:identity",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"auth",
 												"oauth2",
 												":identity"
@@ -1334,9 +1437,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/oauth2/:identity/_exchange",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"auth",
 												"oauth2",
 												":identity",
@@ -1403,9 +1508,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/login",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"auth",
 												"login"
 											]
@@ -1433,9 +1540,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/logout",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"auth",
 												"logout"
 											]
@@ -1498,9 +1607,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"configuration"
 									]
 								}
@@ -1527,9 +1638,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/identities",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"configuration",
 										"identities"
 									]
@@ -1557,9 +1670,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/info",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"info"
 									]
 								}
@@ -1618,9 +1733,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"pages"
 									]
 								}
@@ -1647,9 +1764,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"pages",
 										":pageId"
 									],
@@ -1715,9 +1834,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions"
 									]
 								}
@@ -1744,9 +1865,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions"
 									]
 								}
@@ -1773,9 +1896,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId"
 									],
@@ -1809,9 +1934,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/_close",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId",
 										"_close"
@@ -1846,9 +1973,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/_renew",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId",
 										"keys",
@@ -1884,9 +2013,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId",
 										"keys",
@@ -1947,9 +2078,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/tickets",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"tickets"
 									]
 								}
@@ -2027,9 +2160,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"users",
 												"registration"
 											]
@@ -2073,9 +2208,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration/_finalize",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"users",
 												"registration",
 												"_finalize"
@@ -2135,9 +2272,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"users"
 											]
 										}
@@ -2164,9 +2303,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"user"
 											]
 										}
@@ -2193,9 +2334,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"user"
 											]
 										}
@@ -2222,9 +2365,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/avatar",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"user",
 												"avatar"
 											]
@@ -2252,9 +2397,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"user",
 												"notifications"
 											]
@@ -2282,9 +2429,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"user",
 												"notifications"
 											]
@@ -2312,9 +2461,11 @@
 										"url": {
 											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications/:notificationId",
 											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
+												"portal",
+												"DEFAULT",
 												"user",
 												"notifications",
 												":notificationId"
@@ -2385,9 +2536,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"views"
 									]
 								}
@@ -2414,9 +2567,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views/:viewId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"views",
 										":viewId"
 									],
@@ -2450,9 +2605,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views/:viewId/picture",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"views",
 										":viewId",
 										"picture"
@@ -2528,9 +2685,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis"
 									]
 								}
@@ -2557,11 +2716,52 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId"
+									],
+									"variable": [
+										{
+											"key": "apiId",
+											"value": "API"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /apis/:apiId/metrics",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "04387e67-11a5-495f-8da0-724b396e697a",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/metrics",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"apis",
+										":apiId",
+										"metrics"
 									],
 									"variable": [
 										{
@@ -2593,9 +2793,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/_search",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										"_search"
 									]
@@ -2623,9 +2825,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId",
 										"pages"
@@ -2660,9 +2864,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId",
 										"pages",
@@ -2702,9 +2908,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/picture",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId",
 										"picture"
@@ -2739,9 +2947,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/plans",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId",
 										"plans"
@@ -2776,9 +2986,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId",
 										"ratings"
@@ -2813,9 +3025,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"apis",
 										":apiId",
 										"ratings"
@@ -2879,9 +3093,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications"
 									]
 								}
@@ -2908,9 +3124,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications"
 									]
 								}
@@ -2937,9 +3155,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId"
 									],
@@ -2973,9 +3193,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId"
 									],
@@ -3009,9 +3231,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId"
 									],
@@ -3045,9 +3269,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/picture",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"picture"
@@ -3082,9 +3308,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications"
@@ -3119,9 +3347,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications"
@@ -3156,9 +3386,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications"
@@ -3193,9 +3425,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications",
@@ -3235,9 +3469,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"notifications",
@@ -3277,9 +3513,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members"
@@ -3314,9 +3552,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members"
@@ -3351,9 +3591,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/_transfer_ownership",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -3389,9 +3631,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -3431,9 +3675,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -3473,9 +3719,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"members",
@@ -3515,9 +3763,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"analytics"
@@ -3552,9 +3802,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"logs"
@@ -3589,9 +3841,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"logs",
@@ -3627,9 +3881,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/:logId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"logs",
@@ -3669,9 +3925,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/_renew_secret",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"applications",
 										":applicationId",
 										"_renew_secret"
@@ -3735,9 +3993,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/login",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"auth",
 										"login"
 									]
@@ -3765,9 +4025,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/logout",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"auth",
 										"logout"
 									]
@@ -3795,9 +4057,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/oauth2/:identity",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"auth",
 										"oauth2",
 										":identity"
@@ -3832,9 +4096,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/oauth2/:identity/_exchange",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"auth",
 										"oauth2",
 										":identity",
@@ -3877,9 +4143,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"configuration"
 									]
 								}
@@ -3906,9 +4174,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/identities",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"configuration",
 										"identities"
 									]
@@ -3936,9 +4206,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/info",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"info"
 									]
 								}
@@ -3994,9 +4266,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"pages"
 									]
 								}
@@ -4023,9 +4297,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"pages",
 										":pageId"
 									],
@@ -4088,9 +4364,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions"
 									]
 								}
@@ -4117,9 +4395,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions"
 									]
 								}
@@ -4146,9 +4426,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId"
 									],
@@ -4182,9 +4464,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/_close",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId",
 										"_close"
@@ -4219,9 +4503,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/_renew",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId",
 										"keys",
@@ -4257,9 +4543,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"subscriptions",
 										":subscriptionId",
 										"keys",
@@ -4329,9 +4617,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"users"
 									]
 								}
@@ -4374,9 +4664,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"users",
 										"registration"
 									]
@@ -4420,9 +4712,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration/_finalize",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"users",
 										"registration",
 										"_finalize"
@@ -4451,9 +4745,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"user"
 									]
 								}
@@ -4480,9 +4776,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"user"
 									]
 								}
@@ -4509,9 +4807,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/avatar",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"user",
 										"avatar"
 									]
@@ -4539,9 +4839,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"user",
 										"notifications"
 									]
@@ -4569,9 +4871,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"user",
 										"notifications"
 									]
@@ -4599,9 +4903,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications/:notificationId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"user",
 										"notifications",
 										":notificationId"
@@ -4653,9 +4959,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/tickets",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"tickets"
 									]
 								}
@@ -4711,9 +5019,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"views"
 									]
 								}
@@ -4740,9 +5050,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views/:viewId",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"views",
 										":viewId"
 									],
@@ -4776,9 +5088,11 @@
 								"url": {
 									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views/:viewId/picture",
 									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT"
+										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
+										"portal",
+										"DEFAULT",
 										"views",
 										":viewId",
 										"picture"
