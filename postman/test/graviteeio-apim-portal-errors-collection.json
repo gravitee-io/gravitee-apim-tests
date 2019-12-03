@@ -2989,9 +2989,9 @@
 											"script": {
 												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
 												"exec": [
-													"pm.test(\"'from' query parameter value must be greater than 'to'\", function () {",
+													"pm.test(\"'from' query parameter value must not be greater than 'to'\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].message).to.eql(\"'from' query parameter value must be greater than 'to'\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"'from' query parameter value must not be greater than 'to'\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3266,9 +3266,9 @@
 											"script": {
 												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
 												"exec": [
-													"pm.test(\"'from' query parameter value must be greater than 'to'\", function () {",
+													"pm.test(\"'from' query parameter value must not be greater than 'to'\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].message).to.eql(\"'from' query parameter value must be greater than 'to'\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"'from' query parameter value must not be greater than 'to'\");",
 													"});"
 												],
 												"type": "text/javascript"
