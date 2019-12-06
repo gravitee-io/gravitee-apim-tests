@@ -6695,7 +6695,7 @@
 													"",
 													"pm.test(\"Must be authenticated\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"You must be authenticated to access this resource\");",
 													"});"
 												],
 												"type": "text/javascript"
@@ -7058,7 +7058,7 @@
 													"",
 													"pm.test(\"Must be authenticated\", function () {",
 													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].detail).to.eql(\"You must be authenticated to access this resource\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"You must be authenticated to access this resource\");",
 													"});"
 												],
 												"type": "text/javascript"
