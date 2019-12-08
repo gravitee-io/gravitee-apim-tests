@@ -112,6 +112,86 @@
 							"raw": "{\"name\":\"REST API Design Best Practices\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"\",\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://raw.githubusercontent.com/anilkbachola/restapi-design-guidelines/master/README.md\"}}}"
 						}
 					}
+				},
+				{
+					"name": "Add how it works directory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;",
+									"",
+									"var doc = JSON.parse(responseBody);",
+									"tests[\"Doc with type API\"] = doc.type === \"FOLDER\";",
+									"",
+									"",
+									"postman.setGlobalVariable(\"DOC_ID\", doc.parentId);"
+								]
+							}
+						}
+					],,
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"How it works\",\"type\":\"FOLDER\",\"parentId\":\"\",\"published\":true}"
+						}
+					}
+				},
+				{
+					"name": "Add how it works",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Homepage\",\"type\":\"MARKDOWN\",\"parentId\":\"{{DOC_ID}}\",\"published\":true,\"content\":\"## How it works\",\"homepage\":true}"
+						}
+					}
+				},
+				{
+					"name": "Add swagger example",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Petstore example\",\"type\":\"SWAGGER\",\"parentId\":\"{{DOC_ID}}\",\"published\":true,\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://petstore.swagger.io/v2/swagger.json\"}}}"
+						}
+					}
 				}
 			]
 		}
