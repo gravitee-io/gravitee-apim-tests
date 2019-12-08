@@ -74,7 +74,7 @@
 				{
 					"name": "Add homepage",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -89,6 +89,27 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\":\"Homepage\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"## Welcome to the API portal\",\"homepage\":true}"
+						}
+					}
+				},
+				{
+					"name": "Add best practice page",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"REST API Design Best Practices\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"\",\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://raw.githubusercontent.com/anilkbachola/restapi-design-guidelines/master/README.md\"}}}"
 						}
 					}
 				}
