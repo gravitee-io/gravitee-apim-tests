@@ -124,14 +124,15 @@
 									"tests[\"Status code is 201\"] = responseCode.code === 201;",
 									"",
 									"var doc = JSON.parse(responseBody);",
+									"tests[\"Doc has ID\"] = doc.id !== undefined;",
 									"tests[\"Doc with type API\"] = doc.type === \"FOLDER\";",
 									"",
 									"",
-									"postman.setGlobalVariable(\"DOC_ID\", doc.parentId);"
+									"postman.setGlobalVariable(\"DOC_ID\", doc.id);"
 								]
 							}
 						}
-					],,
+					],
 					"request": {
 						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
 						"method": "POST",
@@ -154,7 +155,7 @@
 				{
 					"name": "Add how it works",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -168,14 +169,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\":\"Homepage\",\"type\":\"MARKDOWN\",\"parentId\":\"{{DOC_ID}}\",\"published\":true,\"content\":\"## How it works\",\"homepage\":true}"
+							"raw": "{\"name\":\"How it works\",\"type\":\"MARKDOWN\",\"parentId\":\"{{DOC_ID}}\",\"published\":true,\"content\":\"## How it works\"}"
 						}
 					}
 				},
 				{
 					"name": "Add swagger example",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
