@@ -48,11 +48,6 @@ node() {
                 sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.Application.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -n 100 --bail"
             }
 
-            stage("Create 100 started apis") {
-                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.view --bail"
-                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.api -n 100 --bail"
-            }
-
             stage("Create showcase views") {
                 sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-Create.View.json -e postman/env/Gravitee.io-Nightly-Environment.json -d postman/showcase/views.json --bail"
             }
@@ -63,7 +58,8 @@ node() {
                 sh "node node_modules/newman/bin/newman.js run postman/showcase/Gravitee.io-Showcase-import-API-OAI.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --bail"
             }
 
-            stage("Create APIs by views") {
+            stage("Create 100 started apis") {
+                sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json --folder create.view --bail"
                 sh "node node_modules/newman/bin/newman.js run postman/test/Gravitee.io-Test.Suite-Create.And.Start.Api.postman_collection.json -e postman/env/Gravitee.io-Nightly-Environment.json -d postman/showcase/views.json --folder create.api -n 100 --bail"
             }
 

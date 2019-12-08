@@ -70,6 +70,27 @@
 							"raw": "{{portal}}"
 						}
 					}
+				},
+				{
+					"name": "Add homepage",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Homepage\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"## Welcome to the API portal\",\"homepage\":true}"
+						}
+					}
 				}
 			]
 		}

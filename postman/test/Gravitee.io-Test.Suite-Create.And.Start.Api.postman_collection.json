@@ -400,6 +400,48 @@
 							"raw": "{\"rate\": {{rate}}}"
 						}
 					}
+				},
+				{
+					"name": "Add homepage",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Homepage\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"<#if api.picture??>\\n<img src=\\\"${api.picture}\\\" style=\\\"float: right;max-width: 60px;\\\"></img>\\n</#if>\\n\\n# Welcome to the API ${api.name}(${api.version})!\\n\\nThe API is <span style=\\\"text-transform: lowercase;color: <#if api.state=='STARTED'>green<#else>red</#if>\\\">${api.state}</span>.\\n\\nThis API has been created on ${api.createdAt?datetime} and updated on ${api.updatedAt?datetime}.\\n\\n<#if api.deployedAt??>\\nThis API has been deployed on ${api.deployedAt?datetime}.\\n<#else>\\nThis API has not yet been deployed.\\n</#if>\\n\\n<#if api.visibility=='PUBLIC'>\\nThis API is publicly exposed.\\n<#else>\\nThis API is not publicly exposed.\\n</#if>\\n\\n<#if api.tags?has_content>\\nSharding tags: ${api.tags?join(\\\", \\\")}\\n</#if>\\n\\n## Description\\n\\n${api.description}\\n\\n## How to access\\n\\nThe API can be accessed through https://api.company.com${api.proxy.contextPath}:\\n\\ncurl https://api.company.com${api.proxy.contextPath}\\n\\n## Rating\\n\\nYou can rate and put a comment for this API <a href='/#!/apis/${api.id}/ratings'>here</a>.\\n\\n## Contact\\n\\nThe support contact is <a href=\\\"mailto:${api.metadata['email-support']}\\\">${api.metadata['email-support']}</a>.\\n\\nThe API owner is <#if api.primaryOwner.email??><a href=\\\"mailto:${api.primaryOwner.email}\\\">${api.primaryOwner.displayName}</a><#else>${api.primaryOwner.displayName}</#if>.\",\"homepage\":true}"
+						}
+					}
+				},
+				{
+					"name": "Add technical doc",
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/pages",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Petstore\",\"type\":\"SWAGGER\",\"parentId\":\"\",\"published\":true,\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://petstore.swagger.io/v2/swagger.json\"}}}"
+						}
+					}
 				}
 			]
 		},
