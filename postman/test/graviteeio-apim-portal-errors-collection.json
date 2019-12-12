@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fdd23e01-1d03-4dfa-a56c-7e486b47593d",
+		"_postman_id": "fbd567ba-2cc5-4a6a-9e51-109511f0dbfb",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -1465,6 +1465,45 @@
 												"apis",
 												":apiId",
 												"ratings"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "API"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /apis/:apiId/subscribers - API not found",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/subscribers",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"subscribers"
 											],
 											"variable": [
 												{

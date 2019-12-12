@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "98ad3f2d-381f-4477-82e4-392340ed0e61",
+		"_postman_id": "f95f81e8-90e4-46a2-b987-308deb42bb35",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -449,6 +449,45 @@
 												"apis",
 												":apiId",
 												"ratings"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "API"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /apis/:apiId/subscribers",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/subscribers",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"subscribers"
 											],
 											"variable": [
 												{
@@ -3162,6 +3201,45 @@
 										"apis",
 										":apiId",
 										"ratings"
+									],
+									"variable": [
+										{
+											"key": "apiId",
+											"value": "API"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /apis/:apiId/subscribers",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/subscribers",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"apis",
+										":apiId",
+										"subscribers"
 									],
 									"variable": [
 										{
