@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fbd567ba-2cc5-4a6a-9e51-109511f0dbfb",
+		"_postman_id": "3fa4e0b7-abf3-4345-b4bf-8be1fb0abdf9",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -6574,6 +6574,86 @@
 								"type": "text/javascript",
 								"exec": [
 									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "configuration",
+			"item": [
+				{
+					"name": "404",
+					"item": [
+						{
+							"name": "GET /configuration/identities/:identityProviderId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/identities/:identityProviderId",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"configuration",
+										"identities",
+										":identityProviderId"
+									],
+									"variable": [
+										{
+											"key": "identityProviderId",
+											"value": "IDENTITY_PROVIDER"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a6408e93-9abc-45f6-88f0-9da50fd5c210",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b7c0a6b0-4312-4529-ae54-3c79b976014a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"pm.test(\"Identity provider not found\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.errors[0].message).to.eql(\"Identity provider [IDENTITY_PROVIDER] can not be found.\");",
+									"});"
 								]
 							}
 						}
