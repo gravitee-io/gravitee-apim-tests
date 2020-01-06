@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f95f81e8-90e4-46a2-b987-308deb42bb35",
+		"_postman_id": "6a2f2926-8d77-4036-aee8-b762667ea9f5",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -105,6 +105,45 @@
 												"DEFAULT",
 												"apis",
 												":apiId"
+											],
+											"variable": [
+												{
+													"key": "apiId",
+													"value": "API"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /apis/:apiId/links",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/links",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"DEFAULT",
+												"apis",
+												":apiId",
+												"links"
 											],
 											"variable": [
 												{
@@ -1735,6 +1774,77 @@
 							"response": []
 						},
 						{
+							"name": "GET /configuration/identities/:identityProviderId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/identities/:identityProviderId",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"configuration",
+										"identities",
+										":identityProviderId"
+									],
+									"variable": [
+										{
+											"key": "identityProviderId",
+											"value": "IDENTITY_PROVIDER"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /configuration/links",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/links",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"configuration",
+										"links"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "GET /info",
 							"event": [
 								{
@@ -2846,6 +2956,45 @@
 										"DEFAULT",
 										"apis",
 										":apiId"
+									],
+									"variable": [
+										{
+											"key": "apiId",
+											"value": "API"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /apis/:apiId/links",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/links",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"apis",
+										":apiId",
+										"links"
 									],
 									"variable": [
 										{
@@ -4419,6 +4568,77 @@
 										"portal",
 										"DEFAULT",
 										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /configuration/identities/:identityProviderId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/identities/:identityProviderId",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"configuration",
+										"identities",
+										":identityProviderId"
+									],
+									"variable": [
+										{
+											"key": "identityProviderId",
+											"value": "IDENTITY_PROVIDER"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /configuration/link",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/links",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"DEFAULT",
+										"configuration",
+										"links"
 									]
 								}
 							},
