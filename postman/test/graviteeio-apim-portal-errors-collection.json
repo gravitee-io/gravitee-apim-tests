@@ -7380,45 +7380,6 @@
 							"name": "Input must not be null.",
 							"item": [
 								{
-									"name": "GET /subscriptions",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "a5578519-0b09-46b6-8510-a6ddc8d18ab2",
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
-													"",
-													"pm.test(\"At least an api or an application must be provided.\", function () {",
-													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].message).to.eql(\"At least an api or an application must be provided.\");",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
-											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}"
-											],
-											"path": [
-												"portal",
-												"DEFAULT",
-												"subscriptions"
-											]
-										},
-										"description": "At least an api or an application must be provided."
-									},
-									"response": []
-								},
-								{
 									"name": "POST /subscriptions",
 									"event": [
 										{
