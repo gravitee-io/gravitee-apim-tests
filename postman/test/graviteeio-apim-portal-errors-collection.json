@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3fa4e0b7-abf3-4345-b4bf-8be1fb0abdf9",
+		"_postman_id": "bcd17e16-2239-4c9d-a731-5855770a50f0",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -8747,44 +8747,6 @@
 						{
 							"name": "You do not have sufficient rights to access this resource",
 							"item": [
-								{
-									"name": "GET /subscriptions - 1",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "a5578519-0b09-46b6-8510-a6ddc8d18ab2",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions?apiId={{created_api_for_sub_id}}",
-											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}"
-											],
-											"path": [
-												"portal",
-												"DEFAULT",
-												"subscriptions"
-											],
-											"query": [
-												{
-													"key": "apiId",
-													"value": "{{created_api_for_sub_id}}"
-												}
-											]
-										},
-										"description": "With an API id but without API_SUBSCRIPTION[READ]"
-									},
-									"response": []
-								},
 								{
 									"name": "GET /subscriptions - 2",
 									"event": [
