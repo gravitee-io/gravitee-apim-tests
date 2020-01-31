@@ -10679,7 +10679,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\n}",
+									"raw": "{\n\t\"id\": \"\",\n\t\"avatar\": \"\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
