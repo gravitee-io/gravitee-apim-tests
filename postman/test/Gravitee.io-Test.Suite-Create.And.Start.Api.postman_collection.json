@@ -43,7 +43,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 						"method": "POST",
 						"header": [
 							{
@@ -83,7 +83,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -127,7 +127,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -166,7 +166,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/plans",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans",
 						"method": "POST",
 						"header": [
 							{
@@ -204,7 +204,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/state",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/state",
 						"method": "GET",
 						"header": [
 							{
@@ -244,7 +244,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/deploy",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/deploy",
 						"method": "POST",
 						"header": [
 							{
@@ -283,7 +283,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/state",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/state",
 						"method": "GET",
 						"header": [
 							{
@@ -320,7 +320,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}?action=START",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}?action=START",
 						"method": "POST",
 						"header": [
 							{
@@ -351,7 +351,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/ratings",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/ratings",
 						"method": "POST",
 						"header": [
 							{
@@ -383,7 +383,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/ratings",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/ratings",
 						"method": "POST",
 						"header": [
 							{
@@ -404,7 +404,7 @@
 				{
 					"name": "Add homepage",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -425,7 +425,7 @@
 				{
 					"name": "Add technical doc",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/{{API_ID}}/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -463,7 +463,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/views",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
 						"method": "POST",
 						"header": [
 							{

@@ -21,7 +21,7 @@
 				}
 			],
 			"request": {
-				"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/user/login",
+				"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/user/login",
 				"method": "POST",
 				"header": [
 					{
@@ -54,7 +54,7 @@
 				}
 			],
 			"request": {
-				"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+				"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 				"method": "POST",
 				"header": [
 					{

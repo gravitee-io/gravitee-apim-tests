@@ -37,12 +37,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -87,12 +90,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis"
 											]
@@ -142,12 +148,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -225,12 +234,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -264,12 +276,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/_search",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/_search",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												"_search"
@@ -348,12 +363,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -410,12 +428,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -472,12 +493,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/ratings/:ratingId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings/:ratingId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -504,12 +528,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -604,12 +631,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -654,12 +684,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis"
 											]
@@ -709,12 +742,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -810,12 +846,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -868,12 +907,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -946,12 +988,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -995,12 +1040,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis"
 											]
@@ -1050,12 +1098,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -1117,12 +1168,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -1155,12 +1209,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/metrics",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/metrics",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1194,12 +1251,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1233,12 +1293,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1277,12 +1340,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId/content",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages/:pageId/content",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1322,12 +1388,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/picture",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/picture",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1361,12 +1430,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/plans",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1400,12 +1472,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1455,12 +1530,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1494,12 +1572,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/subscribers",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscribers",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1578,12 +1659,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1632,12 +1716,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId/content",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages/:pageId/content",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1712,12 +1799,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -1750,12 +1840,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1789,12 +1882,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/pages/:pageId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1833,12 +1929,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/picture",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/picture",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1872,12 +1971,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/plans",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1911,12 +2013,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -1988,12 +2093,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -2088,12 +2196,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -2138,12 +2249,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis"
 											]
@@ -2193,12 +2307,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -2279,12 +2396,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/apis/:apiId/ratings",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/ratings",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -2337,12 +2457,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -2456,12 +2579,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -2491,12 +2617,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -2539,12 +2668,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/notificationsettings",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/notificationsettings",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"notificationsettings"
@@ -2607,12 +2739,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -2654,12 +2789,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -2708,12 +2846,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -2763,12 +2904,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -2818,12 +2962,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -2862,12 +3009,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -2901,12 +3051,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/_transfer_ownership",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/_transfer_ownership",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -2941,12 +3094,15 @@
 										"method": "PUT",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3036,12 +3192,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -3109,12 +3268,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/_renew_secret",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/_renew_secret",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3186,12 +3348,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export?from=-1",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/_export?from=-1",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3235,12 +3400,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export?to=-1",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/_export?to=-1",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3284,12 +3452,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export?from=0&to=0",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/_export?from=0&to=0",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3337,12 +3508,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export?from=0&to=1&order=ORDER",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/_export?from=0&to=1&order=ORDER",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3425,12 +3599,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3467,12 +3644,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=-1",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=-1",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3519,12 +3699,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&to=-1",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&to=-1",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3571,12 +3754,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=0",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=0",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3627,12 +3813,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=-1",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=-1",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3687,12 +3876,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=100",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=100",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3751,12 +3943,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=1000",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=1000",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -3827,12 +4022,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/notificationsettings/:notificationId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/notificationsettings/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"notificationsettings",
@@ -3854,12 +4052,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -3967,12 +4168,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -4002,12 +4206,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/PORTAL/roles",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -4040,12 +4247,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/MANAGEMENT/roles",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -4090,12 +4300,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/user",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/user",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"user"
 											]
@@ -4125,12 +4338,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/PORTAL/roles/DUMMY/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles/DUMMY/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -4165,12 +4381,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/DUMMY/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/DUMMY/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -4218,12 +4437,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -4237,12 +4459,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -4256,12 +4481,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -4282,12 +4510,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -4308,12 +4539,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/picture",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/picture",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4335,12 +4569,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4390,12 +4627,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4445,12 +4685,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4500,12 +4743,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4555,12 +4801,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4615,12 +4864,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4647,12 +4899,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4674,12 +4929,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4706,12 +4964,15 @@
 										"method": "PUT",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4738,12 +4999,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4770,12 +5034,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4797,12 +5064,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/_transfer_ownership",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/_transfer_ownership",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4825,12 +5095,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4852,12 +5125,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4879,12 +5155,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/:logId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/:logId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4911,12 +5190,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/_export",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -4939,12 +5221,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/_renew_secret",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/_renew_secret",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5033,12 +5318,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/PORTAL/roles/USER/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles/USER/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -5073,12 +5361,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/USER/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/USER/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -5097,12 +5388,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/PORTAL/roles/DUMMY",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles/DUMMY",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -5120,12 +5414,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/DUMMY",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/DUMMY",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -5143,12 +5440,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -5235,12 +5535,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -5295,12 +5598,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -5349,12 +5655,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -5387,12 +5696,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -5425,12 +5737,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/picture",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/picture",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5464,12 +5779,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5519,12 +5837,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5574,12 +5895,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5613,12 +5937,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5668,12 +5995,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5723,12 +6053,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/_transfer_ownership",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/_transfer_ownership",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5763,12 +6096,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/analytics",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/analytics",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5802,12 +6138,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5841,12 +6180,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/_export",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/_export",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5881,12 +6223,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/_renew_secret",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/_renew_secret",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -5971,12 +6316,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -6015,12 +6363,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/notifications/:notificationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/notifications/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -6094,12 +6445,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -6154,12 +6508,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -6198,12 +6555,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/members/:memberId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/members/:memberId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -6277,12 +6637,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/applications/:applicationId/logs/:logId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId/logs/:logId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId",
@@ -6344,12 +6707,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -6462,12 +6828,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/oauth2/:identity",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/auth/oauth2/:identity",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"auth",
 												"oauth2",
@@ -6501,12 +6870,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/auth/oauth2/:identity/_exchange",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/auth/oauth2/:identity/_exchange",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"auth",
 												"oauth2",
@@ -6608,12 +6980,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/configuration/identities/:identityProviderId",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/configuration/identities/:identityProviderId",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
 										"portal",
+										"organizations",
+										"DEFAULT",
+										"environments",
 										"DEFAULT",
 										"configuration",
 										"identities",
@@ -6734,12 +7109,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal",
 												"pages"
@@ -6780,12 +7158,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"pages",
 												":pageId"
@@ -6825,12 +7206,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId/content",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/pages/:pageId/content",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"pages",
 												":pageId",
@@ -6903,12 +7287,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/groups",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/groups",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"groups"
@@ -6954,12 +7341,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages/:pageId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal",
 												"pages",
@@ -7009,12 +7399,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/search/users/?q=application1",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/search/users/?q=application1",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"search",
 												"users",
@@ -7052,12 +7445,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/groups/:groupId/members",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/groups/:groupId/members",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"groups",
@@ -7143,12 +7539,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"pages",
 												":pageId"
@@ -7203,12 +7602,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId/content",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/pages/:pageId/content",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"pages",
 												":pageId",
@@ -7274,12 +7676,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/configuration/groups/:groupId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/groups/:groupId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"groups",
@@ -7316,12 +7721,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages/:pageId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal",
 												"pages",
@@ -7369,12 +7777,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/pages/:pageId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/pages/:pageId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"pages",
 												":pageId"
@@ -7484,12 +7895,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions"
 											]
@@ -7566,12 +7980,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis"
 													]
@@ -7621,12 +8038,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId"
@@ -7676,12 +8096,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -7731,12 +8154,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_publish",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_publish",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -7793,12 +8219,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"applications"
 													]
@@ -7832,12 +8261,15 @@
 													}
 												],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_plan_for_sub_id}}",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_plan_for_sub_id}}",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -7882,12 +8314,15 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/keys",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/keys",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -7944,12 +8379,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -7999,12 +8437,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_publish",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_publish",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -8052,12 +8493,15 @@
 													}
 												],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_sec_plan_for_sub_id}}",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_sec_plan_for_sub_id}}",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -8113,12 +8557,15 @@
 												"method": "POST",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
 													"host": [
 														"{{GRAVITEEIO_PORTAL_URL}}"
 													],
 													"path": [
 														"portal",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"subscriptions",
 														":subscriptionId",
@@ -8153,12 +8600,15 @@
 												"method": "POST",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -8192,12 +8642,15 @@
 												"method": "POST",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -8231,12 +8684,15 @@
 												"method": "DELETE",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"applications",
 														":applicationId"
@@ -8257,12 +8713,15 @@
 												"method": "POST",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_close",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_close",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -8290,12 +8749,15 @@
 												"method": "POST",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_close",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_close",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId",
@@ -8323,12 +8785,15 @@
 												"method": "DELETE",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"apis",
 														":apiId"
@@ -8397,12 +8862,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis"
 											]
@@ -8452,12 +8920,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -8507,12 +8978,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -8562,12 +9036,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_publish",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_publish",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -8624,12 +9101,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -8663,12 +9143,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_plan_for_sub_id}}",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_plan_for_sub_id}}",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -8713,12 +9196,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/keys",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/keys",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -8765,12 +9251,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions?applicationId={{created_application_for_sub_id}}",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions?applicationId={{created_application_for_sub_id}}",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions"
 											],
@@ -8803,12 +9292,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions?applicationId={{created_application_for_sub_id}}&apiId={{created_api_for_sub_id}}",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions?applicationId={{created_application_for_sub_id}}&apiId={{created_api_for_sub_id}}",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions"
 											],
@@ -8861,12 +9353,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions"
 											]
@@ -8893,12 +9388,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId"
@@ -8932,12 +9430,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/_close",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/_close",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -8972,12 +9473,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/_renew",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/keys/_renew",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -9013,12 +9517,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -9098,12 +9605,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9137,12 +9647,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -9163,12 +9676,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_close",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_close",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9196,12 +9712,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -9266,12 +9785,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis"
 											]
@@ -9321,12 +9843,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -9376,12 +9901,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9431,12 +9959,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_publish",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_publish",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9493,12 +10024,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications"
 											]
@@ -9532,12 +10066,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_plan_for_sub_id}}",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions?application={{created_application_for_sub_id}}&plan={{created_plan_for_sub_id}}",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9588,12 +10125,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId"
@@ -9626,12 +10166,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/_close",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/_close",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -9665,12 +10208,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/_renew",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/keys/_renew",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -9705,12 +10251,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -9785,12 +10334,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId/keys/:keyId/_revoke",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"subscriptions",
 												":subscriptionId",
@@ -9853,12 +10405,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/subscriptions/:subscriptionId/status?status=CLOSED",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9892,12 +10447,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/applications/:applicationId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/applications/:applicationId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"applications",
 												":applicationId"
@@ -9918,12 +10476,15 @@
 										"method": "POST",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId/plans/:planId/_close",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId/plans/:planId/_close",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId",
@@ -9951,12 +10512,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/apis/:apiId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/:apiId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"apis",
 												":apiId"
@@ -10016,12 +10580,15 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/tickets",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/tickets",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
 										"portal",
+										"organizations",
+										"DEFAULT",
+										"environments",
 										"DEFAULT",
 										"tickets"
 									]
@@ -10128,12 +10695,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/users",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/users",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"users"
 													]
@@ -10162,7 +10732,7 @@
 															"",
 															"pm.test(\"Invalid email.\", function () {",
 															"    var jsonData = pm.response.json();",
-															"    pm.expect(jsonData.errors[0].message).to.eql(\"A user [postman-test@example.com] already exists for environment DEFAULT.\");",
+															"    pm.expect(jsonData.errors[0].message).to.eql(\"A user [postman-test@example.com] already exists for ORGANIZATION DEFAULT.\");",
 															"});"
 														],
 														"type": "text/javascript"
@@ -10189,12 +10759,15 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration",
 													"host": [
 														"{{GRAVITEEIO_PORTAL_URL}}"
 													],
 													"path": [
 														"portal",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"users",
 														"registration"
@@ -10216,12 +10789,15 @@
 												"method": "DELETE",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/users/:userId",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/users/:userId",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
 														"DEFAULT",
 														"users",
 														":userId"
@@ -10309,12 +10885,15 @@
 										"method": "PUT",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/user",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"user"
 											]
@@ -10363,12 +10942,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"users",
 												"registration"
@@ -10418,12 +11000,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"users",
 												"registration"
@@ -10473,12 +11058,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"users",
 												"registration"
@@ -10528,12 +11116,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration/_finalize",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration/_finalize",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"users",
 												"registration",
@@ -10605,12 +11196,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration/_finalize",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration/_finalize",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"users",
 												"registration",
@@ -10687,12 +11281,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/user",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
 										"portal",
+										"organizations",
+										"DEFAULT",
+										"environments",
 										"DEFAULT",
 										"user"
 									]
@@ -10746,12 +11343,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
 									"path": [
 										"portal",
+										"organizations",
+										"DEFAULT",
+										"environments",
 										"DEFAULT",
 										"users"
 									]
@@ -10791,12 +11391,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -10852,12 +11455,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/users/registration",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/users/registration",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"users",
 												"registration"
@@ -10895,12 +11501,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"portal"
 											]
@@ -10984,12 +11593,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/user/notifications/:notificationId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/user/notifications/:notificationId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"user",
 												"notifications",
@@ -11115,12 +11727,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views/:viewId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/views/:viewId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"views",
 												":viewId"
@@ -11153,12 +11768,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/DEFAULT/views/:viewId/picture",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/views/:viewId/picture",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
 											"path": [
 												"portal",
+												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"views",
 												":viewId",
