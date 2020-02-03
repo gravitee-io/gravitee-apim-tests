@@ -22,7 +22,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/user",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/user",
 						"method": "PUT",
 						"header": [
 							{

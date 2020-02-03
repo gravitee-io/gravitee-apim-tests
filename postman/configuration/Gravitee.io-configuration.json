@@ -26,7 +26,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 						"method": "GET",
 						"header": [
 							{
@@ -53,7 +53,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 						"method": "POST",
 						"header": [
 							{
@@ -74,7 +74,7 @@
 				{
 					"name": "Add homepage",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -95,7 +95,7 @@
 				{
 					"name": "Add best practice page",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -134,7 +134,7 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -155,7 +155,7 @@
 				{
 					"name": "Add how it works",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -176,7 +176,7 @@
 				{
 					"name": "Add swagger example",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/DEFAULT/portal/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
