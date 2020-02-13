@@ -417,9 +417,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/auth/login",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/auth/login",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT"
 							],
 							"path": [
 								"auth",
@@ -475,9 +475,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/apis?size=-1",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis?size=-1",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT"
 							],
 							"path": [
 								"apis"
@@ -640,9 +640,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/applications?size=-1",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/applications?size=-1",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT"
 							],
 							"path": [
 								"applications"
@@ -696,9 +696,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/subscriptions",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT"
 							],
 							"path": [
 								"subscriptions"
@@ -727,9 +727,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/subscriptions/:subscriptionId",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/subscriptions/:subscriptionId",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT"
 							],
 							"path": [
 								"subscriptions",
@@ -769,9 +769,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT/auth/logout",
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/auth/logout",
 							"host": [
-								"{{GRAVITEEIO_PORTAL_URL}}/portal/organizations/DEFAULT/environments/DEFAULT"
+								"{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT"
 							],
 							"path": [
 								"auth",
