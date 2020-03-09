@@ -3980,48 +3980,7 @@
 									"response": []
 								},
 								{
-									"name": "Create DUMMY Portal Role",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"scope\":\"PORTAL\",\n\t\"permissions\":{\n\t\t\"API_HEADER\":[],\n\t\t\"APPLICATION\":[],\n\t\t\"CLIENT_REGISTRATION_PROVIDER\":[],\n\t\t\"DOCUMENTATION\":[],\n\t\t\"IDENTITY_PROVIDER\":[],\n\t\t\"METADATA\":[],\n\t\t\"SETTINGS\":[],\n\t\t\"TOP_APIS\":[],\n\t\t\"VIEW\":[]\n\t\t\n\t},\n\t\"name\":\"DUMMY\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"PORTAL",
-												"roles"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Create DUMMY Management Role",
+									"name": "Create DUMMY Environment Role",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -4034,7 +3993,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"scope\":\"MANAGEMENT\",\n\t\"permissions\":{\n\t\t\"ALERT\":[],\n\t\t\"API\":[],\n\t\t\"APPLICATION\":[],\n\t\t\"AUDIT\":[],\n\t\t\"DICTIONARY\":[],\n\t\t\"ENTRYPOINT\":[],\n\t\t\"GROUP\":[],\n\t\t\"INSTANCE\":[],\n\t\t\"MESSAGE\":[],\n\t\t\"NOTIFICATION\":[],\n\t\t\"PLATFORM\":[],\n\t\t\"ROLE\":[],\n\t\t\"SETTINGS\":[],\n\t\t\"TAG\":[],\n\t\t\"TENANT\":[],\n\t\t\"USER\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
+											"raw": "{\n\t\"scope\":\"ENVIRONMENT\",\n\t\"permissions\":{\n\t\t\"ALERT\":[],\n\t\t\"API\":[],\n\t\t\"APPLICATION\":[],\n\t\t\"AUDIT\":[],\n\t\t\"DICTIONARY\":[],\n\t\t\"ENTRYPOINT\":[],\n\t\t\"GROUP\":[],\n\t\t\"INSTANCE\":[],\n\t\t\"MESSAGE\":[],\n\t\t\"NOTIFICATION\":[],\n\t\t\"PLATFORM\":[],\n\t\t\"SETTINGS\":[],\n\t\t\"TAG\":[],\n\t\t\"TENANT\":[],\n\t\t\"DASHBOARD\":[],\n\t\t\"QUALITY_RULE\":[],\n\t\t\"METADATA\":[],\n\t\t\"DOCUMENTATION\":[],\n\t\t\"VIEW\":[],\n\t\t\"TOP_APIS\":[],\n\t\t\"API_HEADER\":[],\n\t\t\"IDENTITY_PROVIDER\":[],\n\t\t\"CLIENT_REGISTRATION_PROVIDER\":[],\n\t\t\"THEME\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4042,7 +4001,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4054,7 +4013,48 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"MANAGEMENT",
+												"ENVIRONMENT",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create DUMMY Organization Role",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"scope\":\"ORGANIZATION\",\n\t\"permissions\":{\n\t\t\"USER\":[],\n\t\t\"ENVIRONMENT\":[],\n\t\t\"ROLE\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles",
+											"host": [
+												"{{GRAVITEEIO_MGMT_URL}}"
+											],
+											"path": [
+												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
+												"DEFAULT",
+												"configuration",
+												"rolescopes",
+												"ORGANIZATION",
 												"roles"
 											]
 										}
@@ -4112,15 +4112,15 @@
 									"response": []
 								},
 								{
-									"name": "Add DUMMY Portal Role to user",
+									"name": "Delete USER Organization Role from user",
 									"request": {
-										"method": "POST",
+										"method": "DELETE",
 										"header": [
 											{
 												"key": "Content-Type",
 												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
+												"type": "text",
+												"value": "application/json"
 											}
 										],
 										"body": {
@@ -4133,7 +4133,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles/DUMMY/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/USER/users/:userId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4145,17 +4145,74 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"PORTAL",
+												"ORGANIZATION",
 												"roles",
-												"DUMMY",
-												"users"
+												"USER",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{current_user_id}}"
+												}
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "Add DUMMY Management Role to user",
+									"name": "Delete USER Environment Role from user",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER/users/:userId",
+											"host": [
+												"{{GRAVITEEIO_MGMT_URL}}"
+											],
+											"path": [
+												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
+												"DEFAULT",
+												"configuration",
+												"rolescopes",
+												"ENVIRONMENT",
+												"roles",
+												"USER",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{current_user_id}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add DUMMY Organization Role to user",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -4176,7 +4233,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/DUMMY/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/DUMMY/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4188,7 +4245,50 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"MANAGEMENT",
+												"ORGANIZATION",
+												"roles",
+												"DUMMY",
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add DUMMY Environment Role to user",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/DUMMY/users",
+											"host": [
+												"{{GRAVITEEIO_MGMT_URL}}"
+											],
+											"path": [
+												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
+												"DEFAULT",
+												"configuration",
+												"rolescopes",
+												"ENVIRONMENT",
 												"roles",
 												"DUMMY",
 												"users"
@@ -4814,15 +4914,15 @@
 							"name": "-- Clean up --",
 							"item": [
 								{
-									"name": "Add PORTAL[USER] Role to user",
+									"name": "Delete DUMMY Organization Role from user",
 									"request": {
-										"method": "POST",
+										"method": "DELETE",
 										"header": [
 											{
 												"key": "Content-Type",
 												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
+												"type": "text",
+												"value": "application/json"
 											}
 										],
 										"body": {
@@ -4835,7 +4935,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles/USER/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/DUMMY/users/:userId",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4847,17 +4947,74 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"PORTAL",
+												"ORGANIZATION",
 												"roles",
-												"USER",
-												"users"
+												"DUMMY",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{current_user_id}}"
+												}
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "Add MANAGEMENT[USER] Role to user Copy",
+									"name": "Delete DUMMY Environment Role from user",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/DUMMY/users/:userId",
+											"host": [
+												"{{GRAVITEEIO_MGMT_URL}}"
+											],
+											"path": [
+												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
+												"DEFAULT",
+												"configuration",
+												"rolescopes",
+												"ENVIRONMENT",
+												"roles",
+												"DUMMY",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "{{current_user_id}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add USER Organization Role to user",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -4878,7 +5035,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/USER/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/USER/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4890,7 +5047,7 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"MANAGEMENT",
+												"ORGANIZATION",
 												"roles",
 												"USER",
 												"users"
@@ -4900,12 +5057,28 @@
 									"response": []
 								},
 								{
-									"name": "Delete DUMMY Portal role",
+									"name": "Add USER Environment Role to user",
 									"request": {
-										"method": "DELETE",
-										"header": [],
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/PORTAL/roles/DUMMY",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER/users",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4917,7 +5090,34 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"PORTAL",
+												"ENVIRONMENT",
+												"roles",
+												"USER",
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete DUMMY Environment role",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/DUMMY",
+											"host": [
+												"{{GRAVITEEIO_MGMT_URL}}"
+											],
+											"path": [
+												"management",
+												"organizations",
+												"DEFAULT",
+												"environments",
+												"DEFAULT",
+												"configuration",
+												"rolescopes",
+												"ENVIRONMENT",
 												"roles",
 												"DUMMY"
 											]
@@ -4926,12 +5126,12 @@
 									"response": []
 								},
 								{
-									"name": "Delete DUMMY Management role",
+									"name": "Delete DUMMY Organization role",
 									"request": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/MANAGEMENT/roles/DUMMY",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/DUMMY",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
@@ -4943,7 +5143,7 @@
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
-												"MANAGEMENT",
+												"ORGANIZATION",
 												"roles",
 												"DUMMY"
 											]
