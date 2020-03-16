@@ -9,7 +9,7 @@
     },
     {
       "key": "GRAVITEEIO_PORTAL_URL",
-      "value": "http://localhost:8084",
+      "value": "http://localhost:8083",
       "enabled": true
     },
     {
