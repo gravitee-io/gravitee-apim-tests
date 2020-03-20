@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6a2f2926-8d77-4036-aee8-b762667ea9f5",
+		"_postman_id": "a7140766-8115-476d-925e-2d6678afd303",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -2505,6 +2505,55 @@
 												"users",
 												"registration",
 												"_finalize"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /users/_reset_password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"users",
+												"_reset_password"
 											]
 										}
 									},
@@ -5308,6 +5357,55 @@
 										"users",
 										"registration",
 										"_finalize"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /users/_reset_password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"users",
+										"_reset_password"
 									]
 								}
 							},

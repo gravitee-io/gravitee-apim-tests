@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bcd17e16-2239-4c9d-a731-5855770a50f0",
+		"_postman_id": "477121eb-6d1e-48e7-be3a-ae0f70f5b677",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -8372,7 +8372,7 @@
 														"{{GRAVITEEIO_PORTAL_URL}}"
 													],
 													"path": [
-										        "portal",
+														"portal",
 														"environments",
 														"DEFAULT",
 														"subscriptions",
@@ -10546,7 +10546,7 @@
 														"{{GRAVITEEIO_PORTAL_URL}}"
 													],
 													"path": [
-										        "portal",
+														"portal",
 														"environments",
 														"DEFAULT",
 														"users",
@@ -10981,6 +10981,127 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "POST /users/_reset_password - input must not be null",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Input must not be null.\", function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"Input must not be null.\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"users",
+												"_reset_password"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Not active",
+							"item": [
+								{
+									"name": "POST /users/_reset_password - user is not active",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"User is not active.\", function () {",
+													"    var jsonData = pm.response.json();",
+													"    ",
+													"    var userId = pm.environment.get(\"created_user_id\");",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"The user with id deleted-postman-test@example.com is not active.\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"username\": \"deleted-postman-test@example.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"users",
+												"_reset_password"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"protocolProfileBehavior": {},
@@ -11122,6 +11243,180 @@
 								}
 							},
 							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "404",
+					"item": [
+						{
+							"name": "Notification not found",
+							"item": [
+								{
+									"name": "DELETE /user/notifications/:notificationId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/user/notifications/:notificationId",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"user",
+												"notifications",
+												":notificationId"
+											],
+											"variable": [
+												{
+													"key": "notificationId",
+													"value": "NOTIFICATION"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "dfad55b0-ab87-4f96-b66b-89a220d9269c",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "5f6dbbc8-d021-4d5d-af6d-a95354ceb7f7",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											"pm.test(\"Notification not found\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Portal notification [NOTIFICATION] can not be found.\");",
+											"});"
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "048d1340-680c-48e7-af14-7c4e3b47de94",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d518405-f909-4133-9c61-a35390249559",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "500",
+					"item": [
+						{
+							"name": "User not found for password reset",
+							"item": [
+								{
+									"name": "POST /users/_reset_password - user not found",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													"pm.test(\"Status code is 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Input must not be null.\", function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"No user found with this sourceId : test@example.com\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"username\": \"test@example.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"users",
+												"_reset_password"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -11321,110 +11616,6 @@
 							"listen": "test",
 							"script": {
 								"id": "85d9b6b7-ab1a-4cdf-a27b-07223864b84f",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "404",
-					"item": [
-						{
-							"name": "Notification not found",
-							"item": [
-								{
-									"name": "DELETE /user/notifications/:notificationId",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/user/notifications/:notificationId",
-											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}"
-											],
-											"path": [
-												"portal",
-												"environments",
-												"DEFAULT",
-												"user",
-												"notifications",
-												":notificationId"
-											],
-											"variable": [
-												{
-													"key": "notificationId",
-													"value": "NOTIFICATION"
-												}
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "dfad55b0-ab87-4f96-b66b-89a220d9269c",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "5f6dbbc8-d021-4d5d-af6d-a95354ceb7f7",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 404\", function () {",
-											"    pm.response.to.have.status(404);",
-											"});",
-											"pm.test(\"Notification not found\", function () {",
-											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].message).to.eql(\"Portal notification [NOTIFICATION] can not be found.\");",
-											"});"
-										]
-									}
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						}
-					],
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "048d1340-680c-48e7-af14-7c4e3b47de94",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "2d518405-f909-4133-9c61-a35390249559",
 								"type": "text/javascript",
 								"exec": [
 									""
