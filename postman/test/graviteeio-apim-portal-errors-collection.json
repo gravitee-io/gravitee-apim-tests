@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "477121eb-6d1e-48e7-be3a-ae0f70f5b677",
+		"_postman_id": "74f7d95a-ced8-4213-aa8f-a78b068956b5",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -3792,7 +3792,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=100",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=100&",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
@@ -11106,6 +11106,69 @@
 							],
 							"protocolProfileBehavior": {},
 							"_postman_isSubFolder": true
+						},
+						{
+							"name": "User not found for password reset",
+							"item": [
+								{
+									"name": "POST /users/_reset_password - user not found",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Input must not be null.\", function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.errors[0].message).to.eql(\"User [test@example.com] can not be found.\");",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"username\": \"test@example.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"users",
+												"_reset_password"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -11347,76 +11410,6 @@
 									""
 								]
 							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "500",
-					"item": [
-						{
-							"name": "User not found for password reset",
-							"item": [
-								{
-									"name": "POST /users/_reset_password - user not found",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
-												"exec": [
-													"pm.test(\"Status code is 500\", function () {",
-													"    pm.response.to.have.status(500);",
-													"});",
-													"",
-													"pm.test(\"Input must not be null.\", function () {",
-													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.errors[0].message).to.eql(\"No user found with this sourceId : test@example.com\");",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"username\": \"test@example.com\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_reset_password",
-											"host": [
-												"{{GRAVITEEIO_PORTAL_URL}}"
-											],
-											"path": [
-												"portal",
-												"environments",
-												"DEFAULT",
-												"users",
-												"_reset_password"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
 						}
 					],
 					"protocolProfileBehavior": {},
