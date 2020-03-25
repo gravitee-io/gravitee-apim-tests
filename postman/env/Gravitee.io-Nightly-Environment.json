@@ -4,12 +4,12 @@
   "values": [
     {
       "key": "GRAVITEEIO_MGMT_URL",
-      "value": "https://nightly.gravitee.io",
+      "value": "https://nightly.gravitee.io/api",
       "enabled": true
     },
     {
       "key": "GRAVITEEIO_PORTAL_URL",
-      "value": "https://v3.nightly.gravitee.io",
+      "value": "https://nightly.gravitee.io/api",
       "enabled": true
     },
     {
