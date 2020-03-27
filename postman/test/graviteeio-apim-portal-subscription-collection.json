@@ -533,8 +533,8 @@
 							"script": {
 								"id": "9438be91-e5cd-4574-aa6e-24e70b080edd",
 								"exec": [
-									"pm.test(\"Etag is present and with correct value\", function () {",
-									"    pm.response.to.have.header(\"ETag\", \"\\\"1870698676\\\"\");",
+									"pm.test(\"Etag is not present since an API does not have a default image anymore\", function () {",
+									"    pm.response.to.not.have.header(\"ETag\");",
 									"});"
 								],
 								"type": "text/javascript"
