@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a7140766-8115-476d-925e-2d6678afd303",
+		"_postman_id": "f98ddee4-0327-4ceb-bc41-bfc77ec57b2a",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -1652,6 +1652,74 @@
 							"response": []
 						},
 						{
+							"name": "GET /configuration/applications/roles",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/configuration/applications/roles",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"configuration",
+										"applications",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /configuration/applications/types",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/configuration/applications/types",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"configuration",
+										"applications",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "GET /configuration/identities",
 							"event": [
 								{
@@ -1810,6 +1878,110 @@
 								"exec": [
 									"pm.test(\"Status code is not 401\", function () {",
 									"    pm.response.to.not.have.status(401);",
+									"});"
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "groups",
+					"item": [
+						{
+							"name": "GET /groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/groups",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /groups/:groupId/members",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/groups/:groupId/members",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"groups",
+										":groupId",
+										"members"
+									],
+									"variable": [
+										{
+											"key": "groupId",
+											"value": "GROUP_ID"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "All anonymous requests to /groups/... should return 401",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "71d4dfee-80d6-4df2-b23b-543e6ab5dee9",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa618fce-577b-4543-a294-6197d08baad1",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
 									"});"
 								]
 							}
@@ -2461,7 +2633,40 @@
 							"name": "401",
 							"item": [
 								{
-									"name": "GET /users",
+									"name": "POST /users/_search",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_search",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"users",
+												"_search"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /users/:userId/avatar",
 									"event": [
 										{
 											"listen": "test",
@@ -2478,7 +2683,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/:userId/avatar",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
@@ -2486,7 +2691,15 @@
 												"portal",
 												"environments",
 												"DEFAULT",
-												"users"
+												"users",
+												":userId",
+												"avatar"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "USER_ID"
+												}
 											]
 										}
 									},
@@ -4406,6 +4619,74 @@
 							"response": []
 						},
 						{
+							"name": "GET /configuration/applications/roles",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/configuration/applications/roles",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"configuration",
+										"applications",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /configuration/applications/types",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/configuration/applications/types",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"configuration",
+										"applications",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "GET /configuration/identities",
 							"event": [
 								{
@@ -4559,6 +4840,107 @@
 							"listen": "test",
 							"script": {
 								"id": "0edcab96-14e9-4ace-afee-695af68016ca",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "groups",
+					"item": [
+						{
+							"name": "GET /groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/groups",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /groups/:groupId/members",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/groups/:groupId/members",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"groups",
+										":groupId",
+										"members"
+									],
+									"variable": [
+										{
+											"key": "groupId",
+											"value": "GROUP_ID"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "71d4dfee-80d6-4df2-b23b-543e6ab5dee9",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa618fce-577b-4543-a294-6197d08baad1",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4972,7 +5354,40 @@
 					"name": "users & user",
 					"item": [
 						{
-							"name": "GET /users",
+							"name": "POST /users/_search",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/_search",
+									"host": [
+										"{{GRAVITEEIO_PORTAL_URL}}"
+									],
+									"path": [
+										"portal",
+										"environments",
+										"DEFAULT",
+										"users",
+										"_search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /users/:userId/avatar",
 							"event": [
 								{
 									"listen": "test",
@@ -4989,7 +5404,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/users/:userId/avatar",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -4997,7 +5412,15 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"users"
+										"users",
+										":userId",
+										"avatar"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "USER_ID"
+										}
 									]
 								}
 							},
