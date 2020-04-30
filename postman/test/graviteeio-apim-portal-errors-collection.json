@@ -3675,7 +3675,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/applications/:applicationId/analytics?type=GROUP_BY&from=0&to=1&interval=100&",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/applications/:applicationId/analytics?type=DATE_HISTO&from=0&to=1&interval=100&",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
@@ -3690,7 +3690,7 @@
 											"query": [
 												{
 													"key": "type",
-													"value": "GROUP_BY"
+													"value": "DATE_HISTO"
 												},
 												{
 													"key": "from",
