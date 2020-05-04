@@ -8,6 +8,48 @@
 	},
 	"item": [
 		{
+			"name": "create.view",
+			"description": "",
+			"item": [
+				{
+					"name": "Create a view",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "create.api",
 			"description": "",
 			"item": [
@@ -64,48 +106,6 @@
 						"description": ""
 					},
 					"response": []
-				},
-				{
-					"name": "create.view",
-					"description": "",
-					"item": [
-						{
-							"name": "Create a view",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"type": "text/javascript",
-										"exec": [
-											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
-									}
-								}
-							],
-							"request": {
-								"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Authorization",
-										"value": "{{AUTHORIZATION_ADMIN}}",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}"
-								},
-								"description": ""
-							},
-							"response": []
-						}
-					]
 				},
 				{
 					"name": "Get API view id",
