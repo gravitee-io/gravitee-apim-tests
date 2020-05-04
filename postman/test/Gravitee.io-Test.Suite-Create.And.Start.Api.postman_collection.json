@@ -66,6 +66,89 @@
 					"response": []
 				},
 				{
+					"name": "create.view",
+					"description": "",
+					"item": [
+						{
+							"name": "Create a view",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "{{AUTHORIZATION_ADMIN}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get API view id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"postman.setEnvironmentVariable(\"id\", jsonData[Math.floor(Math.random() * 10)].id);",
+									"postman.setEnvironmentVariable(\"100-apis\", jsonData.find(v => '100+ apis' === v.name).id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"version\":\"{{RANDOM_NUMBER}}\",\n\t\"description\":\"The API {{RANDOM_NUMBER}}\",\n\t\"proxy\":{\n\t\t\"context_path\":\"/api{{RANDOM_NUMBER}}\",\n\t\t\"strip_context_path\":false,\"dumpRequest\":false,\n\t\t\"endpoints\":[\n\t\t\t{\n\t\t\t\t\"name\":\"default\",\"target\":\"http://api/{{RANDOM_NUMBER}}\",\n\t\t\t\t\"weight\":1,\n\t\t\t\t\"backup\":false,\n\t\t\t\t\"healthcheck\":true,\n\t\t\t\t\"http\":{\n\t\t\t\t\t\"connectTimeout\":5000,\n\t\t\t\t\t\"idleTimeout\":60000,\n\t\t\t\t\t\"keepAlive\":true,\n\t\t\t\t\t\"readTimeout\":10000,\n\t\t\t\t\t\"pipelining\":false,\n\t\t\t\t\t\"maxConcurrentConnections\":100,\n\t\t\t\t\t\"useCompression\":false\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"load_balancing\":{\n\t\t\t\"type\":\"ROUND_ROBIN\"\n\t\t}\n\t},\n\t\"paths\":{\n\t\t\"/\":[]\n\t\n\t},\n\t\"visibility\":\"private\",\n\t\"name\":\"API {{RANDOM_NUMBER}}\",\n\t\"services\":{},\n\t\"tags\":[],\n\t\"resources\":[],\n\t\"views\":[\"{{100-apis}}\", \"{{id}}\"],\n\t\"groups\":null\n\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "Update API view",
 					"event": [
 						{
@@ -99,7 +182,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"version\":\"{{RANDOM_NUMBER}}\",\n\t\"description\":\"The API {{RANDOM_NUMBER}}\",\n\t\"proxy\":{\n\t\t\"context_path\":\"/api{{RANDOM_NUMBER}}\",\n\t\t\"strip_context_path\":false,\"dumpRequest\":false,\n\t\t\"endpoints\":[\n\t\t\t{\n\t\t\t\t\"name\":\"default\",\"target\":\"http://api/{{RANDOM_NUMBER}}\",\n\t\t\t\t\"weight\":1,\n\t\t\t\t\"backup\":false,\n\t\t\t\t\"healthcheck\":true,\n\t\t\t\t\"http\":{\n\t\t\t\t\t\"connectTimeout\":5000,\n\t\t\t\t\t\"idleTimeout\":60000,\n\t\t\t\t\t\"keepAlive\":true,\n\t\t\t\t\t\"readTimeout\":10000,\n\t\t\t\t\t\"pipelining\":false,\n\t\t\t\t\t\"maxConcurrentConnections\":100,\n\t\t\t\t\t\"useCompression\":false\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"load_balancing\":{\n\t\t\t\"type\":\"ROUND_ROBIN\"\n\t\t}\n\t},\n\t\"paths\":{\n\t\t\"/\":[]\n\t\n\t},\n\t\"visibility\":\"private\",\n\t\"name\":\"API {{RANDOM_NUMBER}}\",\n\t\"services\":{},\n\t\"tags\":[],\n\t\"resources\":[],\n\t\"views\":[\"100-apis\", \"{{id}}\"],\n\t\"groups\":null\n\n}"
+							"raw": "{\n\t\"version\":\"{{RANDOM_NUMBER}}\",\n\t\"description\":\"The API {{RANDOM_NUMBER}}\",\n\t\"proxy\":{\n\t\t\"context_path\":\"/api{{RANDOM_NUMBER}}\",\n\t\t\"strip_context_path\":false,\"dumpRequest\":false,\n\t\t\"endpoints\":[\n\t\t\t{\n\t\t\t\t\"name\":\"default\",\"target\":\"http://api/{{RANDOM_NUMBER}}\",\n\t\t\t\t\"weight\":1,\n\t\t\t\t\"backup\":false,\n\t\t\t\t\"healthcheck\":true,\n\t\t\t\t\"http\":{\n\t\t\t\t\t\"connectTimeout\":5000,\n\t\t\t\t\t\"idleTimeout\":60000,\n\t\t\t\t\t\"keepAlive\":true,\n\t\t\t\t\t\"readTimeout\":10000,\n\t\t\t\t\t\"pipelining\":false,\n\t\t\t\t\t\"maxConcurrentConnections\":100,\n\t\t\t\t\t\"useCompression\":false\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"load_balancing\":{\n\t\t\t\"type\":\"ROUND_ROBIN\"\n\t\t}\n\t},\n\t\"paths\":{\n\t\t\"/\":[]\n\t\n\t},\n\t\"visibility\":\"private\",\n\t\"name\":\"API {{RANDOM_NUMBER}}\",\n\t\"services\":{},\n\t\"tags\":[],\n\t\"resources\":[],\n\t\"views\":[\"{{100-apis}}\", \"{{id}}\"],\n\t\"groups\":null\n\n}"
 						},
 						"description": ""
 					},
@@ -442,48 +525,6 @@
 							"raw": "{\"name\":\"Petstore\",\"type\":\"SWAGGER\",\"parentId\":\"\",\"published\":true,\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://petstore.swagger.io/v2/swagger.json\"}}}"
 						}
 					}
-				}
-			]
-		},
-		{
-			"name": "create.view",
-			"description": "",
-			"item": [
-				{
-					"name": "Create a view",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "{{AUTHORIZATION_ADMIN}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}"
-						},
-						"description": ""
-					},
-					"response": []
 				}
 			]
 		}
