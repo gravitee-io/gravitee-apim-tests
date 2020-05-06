@@ -204,7 +204,21 @@
 									"delete jsonData.created_at;",
 									"delete jsonData.updated_at;",
 									"delete jsonData.owner;",
-									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));"
+									"delete jsonData.context_path;",
+									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));",
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
+									"tests[\"API is private\"] = jsonData.visibility === \"public\";"
 								]
 							}
 						}

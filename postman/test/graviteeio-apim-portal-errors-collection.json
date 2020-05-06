@@ -121,6 +121,7 @@
 													"delete createdApi_toPublish.created_at;",
 													"delete createdApi_toPublish.updated_at;",
 													"delete createdApi_toPublish.owner;",
+													"delete createdApi_toPublish.context_path;",
 													"pm.environment.set(\"createdApi_toPublish\", JSON.stringify(createdApi_toPublish));",
 													""
 												],
@@ -709,6 +710,7 @@
 													"delete createdApi_toPublish.created_at;",
 													"delete createdApi_toPublish.updated_at;",
 													"delete createdApi_toPublish.owner;",
+													"delete createdApi_toPublish.context_path;",
 													"pm.environment.set(\"createdApi_toPublish\", JSON.stringify(createdApi_toPublish));",
 													""
 												],
@@ -1063,6 +1065,7 @@
 													"delete createdApi_toPublish.created_at;",
 													"delete createdApi_toPublish.updated_at;",
 													"delete createdApi_toPublish.owner;",
+													"delete createdApi_toPublish.context_path;",
 													"pm.environment.set(\"createdApi_toPublish\", JSON.stringify(createdApi_toPublish));",
 													""
 												],
@@ -2236,6 +2239,7 @@
 													"delete createdApi_toPublish.created_at;",
 													"delete createdApi_toPublish.updated_at;",
 													"delete createdApi_toPublish.owner;",
+													"delete createdApi_toPublish.context_path;",
 													"pm.environment.set(\"createdApi_toPublish\", JSON.stringify(createdApi_toPublish));",
 													""
 												],
@@ -7473,6 +7477,7 @@
 															"delete createdApi_for_sub_toPublish.created_at;",
 															"delete createdApi_for_sub_toPublish.updated_at;",
 															"delete createdApi_for_sub_toPublish.owner;",
+															"delete createdApi_for_sub_toPublish.context_path;",
 															"pm.environment.set(\"createdApi_for_sub_toPublish\", JSON.stringify(createdApi_for_sub_toPublish));",
 															""
 														],
@@ -8353,6 +8358,7 @@
 													"delete createdApi_for_sub_toPublish.created_at;",
 													"delete createdApi_for_sub_toPublish.updated_at;",
 													"delete createdApi_for_sub_toPublish.owner;",
+													"delete createdApi_for_sub_toPublish.context_path;",
 													"pm.environment.set(\"createdApi_for_sub_toPublish\", JSON.stringify(createdApi_for_sub_toPublish));",
 													""
 												],
@@ -9262,6 +9268,7 @@
 													"delete createdApi_for_sub_toPublish.created_at;",
 													"delete createdApi_for_sub_toPublish.updated_at;",
 													"delete createdApi_for_sub_toPublish.owner;",
+													"delete createdApi_for_sub_toPublish.context_path;",
 													"pm.environment.set(\"createdApi_for_sub_toPublish\", JSON.stringify(createdApi_for_sub_toPublish));",
 													""
 												],
