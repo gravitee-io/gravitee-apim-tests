@@ -45,7 +45,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"with_documentation\":true,\"with_path_mapping\":true,\"with_policy_paths\":true,\"with_policy_mocks\":false,\"type\":\"URL\",\"payload\":\"https://petstore.swagger.io/v2/swagger.json\"}"
+							"raw": "{\"with_documentation\":true,\"with_path_mapping\":true,\"with_policy_paths\":true,\"type\":\"URL\",\"payload\":\"https://petstore.swagger.io/v2/swagger.json\"}"
 						},
 						"description": ""
 					},
