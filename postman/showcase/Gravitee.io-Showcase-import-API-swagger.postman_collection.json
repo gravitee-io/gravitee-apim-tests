@@ -95,7 +95,7 @@
 				{
 					"name": "Get Page",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
+						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages?root=true&type=SWAGGER",
 						"method": "GET",
 						"header": [
 							{
@@ -107,6 +107,16 @@
 								"key": "Authorization",
 								"value": "{{AUTHORIZATION_API1}}",
 								"description": ""
+							}
+						],
+						"query": [
+							{
+								"key": "root",
+								"value": true
+							},
+							{
+								"key": "type",
+								"value": "SWAGGER"
 							}
 						]
 					},

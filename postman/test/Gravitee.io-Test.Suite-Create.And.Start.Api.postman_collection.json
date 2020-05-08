@@ -205,7 +205,7 @@
 									"delete jsonData.updated_at;",
 									"delete jsonData.owner;",
 									"delete jsonData.context_path;",
-									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));",
+									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));"
 								]
 							}
 						},
