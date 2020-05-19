@@ -1,8 +1,8 @@
 {
 	"info": {
+		"_postman_id": "3dbb24b3-22ce-495f-87c3-eefed04f1dec",
 		"name": "Gravitee.io-Showcase-Create.Views",
-		"_postman_id": "Gravitee.io-Showcase-Create.Views",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -22,7 +22,6 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
 						"method": "POST",
 						"header": [
 							{
@@ -37,10 +36,60 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\": \"{{name}}\",\"description\": \"{{description}}\"}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"configuration",
+								"views"
+							]
 						}
-					}
+					},
+					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "20ea18a4-b4d5-4f59-9b79-a0f62709c038",
+				"type": "text/javascript",
+				"exec": [
+					"if(!pm.environment.get('X-Xsrf-Token')) {",
+					"    pm.sendRequest({",
+					"        url: pm.environment.get('GRAVITEEIO_MGMT_URL') + '/management/organizations/DEFAULT/environments/DEFAULT/portal',",
+					"        method: 'GET',",
+					"    ",
+					"    }, function (err, res) {",
+					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cd0366ea-ee8d-4ca8-8efe-f45ae5e60493",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
 }

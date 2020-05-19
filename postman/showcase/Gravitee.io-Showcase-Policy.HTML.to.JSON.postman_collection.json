@@ -1,15 +1,12 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "3cee93e5-5f7c-4ff0-adb2-c8f8a3270450",
 		"name": "Gravitee.io-Showcase-Policy.HTML.to.JSON",
-		"_postman_id": "Gravitee.io-Showcase-Policy.HTML.to.JSON",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "showcase.api.html.to.json",
-			"description": "",
 			"item": [
 				{
 					"name": "Create API",
@@ -28,50 +25,71 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"contextPath\": \"/gravitee.io/features\",\n\t\"description\": \"Gravitee.io features with HTML to JSON policy\",\n\t\"endpoint\": \"https://gravitee.io/products/apim/\",\n\t\"name\": \"Gravitee.io features\",\n\t\"version\": \"v1\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Update API view and policy",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"version\":\"v1\",\"description\":\"Gravitee.io features with HTML to JSON policy\",\"proxy\":{\"context_path\":\"/gravitee.io/features\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io/products/apim/\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\"],\"html-json\":{\"selectors\":[{\"array\":true,\"selector\":\".feature .h05\",\"jsonName\":\"features\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true}]},\"visibility\":\"public\",\"name\":\"Gravitee.io features\",\"services\":{},\"tags\":[],\"resources\":[],\"views\":[\"showcase-apis\"]}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}"
+							]
+						}
 					},
 					"response": []
 				},
@@ -90,115 +108,218 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"security\": \"key_less\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
-
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"plans"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Publish Plan",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
-						]
+						],
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"plans",
+								"{{PLAN_ID}}",
+								"_publish"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Deploy API",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/deploy",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/deploy",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"deploy"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Start  API",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}?action=START",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "formdata",
 							"formdata": []
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}?action=START",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "START"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Top API",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/top-apis/",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_ADMIN}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_ADMIN}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"api\":\"{{API_ID}}\"}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/top-apis/",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"configuration",
+								"top-apis",
+								""
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cbec29d5-bc65-4eb1-b7df-b049d2d01365",
+				"type": "text/javascript",
+				"exec": [
+					"if(!pm.environment.get('X-Xsrf-Token')) {",
+					"    pm.sendRequest({",
+					"        url: pm.environment.get('GRAVITEEIO_MGMT_URL') + '/management/organizations/DEFAULT/environments/DEFAULT/portal',",
+					"        method: 'GET',",
+					"    ",
+					"    }, function (err, res) {",
+					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ea45f143-2af3-4bf0-8d5a-482988a1faab",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
 }

@@ -1,15 +1,12 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "f3548951-fc4c-4be7-a95a-7b5fc26559a0",
 		"name": "Gravitee.io Issues",
-		"_postman_id": "1ee0da89-d435-a06b-c26b-293547a03e89",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "#357 - Create page without type",
-			"description": "",
 			"item": [
 				{
 					"name": "#357 - Create API",
@@ -18,30 +15,46 @@
 							"listen": "test",
 							"script": {
 								"type": "text/javascript",
-								"exec": "tests[\"Status code is 201\"] = responseCode.code === 201;\n\nvar jsonData = JSON.parse(responseBody);\n\npostman.setGlobalVariable(\"API_ID\", jsonData.id);"
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
+								]
 							}
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Basic YWRtaW46YWRtaW4=",
-								"description": ""
+								"value": "Basic YWRtaW46YWRtaW4="
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"contextPath\": \"/issue357\",\n\t\"description\": \"Issue 357\",\n\t\"endpoint\": \"http://localhost:8080\",\n\t\"name\": \"Issue 357\",\n\t\"version\": \"1.0\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis"
+							]
+						}
 					},
 					"response": []
 				},
@@ -52,34 +65,82 @@
 							"listen": "test",
 							"script": {
 								"type": "text/javascript",
-								"exec": "tests[\"Status code is 400\"] = responseCode.code === 400;"
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;"
+								]
 							}
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Basic YWRtaW46YWRtaW4=",
-								"description": ""
+								"value": "Basic YWRtaW46YWRtaW4="
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"produit-doc\",\n\t\"content\": \"json\",\n\t\"source\": {\n\t\t\"type\": \"http-fetcher\",\n\t\t\"configuration\": {\n\t\t\t\"url\": \"http://128.239.252.127:8080/v2/products/docs\"\n\t\t}\n\t},\n\t\"configuration\": {\n\t\t\"tryItURL\": \"http://128.239.252.127:8080/v2\",\n\t\t\"tryIt\": true\n\t}\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"pages"
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "756dc7ac-9ff2-4d80-b5b9-8439d166169d",
+				"type": "text/javascript",
+				"exec": [
+					"if(!pm.environment.get('X-Xsrf-Token')) {",
+					"    pm.sendRequest({",
+					"        url: pm.environment.get('GRAVITEEIO_MGMT_URL') + '/management/organizations/DEFAULT/environments/DEFAULT/portal',",
+					"        method: 'GET',",
+					"    ",
+					"    }, function (err, res) {",
+					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4c42f989-2c86-4bd2-be51-9a27f7bad97e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
 }

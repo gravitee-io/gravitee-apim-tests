@@ -1,13 +1,12 @@
 {
 	"info": {
+		"_postman_id": "099c17c8-f2b9-4d03-bc81-15ab9b9b8fc9",
 		"name": "Gravitee.io-configuration",
-		"_postman_id": "Gravitee.io-configuration",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "configuration",
-			"description": "",
 			"item": [
 				{
 					"name": "Get portal configuration",
@@ -26,15 +25,29 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
 								"value": "{{AUTHORIZATION_ADMIN}}"
 							}
-						]
-					}
+						],
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal"
+							]
+						}
+					},
+					"response": []
 				},
 				{
 					"name": "Activate rating and support",
@@ -53,7 +66,6 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
 						"method": "POST",
 						"header": [
 							{
@@ -68,13 +80,27 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{{portal}}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Add homepage",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -89,13 +115,28 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\":\"Homepage\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"## Welcome to the API portal\",\"homepage\":true}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal",
+								"pages"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Add best practice page",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -110,8 +151,24 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\":\"REST API Design Best Practices\",\"type\":\"MARKDOWN\",\"parentId\":\"\",\"published\":true,\"content\":\"\",\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://raw.githubusercontent.com/anilkbachola/restapi-design-guidelines/master/README.md\"}}}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal",
+								"pages"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Add how it works directory",
@@ -134,7 +191,6 @@
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -149,13 +205,28 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\":\"How it works\",\"type\":\"FOLDER\",\"parentId\":\"\",\"published\":true}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal",
+								"pages"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Add how it works",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -170,13 +241,28 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\":\"How it works\",\"type\":\"MARKDOWN\",\"parentId\":\"{{DOC_ID}}\",\"published\":true,\"content\":\"## How it works\"}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal",
+								"pages"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Add swagger example",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
 						"method": "POST",
 						"header": [
 							{
@@ -191,10 +277,60 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"name\":\"Petstore example\",\"type\":\"SWAGGER\",\"parentId\":\"{{DOC_ID}}\",\"published\":true,\"source\":{\"type\":\"http-fetcher\",\"configuration\":{\"useSystemProxy\":false,\"url\":\"https://petstore.swagger.io/v2/swagger.json\"}}}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"portal",
+								"pages"
+							]
 						}
-					}
+					},
+					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "59d2e8f1-e826-479e-b9bd-ef9bfd36db6b",
+				"type": "text/javascript",
+				"exec": [
+					"if(!pm.environment.get('X-Xsrf-Token')) {",
+					"    pm.sendRequest({",
+					"        url: pm.environment.get('GRAVITEEIO_MGMT_URL') + '/management/organizations/DEFAULT/environments/DEFAULT/portal',",
+					"        method: 'GET',",
+					"    ",
+					"    }, function (err, res) {",
+					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7def6ff9-a9c9-4be3-b256-528ac32beec6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
 }

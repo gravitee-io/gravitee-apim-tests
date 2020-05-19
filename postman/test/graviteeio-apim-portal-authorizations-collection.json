@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f98ddee4-0327-4ceb-bc41-bfc77ec57b2a",
+		"_postman_id": "72507b44-0e46-4f34-8f8c-778c9f7ac5b1",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -6043,7 +6043,17 @@
 				"id": "34cc3a2f-d3af-47c3-9c54-88a5abd558fa",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"if(!pm.environment.get('X-Xsrf-Token')) {",
+					"    pm.sendRequest({",
+					"        url: pm.environment.get('GRAVITEEIO_PORTAL_URL') + '/portal/environments/DEFAULT/configuration',",
+					"        method: 'GET',",
+					"    ",
+					"    }, function (err, res) {",
+					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
 				]
 			}
 		},
