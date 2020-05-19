@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "45c1b62a-a1fd-429c-9631-aeb56b2211ef",
+		"_postman_id": "44e0d907-74fc-4f88-a2a2-3dd4abe340e5",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -11288,7 +11288,17 @@
 				"id": "34cc3a2f-d3af-47c3-9c54-88a5abd558fa",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"if(!pm.environment.get('X-Xsrf-Token')) {",
+					"    pm.sendRequest({",
+					"        url: pm.environment.get('GRAVITEEIO_PORTAL_URL') + '/portal/environments/DEFAULT/configuration',",
+					"        method: 'GET',",
+					"    ",
+					"    }, function (err, res) {",
+					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
+					"    });",
+					"}",
+					"",
+					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
 				]
 			}
 		},
