@@ -6,10 +6,10 @@
 	},
 	"item": [
 		{
-			"name": "create.view",
+			"name": "create.category",
 			"item": [
 				{
-					"name": "Create a view",
+					"name": "Create a category",
 					"event": [
 						{
 							"listen": "test",
@@ -35,10 +35,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\": \"100+ apis\",\"description\": \"a view with more 100+ apis\"}"
+							"raw": "{\"name\": \"100+ apis\",\"description\": \"a category with more 100+ apis\"}"
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/categories",
 							"host": [
 								"{{GRAVITEEIO_MGMT_URL}}"
 							],
@@ -49,7 +49,7 @@
 								"environments",
 								"DEFAULT",
 								"configuration",
-								"views"
+								"categories"
 							]
 						}
 					},
@@ -126,7 +126,7 @@
 					"response": []
 				},
 				{
-					"name": "Get API view id",
+					"name": "Get API category id",
 					"event": [
 						{
 							"listen": "test",
@@ -156,7 +156,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views/",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/categories/",
 							"host": [
 								"{{GRAVITEEIO_MGMT_URL}}"
 							],
@@ -167,7 +167,7 @@
 								"environments",
 								"DEFAULT",
 								"configuration",
-								"views",
+								"categories",
 								""
 							]
 						}
@@ -175,7 +175,7 @@
 					"response": []
 				},
 				{
-					"name": "Update API view",
+					"name": "Update API category",
 					"event": [
 						{
 							"listen": "test",
@@ -205,7 +205,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"version\":\"{{RANDOM_NUMBER}}\",\n\t\"description\":\"The API {{RANDOM_NUMBER}}\",\n\t\"proxy\":{\n\t\t\"context_path\":\"/api{{RANDOM_NUMBER}}\",\n\t\t\"strip_context_path\":false,\"dumpRequest\":false,\n\t\t\"endpoints\":[\n\t\t\t{\n\t\t\t\t\"name\":\"default\",\"target\":\"http://api/{{RANDOM_NUMBER}}\",\n\t\t\t\t\"weight\":1,\n\t\t\t\t\"backup\":false,\n\t\t\t\t\"healthcheck\":true,\n\t\t\t\t\"http\":{\n\t\t\t\t\t\"connectTimeout\":5000,\n\t\t\t\t\t\"idleTimeout\":60000,\n\t\t\t\t\t\"keepAlive\":true,\n\t\t\t\t\t\"readTimeout\":10000,\n\t\t\t\t\t\"pipelining\":false,\n\t\t\t\t\t\"maxConcurrentConnections\":100,\n\t\t\t\t\t\"useCompression\":false\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"load_balancing\":{\n\t\t\t\"type\":\"ROUND_ROBIN\"\n\t\t}\n\t},\n\t\"paths\":{\n\t\t\"/\":[]\n\t\n\t},\n\t\"visibility\":\"private\",\n\t\"name\":\"API {{RANDOM_NUMBER}}\",\n\t\"services\":{},\n\t\"tags\":[],\n\t\"resources\":[],\n\t\"views\":[\"{{100-apis}}\", \"{{id}}\"],\n\t\"groups\":null\n\n}"
+							"raw": "{\n\t\"version\":\"{{RANDOM_NUMBER}}\",\n\t\"description\":\"The API {{RANDOM_NUMBER}}\",\n\t\"proxy\":{\n\t\t\"context_path\":\"/api{{RANDOM_NUMBER}}\",\n\t\t\"strip_context_path\":false,\"dumpRequest\":false,\n\t\t\"endpoints\":[\n\t\t\t{\n\t\t\t\t\"name\":\"default\",\"target\":\"http://api/{{RANDOM_NUMBER}}\",\n\t\t\t\t\"weight\":1,\n\t\t\t\t\"backup\":false,\n\t\t\t\t\"healthcheck\":true,\n\t\t\t\t\"http\":{\n\t\t\t\t\t\"connectTimeout\":5000,\n\t\t\t\t\t\"idleTimeout\":60000,\n\t\t\t\t\t\"keepAlive\":true,\n\t\t\t\t\t\"readTimeout\":10000,\n\t\t\t\t\t\"pipelining\":false,\n\t\t\t\t\t\"maxConcurrentConnections\":100,\n\t\t\t\t\t\"useCompression\":false\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\t\"load_balancing\":{\n\t\t\t\"type\":\"ROUND_ROBIN\"\n\t\t}\n\t},\n\t\"paths\":{\n\t\t\"/\":[]\n\t\n\t},\n\t\"visibility\":\"private\",\n\t\"name\":\"API {{RANDOM_NUMBER}}\",\n\t\"services\":{},\n\t\"tags\":[],\n\t\"resources\":[],\n\t\"categories\":[\"{{100-apis}}\", \"{{id}}\"],\n\t\"groups\":null\n\n}"
 						},
 						"url": {
 							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",

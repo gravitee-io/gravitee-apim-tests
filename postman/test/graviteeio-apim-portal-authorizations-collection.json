@@ -2942,10 +2942,10 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "views",
+					"name": "categories",
 					"item": [
 						{
-							"name": "GET /views",
+							"name": "GET /categories",
 							"event": [
 								{
 									"listen": "test",
@@ -2962,7 +2962,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -2970,14 +2970,14 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"views"
+										"categories"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "GET /views/:viewId",
+							"name": "GET /categories/:categoryId",
 							"event": [
 								{
 									"listen": "test",
@@ -2994,7 +2994,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views/:viewId",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -3002,13 +3002,13 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"views",
-										":viewId"
+										"categories",
+										":categoryId"
 									],
 									"variable": [
 										{
-											"key": "viewId",
-											"value": "VIEW"
+											"key": "categoryId",
+											"value": "CATEGORY"
 										}
 									]
 								}
@@ -3016,7 +3016,7 @@
 							"response": []
 						},
 						{
-							"name": "GET /views/:viewId/picture",
+							"name": "GET /categories/:categoryId/picture",
 							"event": [
 								{
 									"listen": "test",
@@ -3033,7 +3033,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views/:viewId/picture",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId/picture",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -3041,14 +3041,14 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"views",
-										":viewId",
+										"categories",
+										":categoryId",
 										"picture"
 									],
 									"variable": [
 										{
-											"key": "viewId",
-											"value": "VIEW"
+											"key": "categoryId",
+											"value": "CATEGORY"
 										}
 									]
 								}
@@ -3056,7 +3056,7 @@
 							"response": []
 						}
 					],
-					"description": "All anonymous requests to /views/... should not return 401",
+					"description": "All anonymous requests to /categories/... should not return 401",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -5853,10 +5853,10 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "views",
+					"name": "categories",
 					"item": [
 						{
-							"name": "GET /views",
+							"name": "GET /categories",
 							"event": [
 								{
 									"listen": "test",
@@ -5873,7 +5873,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -5881,14 +5881,14 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"views"
+										"categories"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "GET /views/:viewId",
+							"name": "GET /categories/:categoryId",
 							"event": [
 								{
 									"listen": "test",
@@ -5905,7 +5905,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views/:viewId",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -5913,13 +5913,13 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"views",
-										":viewId"
+										"categories",
+										":categoryId"
 									],
 									"variable": [
 										{
-											"key": "viewId",
-											"value": "VIEW"
+											"key": "categoryId",
+											"value": "CATEGORY"
 										}
 									]
 								}
@@ -5927,7 +5927,7 @@
 							"response": []
 						},
 						{
-							"name": "GET /views/:viewId/picture",
+							"name": "GET /categories/:categoryId/picture",
 							"event": [
 								{
 									"listen": "test",
@@ -5944,7 +5944,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views/:viewId/picture",
+									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId/picture",
 									"host": [
 										"{{GRAVITEEIO_PORTAL_URL}}"
 									],
@@ -5952,14 +5952,14 @@
 										"portal",
 										"environments",
 										"DEFAULT",
-										"views",
-										":viewId",
+										"categories",
+										":categoryId",
 										"picture"
 									],
 									"variable": [
 										{
-											"key": "viewId",
-											"value": "VIEW"
+											"key": "categoryId",
+											"value": "CATEGORY"
 										}
 									]
 								}
