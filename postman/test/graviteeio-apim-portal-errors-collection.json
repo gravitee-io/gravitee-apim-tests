@@ -3997,7 +3997,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"scope\":\"ENVIRONMENT\",\n\t\"permissions\":{\n\t\t\"ALERT\":[],\n\t\t\"API\":[],\n\t\t\"APPLICATION\":[],\n\t\t\"AUDIT\":[],\n\t\t\"DICTIONARY\":[],\n\t\t\"ENTRYPOINT\":[],\n\t\t\"GROUP\":[],\n\t\t\"INSTANCE\":[],\n\t\t\"MESSAGE\":[],\n\t\t\"NOTIFICATION\":[],\n\t\t\"PLATFORM\":[],\n\t\t\"SETTINGS\":[],\n\t\t\"TAG\":[],\n\t\t\"TENANT\":[],\n\t\t\"DASHBOARD\":[],\n\t\t\"QUALITY_RULE\":[],\n\t\t\"METADATA\":[],\n\t\t\"DOCUMENTATION\":[],\n\t\t\"VIEW\":[],\n\t\t\"TOP_APIS\":[],\n\t\t\"API_HEADER\":[],\n\t\t\"IDENTITY_PROVIDER\":[],\n\t\t\"CLIENT_REGISTRATION_PROVIDER\":[],\n\t\t\"THEME\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
+											"raw": "{\n\t\"scope\":\"ENVIRONMENT\",\n\t\"permissions\":{\n\t\t\"ALERT\":[],\n\t\t\"API\":[],\n\t\t\"APPLICATION\":[],\n\t\t\"AUDIT\":[],\n\t\t\"DICTIONARY\":[],\n\t\t\"ENTRYPOINT\":[],\n\t\t\"GROUP\":[],\n\t\t\"INSTANCE\":[],\n\t\t\"MESSAGE\":[],\n\t\t\"NOTIFICATION\":[],\n\t\t\"PLATFORM\":[],\n\t\t\"SETTINGS\":[],\n\t\t\"TAG\":[],\n\t\t\"TENANT\":[],\n\t\t\"DASHBOARD\":[],\n\t\t\"QUALITY_RULE\":[],\n\t\t\"METADATA\":[],\n\t\t\"DOCUMENTATION\":[],\n\t\t\"CATEGORY\":[],\n\t\t\"TOP_APIS\":[],\n\t\t\"API_HEADER\":[],\n\t\t\"IDENTITY_PROVIDER\":[],\n\t\t\"CLIENT_REGISTRATION_PROVIDER\":[],\n\t\t\"THEME\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -11116,16 +11116,16 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "views",
+			"name": "categories",
 			"item": [
 				{
 					"name": "404",
 					"item": [
 						{
-							"name": "View not found",
+							"name": "Category not found",
 							"item": [
 								{
-									"name": "GET /views/:viewId",
+									"name": "GET /categories/:categoryId",
 									"event": [
 										{
 											"listen": "test",
@@ -11142,7 +11142,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views/:viewId",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
@@ -11150,13 +11150,13 @@
 												"portal",
 												"environments",
 												"DEFAULT",
-												"views",
-												":viewId"
+												"categories",
+												":categoryId"
 											],
 											"variable": [
 												{
-													"key": "viewId",
-													"value": "VIEW"
+													"key": "categoryId",
+													"value": "CATEGORY"
 												}
 											]
 										}
@@ -11164,7 +11164,7 @@
 									"response": []
 								},
 								{
-									"name": "GET /views/:viewId/picture",
+									"name": "GET /categories/:categoryId/picture",
 									"event": [
 										{
 											"listen": "test",
@@ -11181,7 +11181,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/views/:viewId/picture",
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId/picture",
 											"host": [
 												"{{GRAVITEEIO_PORTAL_URL}}"
 											],
@@ -11189,14 +11189,14 @@
 												"portal",
 												"environments",
 												"DEFAULT",
-												"views",
-												":viewId",
+												"categories",
+												":categoryId",
 												"picture"
 											],
 											"variable": [
 												{
-													"key": "viewId",
-													"value": "VIEW"
+													"key": "categoryId",
+													"value": "CATEGORY"
 												}
 											]
 										}
@@ -11224,9 +11224,9 @@
 											"pm.test(\"Status code is 404\", function () {",
 											"    pm.response.to.have.status(404);",
 											"});",
-											"pm.test(\"View not found\", function () {",
+											"pm.test(\"Category not found\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.errors[0].message).to.eql(\"View [VIEW] can not be found.\");",
+											"    pm.expect(jsonData.errors[0].message).to.eql(\"Category [CATEGORY] can not be found.\");",
 											"});",
 											""
 										]

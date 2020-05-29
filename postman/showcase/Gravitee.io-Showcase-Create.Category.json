@@ -1,15 +1,15 @@
 {
 	"info": {
 		"_postman_id": "3dbb24b3-22ce-495f-87c3-eefed04f1dec",
-		"name": "Gravitee.io-Showcase-Create.Views",
+		"name": "Gravitee.io-Showcase-Create.Categories",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "create.view",
+			"name": "create.category",
 			"item": [
 				{
-					"name": "Create view",
+					"name": "Create category",
 					"event": [
 						{
 							"listen": "test",
@@ -38,7 +38,7 @@
 							"raw": "{\"name\": \"{{name}}\",\"description\": \"{{description}}\"}"
 						},
 						"url": {
-							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/views",
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/categories",
 							"host": [
 								"{{GRAVITEEIO_MGMT_URL}}"
 							],
@@ -49,7 +49,7 @@
 								"environments",
 								"DEFAULT",
 								"configuration",
-								"views"
+								"categories"
 							]
 						}
 					},
