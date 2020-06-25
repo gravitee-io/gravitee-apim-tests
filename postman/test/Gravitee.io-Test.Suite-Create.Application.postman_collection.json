@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fb181865-ca03-41de-861f-df8246fef99e",
+		"_postman_id": "906cd755-8de9-478a-ac95-5a92907c35b2",
 		"name": "Gravitee.io-Test.Suite-Create.Application",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "61cdfbc3-18ae-46eb-a7fb-6ed9d7273c31",
+						"id": "ad583a19-b275-476b-a190-8a4cfcbd11a2",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -48,11 +48,11 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
+						"id": "7a712f0a-ffdf-493c-95cb-5afb1d20a6fa",
 						"exec": [
 							"tests[\"Status code is 200\"] = responseCode.code === 200;"
 						],
-						"id": "3bd20e33-f77d-4fb5-9597-cec6b2773787"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -69,15 +69,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/user/login",
+					"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/user/login",
 					"host": [
 						"{{GRAVITEEIO_MGMT_URL}}"
 					],
 					"path": [
 						"management",
 						"organizations",
-						"DEFAULT",
-						"environments",
 						"DEFAULT",
 						"user",
 						"login"
@@ -98,7 +96,7 @@
 							"tests[\"Location is present\"] = postman.getResponseHeader(\"Location\");",
 							"postman.setGlobalVariable(\"APPLICATION_LOCATION\", postman.getResponseHeader(\"Location\"));"
 						],
-						"id": "2a3dabe0-b6c2-4421-b479-351e9e863049"
+						"id": "d95a6245-327c-4668-b5de-053a7f90f7b8"
 					}
 				}
 			],
@@ -159,19 +157,9 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "bc44f83f-d71a-4898-a2b6-6480bb8da500",
+				"id": "efc7acf4-31af-48e7-97c7-d9c3e14c6b7c",
 				"type": "text/javascript",
 				"exec": [
-					"if(!pm.environment.get('X-Xsrf-Token')) {",
-					"    pm.sendRequest({",
-					"        url: pm.environment.get('GRAVITEEIO_MGMT_URL') + '/management/organizations/DEFAULT/environments/DEFAULT/portal',",
-					"        method: 'GET',",
-					"    ",
-					"    }, function (err, res) {",
-					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
-					"    });",
-					"}",
-					"",
 					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
 				]
 			}
@@ -179,7 +167,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "450be9e6-9be3-42a3-8694-7b3ecc86c844",
+				"id": "33b6d740-35aa-4fc7-ac07-6913340f2fc0",
 				"type": "text/javascript",
 				"exec": [
 					""

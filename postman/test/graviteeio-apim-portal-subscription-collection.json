@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3ab0802c-0472-48ee-92b3-5cfab7790e40",
+		"_postman_id": "958b6a1a-5f3b-47cd-b5c3-e3bcac9f1461",
 		"name": "API Portal : Subscriptions",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,12 +9,57 @@
 			"name": "-- Prepare --",
 			"item": [
 				{
+					"name": "Generate XSRF",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0e2e40a0-a59e-4ef7-bb15-c78d112986b4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "932a4c18-966f-4bc3-834d-63270fdfcd09",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.environment.set('X-Xsrf-Token', pm.response.headers.get('X-Xsrf-Token'));",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/configuration",
+							"host": [
+								"{{GRAVITEEIO_PORTAL_URL}}"
+							],
+							"path": [
+								"portal",
+								"environments",
+								"DEFAULT",
+								"configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create API for subscription",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "09b4c96b-4e00-43b3-b727-e6739af6ae6e",
+								"id": "4715a3df-825f-4425-b842-f60f0a7a3e0d",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"pm.environment.set(\"created_api_for_sub\", JSON.stringify(jsonData));",
@@ -30,7 +75,8 @@
 								"exec": [
 									"var uid = (\"0000\" + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4);",
 									"postman.setEnvironmentVariable(\"RANDOM_NUMBER\", uid);"
-								]
+								],
+								"id": "ecdb7dc6-d6d9-45b5-831b-ef45977a8bba"
 							}
 						}
 					],
@@ -91,7 +137,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+								"id": "947fc12e-6f08-49e3-b938-a6c23524b3fb",
 								"exec": [
 									"var createdApi_for_sub_toPublish = JSON.parse(pm.environment.get(\"created_api_for_sub\"));",
 									"createdApi_for_sub_toPublish.lifecycle_state='published';",
@@ -173,7 +219,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+								"id": "41334aee-11af-4731-b53e-14443880dc42",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"pm.environment.set(\"created_plan_for_sub_id\", jsonData.id);"
@@ -247,7 +293,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+								"id": "516a69f9-8689-49ac-a070-8e7ef7a7bba2",
 								"exec": [
 									""
 								],
@@ -317,7 +363,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+								"id": "bb170c24-f1ea-4cb1-8685-d2f9166d2749",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"pm.environment.set(\"created_application_for_sub_id\", jsonData.id);"
@@ -382,7 +428,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ff119b8b-182d-44b0-a6db-17929e9a494c",
+						"id": "5cb1969b-8220-46e2-83df-09834848812f",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -392,7 +438,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "cf428291-ff03-4e85-bcea-e4ca670803f6",
+						"id": "3d4b80c1-98b0-4891-b6ae-fef3adb269c2",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -411,7 +457,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a490e71b-fa6c-4ee3-b89c-64466916d1e0",
+								"id": "3c79cd77-e92b-49c2-82d8-b5678ac91b4a",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -464,7 +510,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5a6f5330-cef1-4057-ada1-0f1b737aa4d1",
+								"id": "a9365da8-2a4c-4ac6-bbcf-1b3809e0a5ec",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"",
@@ -530,7 +576,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d3d3fbef-c861-4414-8c1e-9b90f3670db8",
+								"id": "55adaf46-bf85-4c13-86bc-700e78192c33",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -563,7 +609,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9438be91-e5cd-4574-aa6e-24e70b080edd",
+								"id": "15ad4ade-e19e-4b9d-a113-2b29774a1f79",
 								"exec": [
 									"pm.test(\"Etag is not present since an API does not have a default image anymore\", function () {",
 									"    pm.response.to.not.have.header(\"ETag\");",
@@ -591,7 +637,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "dce2fc47-d5b9-4e17-8716-a92b7bee278e",
+								"id": "2e26de76-05c1-4f18-97fc-0b0879e5f917",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"",
@@ -635,7 +681,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "12062f9f-b905-4972-b28a-eb51838e39bd",
+								"id": "82145a2f-dc0d-4f4d-a1b7-0199ce898301",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"",
@@ -698,7 +744,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e1de8766-ba7d-48e3-b320-fb4ce6d52e46",
+								"id": "a7693a64-67d0-4df0-8571-03eae5b6998b",
 								"exec": [
 									"var jsonData = pm.response.json();",
 									"pm.environment.set(\"created_sub_id\", jsonData.id);",
@@ -751,7 +797,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "646ce264-50d0-4c5d-a07e-709d3095c945",
+								"id": "3854f202-fdc3-4884-a88d-e3fcc04fed93",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -792,7 +838,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2376bbf2-5575-42bb-9cb1-b7e2f8eb05a5",
+								"id": "f80b1b53-332c-47b1-80cf-57226d1b5c94",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -830,7 +876,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8efd6f5e-e1c3-41ac-bb07-bde9755f1520",
+						"id": "e399eb0c-a9ff-4807-93ee-ef6674ba3ce6",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -840,7 +886,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b40876cd-14db-4d7f-9477-bdbd0f333add",
+						"id": "996d82be-e600-4f6e-9950-205d96d605a2",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1057,19 +1103,9 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7b2576d2-c4a3-48fb-93dc-2fcad1a8b833",
+				"id": "3516140a-e7e7-42ad-83e8-7412f5f4a4f0",
 				"type": "text/javascript",
 				"exec": [
-					"if(!pm.environment.get('X-Xsrf-Token')) {",
-					"    pm.sendRequest({",
-					"        url: pm.environment.get('GRAVITEEIO_PORTAL_URL') + '/portal/environments/DEFAULT/configuration',",
-					"        method: 'GET',",
-					"    ",
-					"    }, function (err, res) {",
-					"        pm.environment.set('X-Xsrf-Token', res.headers.get('X-Xsrf-Token'));",
-					"    });",
-					"}",
-					"",
 					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
 				]
 			}
@@ -1077,7 +1113,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "39d19c8d-727d-43ae-80be-59569d34cb78",
+				"id": "0ad0616e-61d6-4d87-be4c-462590c83f71",
 				"type": "text/javascript",
 				"exec": [
 					""

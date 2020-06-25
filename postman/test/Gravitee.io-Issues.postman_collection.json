@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f3548951-fc4c-4be7-a95a-7b5fc26559a0",
+		"_postman_id": "d3e2983f-a91a-4db1-9321-eefedb883fbb",
 		"name": "Gravitee.io Issues",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -21,7 +21,8 @@
 									"var jsonData = JSON.parse(responseBody);",
 									"",
 									"postman.setGlobalVariable(\"API_ID\", jsonData.id);"
-								]
+								],
+								"id": "e5a1fe0d-c395-47c2-b574-98af3d46df83"
 							}
 						}
 					],
@@ -67,7 +68,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 400\"] = responseCode.code === 400;"
-								]
+								],
+								"id": "55217022-1c0a-42d7-9b49-1d2dab59b56d"
 							}
 						}
 					],
@@ -114,7 +116,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "756dc7ac-9ff2-4d80-b5b9-8439d166169d",
+				"id": "62288fb0-fbd6-486a-ac9b-f9711489ab84",
 				"type": "text/javascript",
 				"exec": [
 					"if(!pm.environment.get('X-Xsrf-Token')) {",
@@ -134,7 +136,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "4c42f989-2c86-4bd2-be51-9a27f7bad97e",
+				"id": "95c26b31-583d-4fc7-9080-0849a47d09fa",
 				"type": "text/javascript",
 				"exec": [
 					""

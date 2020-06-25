@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "44e0d907-74fc-4f88-a2a2-3dd4abe340e5",
+		"_postman_id": "107e5e48-313d-4aa4-9072-2593e5e41bab",
 		"name": "API Portal : Business Error",
 		"description": "This collections contains requests to test business errors (no 401) on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -59,7 +59,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "c609318e-1658-4cd2-8f23-27f9341c79c5",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_api\", JSON.stringify(jsonData));",
@@ -112,7 +112,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+												"id": "cb4007a2-ba35-4820-b31b-16260276f40d",
 												"exec": [
 													"var createdApi_toPublish = JSON.parse(pm.environment.get(\"created_api\"));",
 													"createdApi_toPublish.lifecycle_state='published';",
@@ -177,7 +177,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "c6433fb5-d1d4-44ba-8e22-83d3441eade6",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -187,7 +187,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "c6dd4cc6-9fea-4196-93fa-56811660c182",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -207,7 +207,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "7dea5f3a-5578-48f4-829c-64c69a9316bd",
 												"exec": [
 													""
 												],
@@ -263,7 +263,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "23000b55-7bd3-4051-9e47-add0d3de193e",
 												"exec": [
 													""
 												],
@@ -295,7 +295,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "7f10826f-9c63-43de-9b17-5aba6d4d41d6",
+										"id": "2232aee5-000c-4687-beb9-2b3f49e0a862",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -305,7 +305,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3c456109-a55e-4662-8233-4cc6791d2dab",
+										"id": "6d15ac74-228d-4377-90fd-07af1feedb99",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -331,7 +331,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "84aaf647-5b97-45ef-8bc8-4db666a8ac9b",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_rating_id\", jsonData.id);"
@@ -397,7 +397,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "23a544b0-1e93-47c5-974d-18881f3d2241",
 												"exec": [
 													""
 												],
@@ -452,7 +452,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d117ebe-0595-49ce-baad-2293edba077e",
+										"id": "355eaa10-f583-484b-8562-9d4767553a10",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -462,7 +462,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f5af028c-0369-46b5-8a10-39bdf45c3c1d",
+										"id": "ff1faa58-89b8-4d20-90f0-1e220f26f46c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -551,7 +551,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "523ad814-e489-46d9-8d87-d4073557deac",
+										"id": "34415048-cf4b-4e6c-8ee5-85a2588fff8f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -561,7 +561,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ce4a12d5-dc92-4f8a-82a1-8132f90cfc34",
+										"id": "2d5f223e-6c0f-4b31-9123-814f97b3ee0a",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -577,7 +577,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "af01cdfc-61f7-4fd8-ab87-5ff04753d056",
+								"id": "2d250163-521c-4b35-826e-b91dc0c49719",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -587,7 +587,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2a1711ae-382e-43f8-ac03-206c4a433ec2",
+								"id": "29c0dc6d-4bc6-444e-b733-405b3f19fc61",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -648,7 +648,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "60577c0a-6a2c-4a86-afd5-992224af8570",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_api\", JSON.stringify(jsonData));",
@@ -701,7 +701,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+												"id": "e945c150-849f-473c-bbc0-1c2682f5d61d",
 												"exec": [
 													"var createdApi_toPublish = JSON.parse(pm.environment.get(\"created_api\"));",
 													"createdApi_toPublish.lifecycle_state='published';",
@@ -766,7 +766,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "1359b74f-6192-4650-9ab0-c7d036e37ec1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -776,7 +776,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "128800c1-fa4a-4b8e-ab4f-4086c629f9dd",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -796,7 +796,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "e6c1f0b8-dd25-4740-a9db-bae7615fc99d",
 												"exec": [
 													"pm.test(\"Unsufficient rights\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -869,7 +869,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "fc2210a1-74ff-4beb-905f-362079822369",
+										"id": "093bd4b9-3ea7-4f32-b679-8bb4ada8df2c",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -879,7 +879,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "41027246-589a-4168-bd53-6c96ae95a300",
+										"id": "8757f4e0-7d97-4b21-b3c7-0960cacb11a3",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 403\", function () {",
@@ -929,7 +929,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "523ad814-e489-46d9-8d87-d4073557deac",
+										"id": "327551df-14ba-41a7-8d6e-62aa910b4192",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -939,7 +939,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ce4a12d5-dc92-4f8a-82a1-8132f90cfc34",
+										"id": "77e05bda-a6b5-4a79-aa0c-4fda4f315eec",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1004,7 +1004,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "55af95b8-f34f-4328-b83e-0f2a341ba215",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_api\", JSON.stringify(jsonData));",
@@ -1056,7 +1056,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+												"id": "2771bebf-5ab5-473a-907f-6e20d248e017",
 												"exec": [
 													"var createdApi_toPublish = JSON.parse(pm.environment.get(\"created_api\"));",
 													"createdApi_toPublish.lifecycle_state='published';",
@@ -1121,7 +1121,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "789c6073-a396-47c1-b6de-e1cb02a64321",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1131,7 +1131,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "e52eb967-4577-4125-a616-62cfd98507e6",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1151,7 +1151,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "04387e67-11a5-495f-8da0-724b396e697a",
+												"id": "76644b3f-ccb5-475d-8745-ba617278c825",
 												"exec": [
 													""
 												],
@@ -1190,7 +1190,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "04387e67-11a5-495f-8da0-724b396e697a",
+												"id": "19e30ae1-7fd6-4815-b402-98c04c98b54f",
 												"exec": [
 													""
 												],
@@ -1230,7 +1230,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "749bd93b-8923-4fe4-8147-aad652a8a03b",
 												"exec": [
 													""
 												],
@@ -1270,7 +1270,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "17e06413-e1aa-4577-be6e-ed2e867222bf",
 												"exec": [
 													""
 												],
@@ -1315,7 +1315,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "3d4f7aba-bee3-43e6-89bd-6d820bbcc3ed",
 												"exec": [
 													""
 												],
@@ -1361,7 +1361,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "3e832632-3266-4df5-9a4f-0689ba354138",
+												"id": "c38fad2c-4065-4798-a443-4beac7fb7a50",
 												"exec": [
 													""
 												],
@@ -1401,7 +1401,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8b6eac7c-0352-489c-8a8e-6b0c06e538a2",
+												"id": "42adced0-82a3-438d-96aa-fab556428de7",
 												"exec": [
 													""
 												],
@@ -1441,7 +1441,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "2d01fee4-1c21-44bf-8280-c0603d29d7f6",
 												"exec": [
 													""
 												],
@@ -1481,7 +1481,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "dcac829d-7de0-49de-a04f-9403265cc943",
 												"exec": [
 													""
 												],
@@ -1537,7 +1537,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "954510c4-6395-4e80-a3b4-2170b7e9fec3",
 												"exec": [
 													""
 												],
@@ -1576,7 +1576,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "7f10826f-9c63-43de-9b17-5aba6d4d41d6",
+										"id": "2766526d-f375-4f56-8a77-c9daaaa63ac1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1586,7 +1586,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3c456109-a55e-4662-8233-4cc6791d2dab",
+										"id": "3f43b425-60f9-4f93-aeda-a7459fd07ee9",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -1612,7 +1612,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "64fc2f17-2f43-4684-977c-f95dec49522b",
 												"exec": [
 													""
 												],
@@ -1622,7 +1622,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "b62db256-7f0e-4e31-8fb1-1d35bab83d68",
+												"id": "c588b519-e465-4d7c-913d-903b18fb9bac",
 												"exec": [
 													""
 												],
@@ -1667,7 +1667,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "94018374-b317-43d0-8a1a-b14f4f889ca0",
 												"exec": [
 													""
 												],
@@ -1677,7 +1677,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "b62db256-7f0e-4e31-8fb1-1d35bab83d68",
+												"id": "9d53078c-d2d5-4edd-ad1a-c2ec200031c2",
 												"exec": [
 													""
 												],
@@ -1722,7 +1722,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d117ebe-0595-49ce-baad-2293edba077e",
+										"id": "2362987e-cbae-4aaf-bd44-8e2248b2b8e1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1732,7 +1732,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f5af028c-0369-46b5-8a10-39bdf45c3c1d",
+										"id": "2f49784b-eaa1-4350-aefc-1e049d843c2a",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -1758,7 +1758,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "04387e67-11a5-495f-8da0-724b396e697a",
+												"id": "63ea3084-464b-47c8-9c8a-e5f15db16ed9",
 												"exec": [
 													""
 												],
@@ -1797,7 +1797,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "fa90e6e3-afe9-4dfb-a904-069113f0c793",
 												"exec": [
 													""
 												],
@@ -1837,7 +1837,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8725932-131b-4f79-87c9-e13318ec8f23",
+												"id": "1c8afd2d-bc18-47c1-b8f9-cca73c9c4c07",
 												"exec": [
 													""
 												],
@@ -1882,7 +1882,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "3e832632-3266-4df5-9a4f-0689ba354138",
+												"id": "429162de-be76-4db7-bf00-c7204ebfe5a0",
 												"exec": [
 													""
 												],
@@ -1922,7 +1922,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8b6eac7c-0352-489c-8a8e-6b0c06e538a2",
+												"id": "09335cdd-7958-4a1f-acd5-ea47065a9679",
 												"exec": [
 													""
 												],
@@ -1962,7 +1962,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "474e1e1a-2afa-4aea-a60a-49167f8a0d59",
 												"exec": [
 													""
 												],
@@ -2016,7 +2016,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "21e27540-7273-423e-83df-efb67a855696",
+										"id": "a5532761-6585-4e5b-8393-baff8231c2d1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2026,7 +2026,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f476f497-4a70-4ec8-a1ec-2886bdad15bb",
+										"id": "ff2399ae-8961-42f2-9280-617572627559",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -2080,7 +2080,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "523ad814-e489-46d9-8d87-d4073557deac",
+										"id": "40b9226f-e583-49d9-8bc7-b571362d295d",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2090,7 +2090,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ce4a12d5-dc92-4f8a-82a1-8132f90cfc34",
+										"id": "0bdff8e5-3306-4d6a-8a38-4a24969403f1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2106,7 +2106,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "af01cdfc-61f7-4fd8-ab87-5ff04753d056",
+								"id": "6f1d3d00-4314-4c85-89b6-2bd2b4982c0d",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2116,7 +2116,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2a1711ae-382e-43f8-ac03-206c4a433ec2",
+								"id": "c41db740-0583-4cb1-8b7a-3433a0803503",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2177,7 +2177,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "e8f2f501-0838-4954-8516-48a9f3a00eb0",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_api\", JSON.stringify(jsonData));",
@@ -2230,7 +2230,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+												"id": "12a568d5-6b63-4946-be31-16fbaa8498b2",
 												"exec": [
 													"var createdApi_toPublish = JSON.parse(pm.environment.get(\"created_api\"));",
 													"createdApi_toPublish.lifecycle_state='published';",
@@ -2295,7 +2295,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "2295ccff-a753-44bf-865f-6c688e72d946",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2305,7 +2305,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "73db5319-155e-4013-bbca-6387b5e6ac83",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2325,7 +2325,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "605bd875-f2ca-42cc-9fa5-2a777d9bd52f",
 												"exec": [
 													"pm.test(\"Rating service disabled\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -2383,7 +2383,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "fc2210a1-74ff-4beb-905f-362079822369",
+										"id": "66b739ed-94e5-4651-91bd-82788bf3f261",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2393,7 +2393,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "41027246-589a-4168-bd53-6c96ae95a300",
+										"id": "819c2967-b672-41bf-b786-00938f93818e",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 503\", function () {",
@@ -2443,7 +2443,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "523ad814-e489-46d9-8d87-d4073557deac",
+										"id": "7eccc674-2814-4c6a-b1bf-bedc637102ab",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2453,7 +2453,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ce4a12d5-dc92-4f8a-82a1-8132f90cfc34",
+										"id": "ae8fef28-efea-466b-aec0-63c1991e393a",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2469,7 +2469,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "f0839da4-c791-44cf-86e9-40221db28096",
+								"id": "774cf8da-e905-4a47-b707-46b03f9c0de1",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2479,7 +2479,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "de4e447e-1eba-4769-8a16-3d28e5a48ec7",
+								"id": "ceedc0c4-efdf-494d-a5ae-c0541b694595",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2508,7 +2508,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "6608f660-de02-43ae-9f06-91b7b1492161",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_application_id\", jsonData.id);"
@@ -2597,7 +2597,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "ed9991cb-a0fb-43d6-abc9-40e707ce8dc4",
+												"id": "6bb992af-2ad1-45a3-bc71-a8745c6dbe9d",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_generic_config\", jsonData.id);"
@@ -2648,7 +2648,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "9b132558-e84f-4032-89de-7540a7f7065e",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2658,7 +2658,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "e64ef1ae-615d-4742-83d1-db76d472a611",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2678,7 +2678,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8877b70b-b31a-450f-9bf3-0475849c5bb9",
+												"id": "0589fbdd-53fe-469e-a0d5-ddbcd2ec6c2f",
 												"exec": [
 													""
 												],
@@ -2717,7 +2717,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "5582cdd1-05cc-477c-8b69-5e9153bbb793",
 												"exec": [
 													""
 												],
@@ -2772,7 +2772,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "1cf3093c-a652-464b-807e-ecd0cd424130",
 												"exec": [
 													""
 												],
@@ -2828,7 +2828,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "db58a0bc-b81c-47c4-8de9-59fc93762cea",
 												"exec": [
 													""
 												],
@@ -2868,7 +2868,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "7f7e5b1b-eba7-4224-982b-dd2cc7b8d314",
 												"exec": [
 													""
 												],
@@ -2909,7 +2909,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "c26dd8d6-5463-4295-bebd-1e46ca84b2fb",
 												"exec": [
 													""
 												],
@@ -2953,7 +2953,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "96f3e458-352e-41dc-a030-8a3460b0e914",
+										"id": "5312d8b0-7682-4841-82d2-4b1f1b474427",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2963,7 +2963,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6e913c1b-4c94-47c4-9a5b-e7d79b2c1f3b",
+										"id": "4568e9fc-da37-42ae-86b1-ed016c0e91f4",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -2989,7 +2989,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "81b25aea-ec82-4ded-977d-b2296b730cff",
 												"exec": [
 													""
 												],
@@ -3043,7 +3043,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "844f2ec9-e171-4228-9eda-aaefc77cef04",
+										"id": "5385fd18-73ec-4646-8364-af51b41a2fb0",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3053,7 +3053,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0bc529e4-eb44-4496-99dc-b90bd3cea860",
+										"id": "4db14fe7-9406-4d3b-80d2-7636305de026",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -3079,7 +3079,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "9b475481-74ce-4439-902f-e0d42cb1b208",
 												"exec": [
 													""
 												],
@@ -3118,7 +3118,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "844f2ec9-e171-4228-9eda-aaefc77cef04",
+										"id": "a2937edc-7216-4a63-86de-27b296e0b7ad",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3128,7 +3128,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0bc529e4-eb44-4496-99dc-b90bd3cea860",
+										"id": "62baacd7-0aba-4e5e-a246-3d58f3668810",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -3154,7 +3154,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "8cb9d528-d483-4196-bef2-e4211656f4f8",
 												"exec": [
 													"pm.test(\"Query parameter 'from' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3204,7 +3204,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "903552d2-d1da-41df-bc21-f947da969953",
 												"exec": [
 													"pm.test(\"Query parameter 'to' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3254,7 +3254,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "f337659a-fe14-4fc6-91c1-bfdfab4feaf1",
 												"exec": [
 													"pm.test(\"'from' query parameter value must not be greater than 'to'\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3308,7 +3308,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "d0fdb372-64b9-4dbb-a9af-6b4b7ef84b23",
 												"exec": [
 													"pm.test(\"'order' query parameter value must be 'ASC' or 'DESC'\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3365,7 +3365,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2e42d120-1227-4259-bee6-4891eb3111aa",
+										"id": "0b096a0f-6e3e-4d44-8d62-55f9085d0af0",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3375,7 +3375,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8ebe47ba-3dad-4931-a386-d3e0d4a5a16d",
+										"id": "2794c19c-14fb-482d-a2d6-b5227b8a72d5",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -3397,7 +3397,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "c0978bf1-f51b-45e0-b13e-dfb5acca9f28",
 												"exec": [
 													"pm.test(\"Query parameter 'type' must be present and one of : GROUP_BY, DATE_HISTO, COUNT\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3440,7 +3440,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "d991c884-bf6e-427b-bee1-634ec6849925",
 												"exec": [
 													"pm.test(\"Query parameter 'from' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3493,7 +3493,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "bca138c0-b54f-48fe-a88a-03f8e623feb9",
 												"exec": [
 													"pm.test(\"Query parameter 'to' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3546,7 +3546,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "de1da4d1-f6b3-4efd-bd14-58684b874d13",
 												"exec": [
 													"pm.test(\"'from' query parameter value must not be greater than 'to'\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3603,7 +3603,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "02100f6e-c937-4c66-bbf7-f15d37a3833c",
 												"exec": [
 													"pm.test(\"Query parameter 'interval' is not valid\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3664,7 +3664,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "73e9ff50-f804-4352-99a4-4efdb6be6ea9",
 												"exec": [
 													"pm.test(\"Query parameter 'interval' is not valid. 'interval' must be >= 1000 and <= 1000000000\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3729,7 +3729,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "309321dc-7f93-44d5-8472-9cf51b3e20a9",
 												"exec": [
 													"pm.test(\"'field' query parameter is required for 'group_by' request\", function () {",
 													"    var jsonData = pm.response.json();",
@@ -3789,7 +3789,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2e42d120-1227-4259-bee6-4891eb3111aa",
+										"id": "13856fea-e2c1-4679-9241-6cd01edb551f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3799,7 +3799,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8ebe47ba-3dad-4931-a386-d3e0d4a5a16d",
+										"id": "0a8acd46-4ff3-45eb-8af5-fd5abb366c3c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
@@ -3879,7 +3879,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2c576dbb-9f1b-4fe8-9b07-e2a5200d6097",
+										"id": "44128b9f-3860-4bee-8696-63eb2a428133",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3889,7 +3889,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5aa73670-55f7-4709-9f7e-700e47a8aa90",
+										"id": "0ef196f5-989d-44f5-8d87-a8a658de330f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3905,7 +3905,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9348f51e-7565-48fa-9a88-6c3328c14a79",
+								"id": "2c0d6caa-fd40-4695-a60f-eb043d624178",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3915,7 +3915,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c89fe152-7664-42a7-8ea3-383372363710",
+								"id": "60fdce8b-64fa-428d-9367-24c38f8b4852",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3938,7 +3938,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "54ffdacb-cbfa-4237-a24f-b19160245e4a",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_application_id\", jsonData.id);"
@@ -3984,141 +3984,23 @@
 									"response": []
 								},
 								{
-									"name": "Create DUMMY Environment Role",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"scope\":\"ENVIRONMENT\",\n\t\"permissions\":{\n\t\t\"ALERT\":[],\n\t\t\"API\":[],\n\t\t\"APPLICATION\":[],\n\t\t\"AUDIT\":[],\n\t\t\"DICTIONARY\":[],\n\t\t\"ENTRYPOINT\":[],\n\t\t\"GROUP\":[],\n\t\t\"INSTANCE\":[],\n\t\t\"MESSAGE\":[],\n\t\t\"NOTIFICATION\":[],\n\t\t\"PLATFORM\":[],\n\t\t\"SETTINGS\":[],\n\t\t\"TAG\":[],\n\t\t\"TENANT\":[],\n\t\t\"DASHBOARD\":[],\n\t\t\"QUALITY_RULE\":[],\n\t\t\"METADATA\":[],\n\t\t\"DOCUMENTATION\":[],\n\t\t\"CATEGORY\":[],\n\t\t\"TOP_APIS\":[],\n\t\t\"API_HEADER\":[],\n\t\t\"IDENTITY_PROVIDER\":[],\n\t\t\"CLIENT_REGISTRATION_PROVIDER\":[],\n\t\t\"THEME\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ENVIRONMENT",
-												"roles"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Create DUMMY Organization Role",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"scope\":\"ORGANIZATION\",\n\t\"permissions\":{\n\t\t\"USER\":[],\n\t\t\"ENVIRONMENT\":[],\n\t\t\"ROLE\":[]\n\t},\n\t\"name\":\"DUMMY\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ORGANIZATION",
-												"roles"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Get user id",
+									"name": "GET USER Environment Role",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "a8fba918-9ec5-4008-a5e0-085978cfa48b",
+												"id": "53bc24b3-3077-46d7-bd4d-3a705830e81f",
 												"exec": [
 													"var jsonData = pm.response.json();",
-													"pm.environment.set(\"current_user_id\", jsonData.id);"
+													"jsonData.scope = \"ENVIRONMENT\";",
+													"pm.environment.set(\"USER_ENV_ROLE\", jsonData);"
 												],
 												"type": "text/javascript"
 											}
 										}
 									],
 									"request": {
-										"auth": {
-											"type": "basic",
-											"basic": [
-												{
-													"key": "password",
-													"value": "password",
-													"type": "string"
-												},
-												{
-													"key": "username",
-													"value": "user",
-													"type": "string"
-												}
-											]
-										},
 										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/user",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"user"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Delete USER Organization Role from user",
-									"request": {
-										"method": "DELETE",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -4127,98 +4009,43 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/USER/users/:userId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ORGANIZATION",
-												"roles",
-												"USER",
-												"users",
-												":userId"
-											],
-											"variable": [
-												{
-													"key": "userId",
-													"value": "{{current_user_id}}"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Delete USER Environment Role from user",
-									"request": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER/users/:userId",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
 												"ENVIRONMENT",
 												"roles",
-												"USER",
-												"users",
-												":userId"
-											],
-											"variable": [
-												{
-													"key": "userId",
-													"value": "{{current_user_id}}"
-												}
+												"USER"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "Add DUMMY Organization Role to user",
+									"name": "Remove Application permissions from USER Role",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "eb821cca-09eb-4f4b-b944-4375a1ef2b07",
+												"exec": [
+													"var userRole = pm.environment.get(\"USER_ENV_ROLE\");",
+													"userRole.permissions.APPLICATION = [];",
+													"pm.environment.set(\"UPDATED_USER_ENV_ROLE\", JSON.stringify(userRole));"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"request": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -4229,7 +4056,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
+											"raw": "{{UPDATED_USER_ENV_ROLE}}\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4237,65 +4064,19 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/DUMMY/users",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ORGANIZATION",
-												"roles",
-												"DUMMY",
-												"users"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Add DUMMY Environment Role to user",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/DUMMY/users",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
 												"ENVIRONMENT",
 												"roles",
-												"DUMMY",
-												"users"
+												"USER"
 											]
 										}
 									},
@@ -4306,7 +4087,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "c9934164-0441-40e8-a1cc-f45035e1bb06",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4316,7 +4097,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "6fb5f806-06e7-43e4-a8c6-1ecdb4f88fed",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4486,7 +4267,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "8edccbd2-ed9a-40da-98d3-5d78c05344cb",
 												"exec": [
 													""
 												],
@@ -4886,7 +4667,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3e459d05-d941-427c-9877-ccba72631d78",
+										"id": "0ec20c48-394b-4251-9f82-aaa53f02edd1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4896,7 +4677,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "21202725-33f2-4818-bff6-2323839cdab0",
+										"id": "962f56d5-d589-4c44-8e98-6c4a473e4321",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 403\", function () {",
@@ -4918,59 +4699,23 @@
 							"name": "-- Clean up --",
 							"item": [
 								{
-									"name": "Delete DUMMY Organization Role from user",
-									"request": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+									"name": "Reset permissions from USER Role",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "0abb01a9-df58-4e98-b6a7-f4e929bbe6b5",
+												"exec": [
+													"var userRole = pm.environment.get(\"USER_ENV_ROLE\");",
+													"userRole.permissions.APPLICATION = [ \"C\", \"R\", \"U\", \"D\"];",
+													"pm.environment.set(\"USER_ENV_ROLE\", JSON.stringify(userRole));"
+												],
+												"type": "text/javascript"
 											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/DUMMY/users/:userId",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ORGANIZATION",
-												"roles",
-												"DUMMY",
-												"users",
-												":userId"
-											],
-											"variable": [
-												{
-													"key": "userId",
-													"value": "{{current_user_id}}"
-												}
-											]
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Delete DUMMY Environment Role from user",
+									],
 									"request": {
-										"method": "DELETE",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -4981,7 +4726,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
+											"raw": "{{USER_ENV_ROLE}}\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4989,167 +4734,19 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/DUMMY/users/:userId",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
-												"DEFAULT",
-												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
 												"ENVIRONMENT",
 												"roles",
-												"DUMMY",
-												"users",
-												":userId"
-											],
-											"variable": [
-												{
-													"key": "userId",
-													"value": "{{current_user_id}}"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Add USER Organization Role to user",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/USER/users",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ORGANIZATION",
-												"roles",
-												"USER",
-												"users"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Add USER Environment Role to user",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n\t\"id\":\"{{current_user_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER/users",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ENVIRONMENT",
-												"roles",
-												"USER",
-												"users"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Delete DUMMY Environment role",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/DUMMY",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ENVIRONMENT",
-												"roles",
-												"DUMMY"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Delete DUMMY Organization role",
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ORGANIZATION/roles/DUMMY",
-											"host": [
-												"{{GRAVITEEIO_MGMT_URL}}"
-											],
-											"path": [
-												"management",
-												"organizations",
-												"DEFAULT",
-												"environments",
-												"DEFAULT",
-												"configuration",
-												"rolescopes",
-												"ORGANIZATION",
-												"roles",
-												"DUMMY"
+												"USER"
 											]
 										}
 									},
@@ -5189,7 +4786,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2c576dbb-9f1b-4fe8-9b07-e2a5200d6097",
+										"id": "fa8c1edb-bec0-413b-bf5b-084dfa9e7069",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -5199,7 +4796,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5aa73670-55f7-4709-9f7e-700e47a8aa90",
+										"id": "a5334854-4052-4429-ad27-529c9c40aaf0",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -5226,7 +4823,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "82b461f0-0957-46aa-959d-4d1677297331",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_application\", JSON.stringify(jsonData));",
@@ -5277,7 +4874,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e13448e4-e2a1-4af5-9b93-315d08f47bc8",
+										"id": "0d7b8917-88c8-4bcf-b568-3e821e6e93c1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -5287,7 +4884,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b38521-2215-4c48-a319-ee3bfb9e6524",
+										"id": "3b4aa399-9e31-48ee-b930-75c72aef038d",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -5307,7 +4904,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8877b70b-b31a-450f-9bf3-0475849c5bb9",
+												"id": "bfd40757-e4e1-49ba-bb3b-aeea1da479e3",
 												"exec": [
 													""
 												],
@@ -5346,7 +4943,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "0ebbde5f-884f-4477-a221-88cdcd00a77c",
 												"exec": [
 													""
 												],
@@ -5401,7 +4998,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8a8924bf-29d6-4d29-861a-d55aa35287e8",
+												"id": "2aa639b3-8e1e-47f7-b284-cef304458121",
 												"exec": [
 													""
 												],
@@ -5440,7 +5037,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "48fe9929-0d35-49ac-9ef3-cf6f9078dabd",
 												"exec": [
 													""
 												],
@@ -5480,7 +5077,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "00768166-3058-4639-8edd-87f28309ffc3",
 												"exec": [
 													""
 												],
@@ -5520,7 +5117,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "c7e149a9-281c-4001-978c-ea7d7fe72cd4",
 												"exec": [
 													""
 												],
@@ -5576,7 +5173,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "ca9a260e-959a-469c-a6d4-5b1387ac4f29",
 												"exec": [
 													""
 												],
@@ -5616,7 +5213,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "b29279ca-fce8-442c-82a6-94a653e500b3",
 												"exec": [
 													""
 												],
@@ -5672,7 +5269,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "a98680ac-303d-4731-b126-c457ebffd3e1",
 												"exec": [
 													""
 												],
@@ -5729,7 +5326,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "f0b1af23-0c88-4092-9de9-54db5e9a64c2",
 												"exec": [
 													""
 												],
@@ -5769,7 +5366,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "0abe0c14-bc73-4da1-952b-a547a051b8d1",
 												"exec": [
 													""
 												],
@@ -5809,7 +5406,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "0ecf42b1-84c1-4da2-89c6-d26f156a429a",
 												"exec": [
 													""
 												],
@@ -5850,7 +5447,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "e012af44-dbf6-4c80-bbed-e7cf1ae52e1c",
 												"exec": [
 													""
 												],
@@ -5889,7 +5486,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "96f3e458-352e-41dc-a030-8a3460b0e914",
+										"id": "933d736d-d57f-40f0-a472-4fd2a9dc06e9",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -5899,7 +5496,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6e913c1b-4c94-47c4-9a5b-e7d79b2c1f3b",
+										"id": "848c558b-800d-42a1-84c0-ac7d383f71db",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -5925,7 +5522,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "1b214a9e-ad5c-486b-91fb-46b0417f18c5",
 												"exec": [
 													""
 												],
@@ -5970,7 +5567,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "0fe2cbfe-f5ef-4464-8dd6-a15a15e1f4eb",
 												"exec": [
 													""
 												],
@@ -6031,7 +5628,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "7ff3a358-5842-4242-a46d-f5132f16e24e",
 												"exec": [
 													""
 												],
@@ -6075,7 +5672,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "ad369410-a60a-4ce7-86f3-892160e1921b",
+										"id": "96e64f1a-c299-47dc-8348-00341d096cc5",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6085,7 +5682,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "05775cd4-7596-425b-b146-99535e37bd5b",
+										"id": "577de680-abc0-4367-bef4-7410015dc2b0",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -6111,7 +5708,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "31d531f3-c497-4cb7-935f-2ffe74323492",
+												"id": "a8ce6a40-d7e5-4786-baa4-3319864eb3b8",
 												"exec": [
 													""
 												],
@@ -6155,7 +5752,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "5d4654fd-f2ad-4b2e-9714-e3c357f6f047",
+										"id": "61776d52-9fc6-4616-b825-5f89659c3a07",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6165,7 +5762,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6b250f32-a229-4581-b1b5-cf31f0a5b7cd",
+										"id": "b2be7e4f-d11f-4fe3-aaff-f560531194b2",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -6219,7 +5816,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2c576dbb-9f1b-4fe8-9b07-e2a5200d6097",
+										"id": "0a53cafa-4901-4f52-9a8b-c497bcc0a2d8",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6229,7 +5826,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5aa73670-55f7-4709-9f7e-700e47a8aa90",
+										"id": "0e3d97a3-fbb7-45ee-a2d2-cb1ed129c98a",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6245,7 +5842,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "2b0c61b7-708a-499c-9f93-89567afc4129",
+								"id": "c5bf239e-81bd-486b-925e-05206e2a249a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -6255,7 +5852,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "73a268e8-b029-4e73-b59c-275d2063ebb8",
+								"id": "aabb5f98-7fad-4124-b4e6-b77ecb623e28",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -6284,7 +5881,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "4de06740-aec1-475a-a045-e8af5c4fc58f",
 												"exec": [
 													""
 												],
@@ -6340,7 +5937,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "58162ad5-cd45-4737-8b32-41331fa9a453",
 												"exec": [
 													""
 												],
@@ -6380,7 +5977,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "d47bbc07-1175-44d6-a4bb-0276eaa4043c",
+										"id": "b38188d1-586a-429a-8248-881749d25a59",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6390,7 +5987,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "021d8381-52a9-46a9-ba27-8a1702e0d739",
+										"id": "a504dbb5-36ac-4440-a2c4-753d2dbf1797",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -6412,7 +6009,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "44cb3a50-14fc-4a07-a52e-64ffff430823",
+								"id": "d22734a7-9acc-40e6-a4d8-1730f9e27918",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -6422,7 +6019,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e247e777-0dfe-4514-9987-8be623d0bade",
+								"id": "49248529-c8f4-49a8-983b-9f1b54132895",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -6448,7 +6045,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+										"id": "965998e9-8e21-43d3-8bdc-145d695fe279",
 										"exec": [
 											""
 										],
@@ -6487,7 +6084,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "a6408e93-9abc-45f6-88f0-9da50fd5c210",
+								"id": "be057c53-7424-4185-9eed-8c3eb3a9b4b2",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -6497,7 +6094,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b7c0a6b0-4312-4529-ae54-3c79b976014a",
+								"id": "67e96191-f4ba-49aa-ae8a-a1e116e08055",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 404\", function () {",
@@ -6532,7 +6129,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "ff18cf91-7e47-4882-be31-edafaf614683",
+												"id": "ed716138-7276-460d-81d7-8bd15479d197",
 												"exec": [
 													""
 												],
@@ -6542,7 +6139,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "1d4ef9b0-67d5-43da-a44f-ca9d3472bc30",
+												"id": "ddde8c31-7bd4-4d19-a3f6-4caa4f6a3572",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_page_id\", jsonData.id);",
@@ -6617,7 +6214,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "01e09508-310c-42a9-9a18-1a8663867cc0",
 												"exec": [
 													"pm.test(\"Status code is 401\", function () {",
 													"    pm.response.to.have.status(401);",
@@ -6663,7 +6260,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "93e9fa33-9ee3-4f69-b7b0-2b7137bbb6a1",
 												"exec": [
 													"pm.test(\"Status code is 401\", function () {",
 													"    pm.response.to.have.status(401);",
@@ -6717,7 +6314,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "69214d53-2079-4eac-a5fc-ab84af443aa9",
+												"id": "6d4ac5d7-0c2a-4df7-b957-6ce58253ff45",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_exclusion_group_id\", jsonData.id);"
@@ -6845,7 +6442,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "37872782-7483-4d2f-ab3c-9ed0c99b9e5c",
+												"id": "6fa583c4-b9e6-4fa0-8cb9-4e8965bfec65",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"user_reference\", jsonData[0].reference);"
@@ -6873,15 +6470,13 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/search/users/?q=application1",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/search/users/?q=application1",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
-												"DEFAULT",
-												"environments",
 												"DEFAULT",
 												"search",
 												"users",
@@ -6949,7 +6544,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c9430c1a-3588-4c87-91c1-19ae61348392",
+										"id": "7ece9803-d5ad-4a16-a5bf-2034f2298cd3",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6959,7 +6554,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ea10df51-ca08-47ee-90d2-5c13475def52",
+										"id": "870e5fef-047e-4aa8-8d98-b4c7b244d7c6",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -6979,7 +6574,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "e0f324c1-28be-4a0b-a871-f226def94d70",
 												"exec": [
 													"pm.test(\"Status code is 401\", function () {",
 													"    pm.response.to.have.status(401);",
@@ -7040,7 +6635,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "c260e36e-e0d7-471b-a3db-f4149c16aec8",
 												"exec": [
 													"pm.test(\"Status code is 401\", function () {",
 													"    pm.response.to.have.status(401);",
@@ -7101,7 +6696,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "cb6c165f-9c6b-4957-8bc5-7d8ab3012569",
+										"id": "f93ec75a-4b1e-4aa1-acc0-b451a3529fa3",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7111,7 +6706,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f9b65491-0dc1-4095-88c8-f39ade09b1ad",
+										"id": "6be8afe4-9d49-4c23-b31f-3c7f65f1f3c4",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7235,7 +6830,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "4002dd02-c702-446e-955d-a051d414f91f",
 												"exec": [
 													""
 												],
@@ -7273,7 +6868,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "9179df9e-c50a-4a73-9371-27577e662d04",
+										"id": "c7d447da-56bf-49b6-80d2-ca9527e1dafa",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7283,7 +6878,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0edcab96-14e9-4ace-afee-695af68016ca",
+										"id": "1b188df3-7148-4e43-813b-ae7a0ecd3982",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -7305,7 +6900,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "3649027f-2eb3-4663-838e-bf4a9cee2361",
+								"id": "888bda74-1518-4b14-bc78-8b4f161617d8",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -7315,7 +6910,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2dab4c47-1b80-4327-9fd4-d4fe7a77a9c1",
+								"id": "9d2b6aa5-81c7-4a38-a877-b89f49f455b9",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -7344,7 +6939,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "45b0e036-dad5-44b9-ade4-28c7e1e2bc0d",
+												"id": "066be249-9157-4a21-99ce-b9ff3d756825",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -7383,7 +6978,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "4d0b4849-7f4c-4383-b5c9-830f5ea36085",
+										"id": "9529fb79-d30b-4fe4-b9c1-b0890592f33f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7393,7 +6988,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7645b38a-118f-4c57-955f-7b5a77814093",
+										"id": "a37586d5-c969-4450-810c-e2384cf4722f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7416,7 +7011,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "09b4c96b-4e00-43b3-b727-e6739af6ae6e",
+														"id": "df047f16-5881-4403-8c42-7e125a00e3d3",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_api_for_sub\", JSON.stringify(jsonData));",
@@ -7468,7 +7063,7 @@
 												{
 													"listen": "prerequest",
 													"script": {
-														"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+														"id": "79135287-e37b-492c-8b91-73dfaac8336a",
 														"exec": [
 															"var createdApi_for_sub_toPublish = JSON.parse(pm.environment.get(\"created_api_for_sub\"));",
 															"createdApi_for_sub_toPublish.lifecycle_state='published';",
@@ -7534,7 +7129,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+														"id": "0f0cee2c-d3d3-4e3b-a484-25fec323aaf9",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_plan_for_sub_id\", jsonData.id);"
@@ -7593,7 +7188,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+														"id": "edf7248d-1e2e-4ef2-a550-73b35652d79d",
 														"exec": [
 															""
 														],
@@ -7657,7 +7252,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+														"id": "58cb9dae-6bdd-4d4c-b34b-1531022de963",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_application_for_sub_id\", jsonData.id);"
@@ -7708,7 +7303,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "e1de8766-ba7d-48e3-b320-fb4ce6d52e46",
+														"id": "c28cdda2-455d-4085-8dcd-061ac9b6ebdf",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_sub_id\", jsonData.id);"
@@ -7768,7 +7363,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "69dbc838-ab5b-4d35-933a-f7acfa9b0a2e",
+														"id": "0d2472f3-37f6-460f-819f-642f46a1de85",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"first_sub_api_key\", jsonData[0].key);"
@@ -7817,7 +7412,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+														"id": "5dfccea1-0f20-4adb-82f4-3985cf248297",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_sec_plan_for_sub_id\", jsonData.id);"
@@ -7876,7 +7471,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+														"id": "1e9f0736-23c7-4e99-84ee-6c6cceb09b49",
 														"exec": [
 															""
 														],
@@ -7940,7 +7535,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "e1de8766-ba7d-48e3-b320-fb4ce6d52e46",
+														"id": "a4ddbf87-dbd3-43bf-ba67-eb5f83563ef6",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_sec_sub_id\", jsonData.id);"
@@ -8007,7 +7602,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "244f5ecb-b748-4373-9ad0-4715cdd27d0a",
+														"id": "8443fa28-6f15-4ee8-a6f6-dcac8ea5c223",
 														"exec": [
 															"pm.test(\"Status code is 400\", function () {",
 															"    pm.response.to.have.status(400);",
@@ -8297,7 +7892,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "09b4c96b-4e00-43b3-b727-e6739af6ae6e",
+												"id": "12528bd2-a413-463a-8736-9f105ed05ce5",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_api_for_sub\", JSON.stringify(jsonData));",
@@ -8349,7 +7944,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+												"id": "8e3039e2-dfcf-42b3-807a-2ef3b8fd1326",
 												"exec": [
 													"var createdApi_for_sub_toPublish = JSON.parse(pm.environment.get(\"created_api_for_sub\"));",
 													"createdApi_for_sub_toPublish.lifecycle_state='published';",
@@ -8415,7 +8010,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+												"id": "bd31eeff-4eba-43a3-8ec9-a004cbedb186",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_plan_for_sub_id\", jsonData.id);"
@@ -8474,7 +8069,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+												"id": "b2ad8f1f-0dbd-4019-98e2-88709fba80f8",
 												"exec": [
 													""
 												],
@@ -8538,7 +8133,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "1b40178d-aa83-456d-9c0f-8ed3bdb6862b",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_application_for_sub_id\", jsonData.id);"
@@ -8589,7 +8184,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e1de8766-ba7d-48e3-b320-fb4ce6d52e46",
+												"id": "cb0c9508-a712-40d6-ae6e-371508f767e0",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_sub_id\", jsonData.id);"
@@ -8649,7 +8244,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "69dbc838-ab5b-4d35-933a-f7acfa9b0a2e",
+												"id": "8c2128c4-dbfb-470d-b8ec-8405ee30bace",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"first_sub_api_key\", jsonData[0].key);"
@@ -8705,7 +8300,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a5578519-0b09-46b6-8510-a6ddc8d18ab2",
+												"id": "2be36c90-00ea-4c8f-a5b2-a4cad021e5ce",
 												"exec": [
 													""
 												],
@@ -8744,7 +8339,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a5578519-0b09-46b6-8510-a6ddc8d18ab2",
+												"id": "410e5657-4b94-4dde-a291-16ee92fe9137",
 												"exec": [
 													""
 												],
@@ -8787,7 +8382,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e1de8766-ba7d-48e3-b320-fb4ce6d52e46",
+												"id": "ff8f5319-3204-41bd-85af-4073e6887a89",
 												"exec": [
 													""
 												],
@@ -8836,7 +8431,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "646ce264-50d0-4c5d-a07e-709d3095c945",
+												"id": "e8f1c54b-a6aa-42de-892a-18088964b858",
 												"exec": [
 													""
 												],
@@ -8876,7 +8471,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "dc940620-df72-4a25-aa33-3b0df19f8cb0",
 												"exec": [
 													""
 												],
@@ -8917,7 +8512,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "c5078476-5a64-4ddb-85c0-61eafe84ada7",
 												"exec": [
 													""
 												],
@@ -8959,7 +8554,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "6917a09b-9544-47d1-8164-33a1b94dbf89",
 												"exec": [
 													""
 												],
@@ -9020,7 +8615,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "aabaafe2-977f-4a38-9b93-7b83dd48bd36",
+										"id": "6d2471da-68bb-4437-8003-680b10fcd2bc",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -9030,7 +8625,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "03681d25-a5fd-434a-a76e-33ced3e3f302",
+										"id": "b0f5a9bb-1870-4573-a257-66d6b203f157",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 403\", function () {",
@@ -9207,7 +8802,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "09b4c96b-4e00-43b3-b727-e6739af6ae6e",
+												"id": "1de0ffc0-a13e-4ffc-97a4-054e2b59ac75",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_api_for_sub\", JSON.stringify(jsonData));",
@@ -9259,7 +8854,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "79cbaece-c9fc-4d5d-9b3f-30850c1ee42e",
+												"id": "c39141a8-285a-4fc8-9933-bc7fc7f4a1bb",
 												"exec": [
 													"var createdApi_for_sub_toPublish = JSON.parse(pm.environment.get(\"created_api_for_sub\"));",
 													"createdApi_for_sub_toPublish.lifecycle_state='published';",
@@ -9325,7 +8920,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+												"id": "25dc224f-0843-465f-bd24-845eafb2f05e",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_plan_for_sub_id\", jsonData.id);"
@@ -9384,7 +8979,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5b159b0d-08e8-4a1a-b6df-2a87a2af605c",
+												"id": "a8008919-fefa-4685-b83b-243f7e010641",
 												"exec": [
 													""
 												],
@@ -9448,7 +9043,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4bb67939-8bf1-47b3-ae86-d4b4bb4b343b",
+												"id": "e583da20-4663-4cf0-9cd9-c27cbe547c4c",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_application_for_sub_id\", jsonData.id);"
@@ -9499,7 +9094,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e1de8766-ba7d-48e3-b320-fb4ce6d52e46",
+												"id": "9fee3f0e-eb72-4ca7-99c0-162d1d57d1c1",
 												"exec": [
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"created_sub_id\", jsonData.id);"
@@ -9566,7 +9161,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8877b70b-b31a-450f-9bf3-0475849c5bb9",
+												"id": "06a958ca-c33a-4448-8071-57177b609f6b",
 												"exec": [
 													""
 												],
@@ -9605,7 +9200,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "4be29b9a-164d-453f-8ed4-ef2d2dfcf826",
 												"exec": [
 													""
 												],
@@ -9645,7 +9240,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "2d50c565-f547-4160-9bfb-078ff4a9a638",
 												"exec": [
 													""
 												],
@@ -9686,7 +9281,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "37434798-10f5-4059-bb72-5a7915c9cde9",
 												"exec": [
 													""
 												],
@@ -9731,7 +9326,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "71d4dfee-80d6-4df2-b23b-543e6ab5dee9",
+										"id": "baff2b6c-caa0-4b94-adae-db16cce59cd3",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -9741,7 +9336,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aa618fce-577b-4543-a294-6197d08baad1",
+										"id": "4be9e5bc-b59e-4b5c-abb4-fe09b31781c6",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -9767,7 +9362,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2fd9acc6-1c33-4f07-aa8f-2376b68dc008",
+												"id": "4f818d25-bf49-46e4-a9bd-6f2ec3312e1f",
 												"exec": [
 													""
 												],
@@ -9812,7 +9407,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f0539cf2-3b49-4d90-98fa-e0b53141b213",
+										"id": "2369c182-bdfb-4bbb-ad14-4db0ac8c4bb0",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -9822,7 +9417,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7934745f-b148-4896-89de-d4d26be5ea66",
+										"id": "f35a9aa4-5aa7-4c07-bbff-87bae5087117",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -9987,7 +9582,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "80e32e37-fcdb-4023-a1de-aba9457c44c1",
+								"id": "7b97006f-8f26-42d8-9acf-115a2579281a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9997,7 +9592,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c8d42abc-61ec-42c6-a45b-37fed88ddc40",
+								"id": "2d74da4b-85bb-46d5-82fc-d8441b707637",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -10042,7 +9637,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "540730f6-b2b5-4820-8476-b093e5f07434",
+								"id": "8b2feb60-a238-4602-a021-087cdf791765",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -10052,7 +9647,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d1cc1739-64d0-4fb2-8a49-c1b8a84c165e",
+								"id": "2506096c-7662-4c34-8019-f8c1e9f09e97",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 400\", function () {",
@@ -10091,7 +9686,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "b688095b-37f2-4335-8d4e-5f5cd39c7f2e",
+														"id": "b344a34c-cae4-4d45-8c40-d68a156385c5",
 														"exec": [
 															"var jsonData = pm.response.json();",
 															"pm.environment.set(\"created_user_id\", jsonData.id);",
@@ -10136,15 +9731,13 @@
 													}
 												},
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/users",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/users",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
 														"organizations",
-														"DEFAULT",
-														"environments",
 														"DEFAULT",
 														"users"
 													]
@@ -10165,7 +9758,7 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+														"id": "88ebb9bb-1802-44a2-896c-50e9de25e139",
 														"exec": [
 															"pm.test(\"Status code is 400\", function () {",
 															"    pm.response.to.have.status(400);",
@@ -10173,7 +9766,7 @@
 															"",
 															"pm.test(\"Invalid email.\", function () {",
 															"    var jsonData = pm.response.json();",
-															"    pm.expect(jsonData.errors[0].message).to.eql(\"A user [postman-test@example.com] already exists for ORGANIZATION DEFAULT.\");",
+															"    pm.expect(jsonData.errors[0].message).to.eql(\"A user [postman-test@example.com] already exists for organization DEFAULT.\");",
 															"});"
 														],
 														"type": "text/javascript"
@@ -10228,15 +9821,13 @@
 												"method": "DELETE",
 												"header": [],
 												"url": {
-													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/users/:userId",
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/users/:userId",
 													"host": [
 														"{{GRAVITEEIO_MGMT_URL}}"
 													],
 													"path": [
 														"management",
 														"organizations",
-														"DEFAULT",
-														"environments",
 														"DEFAULT",
 														"users",
 														":userId"
@@ -10260,7 +9851,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "77738f5b-fd12-4033-98f5-1cc034da136b",
+										"id": "8a804686-cc04-4f85-a050-a34070ea17d3",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -10270,7 +9861,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b7d3f8e6-ff38-453b-8435-2835813ccf01",
+										"id": "def972b8-732c-41d9-a0e2-5717f394e6e9",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -10290,7 +9881,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "985561b7-2543-4d18-b53a-3ab9b7a200eb",
+												"id": "3abba243-c670-47eb-970c-1bba45b2f2fa",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10344,7 +9935,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "c669bde5-ff5d-4dd0-9b24-ea0a88a2b9c5",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10400,7 +9991,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "f79c1470-1724-404a-ba37-d1f752aa8fe5",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10456,7 +10047,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "26bebf6b-9d00-4c0d-a3c4-38aa20018079",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10512,7 +10103,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "3f2372db-2cda-4212-a302-b510a6f97050",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10569,7 +10160,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "c7376352-0ffe-433e-b095-5b708f193071",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10647,7 +10238,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "e24b3d14-627d-4bdb-ab25-d831f64a65af",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -10714,7 +10305,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "eee7153f-9684-40b0-a219-929ebd88dfdb",
+										"id": "f68c22c0-7585-4e8c-9e05-0fe8d1e16644",
 										"exec": [
 											"pm.test(\"Status code is 401\", function () {",
 											"    pm.response.to.have.status(401);",
@@ -10794,7 +10385,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "e8d01f10-db12-48a3-8c00-0ba722e65057",
 												"exec": [
 													""
 												],
@@ -10833,7 +10424,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "dfad55b0-ab87-4f96-b66b-89a220d9269c",
+										"id": "c04d637f-b94d-4923-b8f6-42c602196f75",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -10843,7 +10434,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5f6dbbc8-d021-4d5d-af6d-a95354ceb7f7",
+										"id": "41e06fca-23ff-43b7-a19d-8bbaf7eff124",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -10865,7 +10456,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "048d1340-680c-48e7-af14-7c4e3b47de94",
+								"id": "7105ad82-0ef1-4423-83a5-9213c7b00264",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -10875,7 +10466,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2d518405-f909-4133-9c61-a35390249559",
+								"id": "9163e507-5d47-4fc3-9b2b-acff61e1781d",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -10943,7 +10534,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5ddbd8bd-5493-4791-8a3c-58e22e4efea8",
+												"id": "a548763b-757f-4f7e-914f-3fbc381a36d9",
 												"exec": [
 													"pm.test(\"Status code is 503\", function () {",
 													"    pm.response.to.have.status(503);",
@@ -11043,7 +10634,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "634d4e69-1a6b-480a-a9ec-0322701897a8",
+										"id": "56ab5335-2892-4a44-b4d5-57184c47df6c",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -11053,7 +10644,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ce1a095d-4b9d-467b-acad-284f681765e7",
+										"id": "806bce3e-31ea-420c-93f6-3d6fdc834f93",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -11069,7 +10660,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9635b8dd-5fee-4be1-bce9-4911cce37be2",
+								"id": "af3b59ff-3cf0-49ea-aa76-2318e617b1a2",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -11079,7 +10670,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "85d9b6b7-ab1a-4cdf-a27b-07223864b84f",
+								"id": "0889d324-c93e-486e-90d2-b9deddd74866",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -11095,7 +10686,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "62bba32d-b158-44ab-af72-b2aef02f8968",
+						"id": "58654736-4464-4d92-a2a9-7031fb8f03bf",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -11105,7 +10696,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6cf61ecd-0171-4153-9508-5c8ddab0b298",
+						"id": "adcee0f6-461b-4198-98b8-1b41fce967a7",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -11130,7 +10721,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "1f3edba3-a655-4a55-8e6e-ca188c902aef",
 												"exec": [
 													""
 												],
@@ -11169,7 +10760,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "34222d3f-ddb4-4bb6-87c8-bbb676cbf33e",
+												"id": "96c3f291-e8a2-46d0-b966-91d1df746079",
 												"exec": [
 													""
 												],
@@ -11208,7 +10799,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "5c1338ef-349a-4e98-a144-f827a73f6138",
+										"id": "d03b41a3-5f82-4951-90b6-6c30074ec76e",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -11218,7 +10809,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aeac0c23-58f8-42a4-8011-129f17077eb1",
+										"id": "391f8e88-da67-442b-887d-563c3ce6045d",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 404\", function () {",
@@ -11241,7 +10832,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "5dddd60c-9db1-4b8e-beeb-959ee50491e0",
+								"id": "555c44b1-aed6-4621-921b-25a1d8886da1",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -11251,7 +10842,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "71b28912-9904-4aa8-be7c-412b3ea997f5",
+								"id": "884464a6-15e2-4459-ac7e-1844e7652c74",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -11285,7 +10876,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "34cc3a2f-d3af-47c3-9c54-88a5abd558fa",
+				"id": "e69a5cee-8b07-48d6-b5b6-fe35d0df432c",
 				"type": "text/javascript",
 				"exec": [
 					"if(!pm.environment.get('X-Xsrf-Token')) {",
@@ -11305,7 +10896,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "915ae064-311e-47b3-9310-21b0529c5789",
+				"id": "fad11d68-95b8-442a-9372-cb794df6a3f0",
 				"type": "text/javascript",
 				"exec": [
 					""
