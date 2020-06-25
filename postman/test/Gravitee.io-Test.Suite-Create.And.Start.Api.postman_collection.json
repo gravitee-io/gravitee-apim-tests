@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "405419de-1ca9-42a9-833d-006712f446f1",
+		"_postman_id": "914cadab-3faa-4828-8e18-9098b815e71b",
 		"name": "Gravitee.io-Test.Suite-Create.And.Start.Api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -17,7 +17,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
+								],
+								"id": "82839f9b-d351-411c-836e-5a66821c53f8"
 							}
 						}
 					],
@@ -78,7 +79,8 @@
 									"",
 									"postman.setGlobalVariable(\"API_ID\", jsonData.id);",
 									"postman.setGlobalVariable(\"API\", responseBody);"
-								]
+								],
+								"id": "d64fa6cf-60b6-4b21-a55e-647e759e9af3"
 							}
 						},
 						{
@@ -88,7 +90,8 @@
 								"exec": [
 									"var uid = (\"0000\" + (Math.random()*Math.pow(36,8) << 0).toString(36)).slice(-8);",
 									"postman.setEnvironmentVariable(\"RANDOM_NUMBER\", uid);"
-								]
+								],
+								"id": "3bd3e948-6bc3-4106-b312-b03e02e577ba"
 							}
 						}
 					],
@@ -139,7 +142,8 @@
 									"",
 									"postman.setEnvironmentVariable(\"id\", jsonData[Math.floor(Math.random() * jsonData.length)].id);",
 									"postman.setEnvironmentVariable(\"100-apis\", jsonData.find(v => '100+ apis' === v.name).id);"
-								]
+								],
+								"id": "4bf32d8d-761c-4782-a616-42a96a3d085a"
 							}
 						}
 					],
@@ -187,7 +191,8 @@
 									"var jsonData = JSON.parse(responseBody);",
 									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
 									"tests[\"API is private\"] = jsonData.visibility === \"private\";"
-								]
+								],
+								"id": "1677952e-c845-45da-ac82-3fea5e519d6f"
 							}
 						}
 					],
@@ -243,7 +248,8 @@
 									"delete jsonData.owner;",
 									"delete jsonData.context_path;",
 									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));"
-								]
+								],
+								"id": "2f1d7878-0ae5-4ef1-b773-31519c0611e9"
 							}
 						},
 						{
@@ -256,7 +262,8 @@
 									"var jsonData = JSON.parse(responseBody);",
 									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
 									"tests[\"API is private\"] = jsonData.visibility === \"public\";"
-								]
+								],
+								"id": "6cbe3f97-9dd1-4ed9-a9a0-a48fec163857"
 							}
 						}
 					],
@@ -310,7 +317,8 @@
 									"",
 									"",
 									"postman.setGlobalVariable(\"PLAN_ID\", plan.id);"
-								]
+								],
+								"id": "746e85d8-15e7-4e0d-bfb9-c34972c57c7b"
 							}
 						}
 					],
@@ -360,7 +368,8 @@
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
 									"var state = JSON.parse(responseBody);",
 									"tests[\"API is not synchronized\"] = state.is_synchronized === false;"
-								]
+								],
+								"id": "73676362-6a9b-414d-a1e6-426c13eebcd7"
 							}
 						}
 					],
@@ -408,7 +417,8 @@
 									"var jsonData = JSON.parse(responseBody);",
 									"tests[\"API is stopped\"] = jsonData.state === \"stopped\";",
 									"tests[\"API is public\"] = jsonData.visibility === \"public\";"
-								]
+								],
+								"id": "0b4fb1d4-0d60-4747-9eb1-d9fb219c7e60"
 							}
 						}
 					],
@@ -459,7 +469,8 @@
 									"",
 									"var state = JSON.parse(responseBody);",
 									"tests[\"API is not synchronized\"] = state.is_synchronized === true;"
-								]
+								],
+								"id": "8e62ee01-df9e-4d8c-8965-e3164b3aa6c2"
 							}
 						}
 					],
@@ -504,7 +515,8 @@
 								"exec": [
 									"tests[\"Status code is 204\"] = responseCode.code === 204;",
 									""
-								]
+								],
+								"id": "e51730af-710a-4c22-ab78-ddc9c194e8a0"
 							}
 						}
 					],
@@ -553,7 +565,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"postman.setEnvironmentVariable(\"rate\", Math.round(Math.random() * 4 + 1));"
-								]
+								],
+								"id": "fb566896-40b7-416c-aa39-330f3d0cd35e"
 							}
 						}
 					],
@@ -601,7 +614,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"postman.setEnvironmentVariable(\"rate\", Math.round(Math.random() * 4 + 1));"
-								]
+								],
+								"id": "9a22a686-188e-42a7-9569-f1fca8f32c0a"
 							}
 						}
 					],
@@ -722,7 +736,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b6cc44f3-1e53-461e-aac1-753c64103466",
+				"id": "c2e51120-d8c8-4d25-bdcc-b17ba6eadbcc",
 				"type": "text/javascript",
 				"exec": [
 					"if(!pm.environment.get('X-Xsrf-Token')) {",
@@ -742,7 +756,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "58de2cea-2c9a-4f6c-b926-1468d7699bcd",
+				"id": "c57e48bf-8e26-4e68-9bdc-7b68be347d3d",
 				"type": "text/javascript",
 				"exec": [
 					""
