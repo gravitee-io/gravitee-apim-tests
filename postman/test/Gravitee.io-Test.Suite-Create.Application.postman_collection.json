@@ -1,10 +1,47 @@
 {
 	"info": {
-		"_postman_id": "f0b3fcc3-591f-4778-b971-778bc80103f4",
+		"_postman_id": "fb181865-ca03-41de-861f-df8246fef99e",
 		"name": "Gravitee.io-Test.Suite-Create.Application",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Generate XSRF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "61cdfbc3-18ae-46eb-a7fb-6ed9d7273c31",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.environment.set('X-Xsrf-Token', pm.response.headers.get('X-Xsrf-Token'));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+					"host": [
+						"{{GRAVITEEIO_MGMT_URL}}"
+					],
+					"path": [
+						"management",
+						"organizations",
+						"DEFAULT",
+						"environments",
+						"DEFAULT",
+						"portal"
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "Login application1 SUCCESS",
 			"event": [
@@ -14,7 +51,8 @@
 						"type": "text/javascript",
 						"exec": [
 							"tests[\"Status code is 200\"] = responseCode.code === 200;"
-						]
+						],
+						"id": "3bd20e33-f77d-4fb5-9597-cec6b2773787"
 					}
 				}
 			],
@@ -59,7 +97,8 @@
 							"tests[\"Status code is 201\"] = responseCode.code === 201;",
 							"tests[\"Location is present\"] = postman.getResponseHeader(\"Location\");",
 							"postman.setGlobalVariable(\"APPLICATION_LOCATION\", postman.getResponseHeader(\"Location\"));"
-						]
+						],
+						"id": "2a3dabe0-b6c2-4421-b479-351e9e863049"
 					}
 				}
 			],
@@ -120,7 +159,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "34647b71-687b-44b5-aff9-4ccdbb4765be",
+				"id": "bc44f83f-d71a-4898-a2b6-6480bb8da500",
 				"type": "text/javascript",
 				"exec": [
 					"if(!pm.environment.get('X-Xsrf-Token')) {",
@@ -140,7 +179,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "9dcc978a-a611-405c-85a2-f7a9210c9822",
+				"id": "450be9e6-9be3-42a3-8694-7b3ecc86c844",
 				"type": "text/javascript",
 				"exec": [
 					""
