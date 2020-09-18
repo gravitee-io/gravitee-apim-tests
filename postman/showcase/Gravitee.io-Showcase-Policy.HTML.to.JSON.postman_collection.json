@@ -38,7 +38,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"contextPath\": \"/gravitee.io/features\",\n\t\"description\": \"Gravitee.io features with HTML to JSON policy\",\n\t\"endpoint\": \"https://gravitee.io/products/apim/\",\n\t\"name\": \"Gravitee.io features\",\n\t\"version\": \"v1\"\n}"
+							"raw": "{\n\t\"contextPath\": \"/gravitee.io/features\",\n\t\"description\": \"Gravitee.io features with HTML to JSON policy\",\n\t\"endpoint\": \"https://gravitee.io/products/api-management/\",\n\t\"name\": \"Gravitee.io features\",\n\t\"version\": \"v1\"\n}"
 						},
 						"url": {
 							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis",
@@ -73,7 +73,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"version\":\"v1\",\"description\":\"Gravitee.io features with HTML to JSON policy\",\"proxy\":{\"context_path\":\"/gravitee.io/features\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io/products/apim/\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\"],\"html-json\":{\"selectors\":[{\"array\":true,\"selector\":\".feature .h05\",\"jsonName\":\"features\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true}]},\"visibility\":\"public\",\"name\":\"Gravitee.io features\",\"services\":{},\"tags\":[],\"resources\":[],\"categories\":[\"showcase-apis\"]}"
+							"raw": "{\"version\":\"v1\",\"description\":\"Gravitee.io features with HTML to JSON policy\",\"proxy\":{\"context_path\":\"/gravitee.io/features\",\"strip_context_path\":false,\"dumpRequest\":false,\"endpoints\":[{\"name\":\"default\",\"target\":\"https://gravitee.io/products/api-management/\",\"weight\":1,\"backup\":false,\"healthcheck\":true,\"http\":{\"connectTimeout\":5000,\"idleTimeout\":60000,\"keepAlive\":true,\"readTimeout\":10000,\"pipelining\":false,\"maxConcurrentConnections\":100,\"useCompression\":true}}],\"load_balancing\":{\"type\":\"ROUND_ROBIN\"}},\"paths\":{\"/\":[{\"methods\":[\"GET\"],\"html-json\":{\"selectors\":[{\"array\":true,\"selector\":\".features .h5\",\"jsonName\":\"features\"}]},\"description\":\"The HTML to JSON Transformation Gravitee Policy allows to get a json by parsing an html content\",\"enabled\":true}]},\"visibility\":\"public\",\"name\":\"Gravitee.io features\",\"services\":{},\"tags\":[],\"resources\":[],\"categories\":[\"showcase-apis\"]}"
 						},
 						"url": {
 							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
