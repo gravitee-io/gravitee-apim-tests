@@ -1,15 +1,12 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "f36d72c0-27b5-4102-babc-129e597f3cf5",
 		"name": "Gravitee.io-Showcase-Policy.import-API-OAI",
-		"_postman_id": "Gravitee.io-Showcase-Policy.import-API-OAI",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "showcase.api.import-API-OAI",
-			"description": "",
 			"item": [
 				{
 					"name": "Import API from OAI",
@@ -17,35 +14,49 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "5ce0624e-0be5-4a31-a48b-76165c5bd002",
 								"exec": [
 									"tests[\"Status code should be 201 / found \" + responseCode.code] = responseCode.code === 201;",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
 									"postman.setGlobalVariable(\"API_ID\", jsonData.id);",
 									"postman.setGlobalVariable(\"API\", responseBody);"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/import/swagger",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"with_documentation\":true,\"with_path_mapping\":true,\"with_policy_paths\":true,\"with_policy_mocks\":true,\"type\":\"URL\",\"payload\":\"{{GRAVITEEIO_PORTAL_URL}}/portal/openapi\"}"
+							"raw": "{\"with_documentation\":true,\"with_path_mapping\":true,\"with_policy_paths\":true,\"with_policies\":[\"mock\"],\"type\":\"URL\",\"payload\":\"{{GRAVITEEIO_PORTAL_URL}}/portal/openapi\"}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/import/swagger",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"import",
+								"swagger"
+							]
 						}
 					},
 					"response": []
@@ -68,12 +79,12 @@
 									"delete jsonData.owner;",
 									"delete jsonData.context_path;",
 									"postman.setGlobalVariable(\"API\", JSON.stringify(jsonData));"
-								]
+								],
+								"id": "6086b4c3-d0be-4e8c-a350-6214c667b9a8"
 							}
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -88,27 +99,27 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{{API}}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Get Page",
-					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
-							}
-						]
-					},
 					"event": [
 						{
 							"listen": "test",
@@ -119,34 +130,79 @@
 									"",
 									"var jsonData = JSON.parse(responseBody);",
 									"postman.setGlobalVariable(\"PAGE_ID\", jsonData[0].id);"
-								]
+								],
+								"id": "1605877f-ac0d-483a-86fe-c07d0c2d6fda"
 							}
 						}
 					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"pages"
+							]
+						}
+					},
 					"response": []
 				},
 				{
 					"name": "Publish Page and enable try it",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages/{{PAGE_ID}}",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"published\":true, \"configuration\": {\"tryIt\": \"true\", \"tryItAnonymous\": \"true\"}}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/pages/{{PAGE_ID}}",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"pages",
+								"{{PAGE_ID}}"
+							]
 						}
-					}
+					},
+					"response": []
 				},
 				{
 					"name": "Create Keyless Plan",
@@ -158,103 +214,12 @@
 								"exec": [
 									"var plan = JSON.parse(responseBody);",
 									"postman.setGlobalVariable(\"PLAN_ID\", plan.id);"
-								]
+								],
+								"id": "0c795a7c-59ce-4ec0-83a3-19b923bb3d18"
 							}
 						}
 					],
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"security\": \"key_less\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
-
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Publish Plan",
-					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
-							}
-						]
-					},
-					"response": []
-				},
-				{
-					"name": "Deploy API",
-					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/deploy",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Start API",
-					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}?action=START",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{AUTHORIZATION_API1}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Top API",
-					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/top-apis/",
 						"method": "POST",
 						"header": [
 							{
@@ -263,22 +228,182 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "{{AUTHORIZATION_ADMIN}}",
-								"description": ""
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Freemium\",\n\t\"description\": \"Free Plan\",\n\t\"security\": \"key_less\",\n\t\"validation\": \"auto\",\n\t\"characteristics\": [],\n\t\"paths\": {\n\t\t\"/\": []\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"plans",
+								"{{PLAN_ID}}",
+								"_publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/deploy",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"deploy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}?action=START",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "START"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_ADMIN}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"api\":\"{{API_ID}}\"}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/top-apis/",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"configuration",
+								"top-apis",
+								""
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Rate API",
 					"request": {
-						"url": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/ratings",
 						"method": "POST",
 						"header": [
 							{
@@ -293,10 +418,29 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"rate\": 5"
+						},
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/ratings",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"ratings"
+							]
 						}
-					}
+					},
+					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
