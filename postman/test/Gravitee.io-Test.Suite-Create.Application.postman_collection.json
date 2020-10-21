@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "906cd755-8de9-478a-ac95-5a92907c35b2",
+		"_postman_id": "e7566a4e-7980-433f-81c9-f80401b2b0fa",
 		"name": "Gravitee.io-Test.Suite-Create.Application",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ad583a19-b275-476b-a190-8a4cfcbd11a2",
+						"id": "9e982f3f-e0fa-4e0b-a164-5b519ce71f85",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -48,7 +48,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7a712f0a-ffdf-493c-95cb-5afb1d20a6fa",
+						"id": "e3c9769b-72fb-4b20-afb4-570783ecf960",
 						"exec": [
 							"tests[\"Status code is 200\"] = responseCode.code === 200;"
 						],
@@ -69,13 +69,15 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/user/login",
+					"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/user/login",
 					"host": [
 						"{{GRAVITEEIO_MGMT_URL}}"
 					],
 					"path": [
 						"management",
 						"organizations",
+						"DEFAULT",
+						"environments",
 						"DEFAULT",
 						"user",
 						"login"
@@ -96,7 +98,7 @@
 							"tests[\"Location is present\"] = postman.getResponseHeader(\"Location\");",
 							"postman.setGlobalVariable(\"APPLICATION_LOCATION\", postman.getResponseHeader(\"Location\"));"
 						],
-						"id": "d95a6245-327c-4668-b5de-053a7f90f7b8"
+						"id": "d8cb8535-893b-483b-b4a1-140bce440c3d"
 					}
 				}
 			],
@@ -157,7 +159,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "efc7acf4-31af-48e7-97c7-d9c3e14c6b7c",
+				"id": "b5e09091-ad03-4e58-b5ea-16c591196b88",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add({key: 'X-Xsrf-Token', value: pm.environment.get('X-Xsrf-Token') });"
@@ -167,7 +169,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "33b6d740-35aa-4fc7-ac07-6913340f2fc0",
+				"id": "269c033c-f6d0-4d93-9b45-42e451588d7c",
 				"type": "text/javascript",
 				"exec": [
 					""
