@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a657fc82-3058-4cb9-b1b3-a49f4a4a5bf3",
+		"_postman_id": "454f1e9c-9361-4ea1-a45c-ccc50b7b8b21",
 		"name": "API Portal : Authorizations",
 		"description": "This collections contains requests to test authorizations on the Portal API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -21,7 +21,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "139ae3cb-031c-4d38-b6c4-f83bdef8fb99",
+												"id": "b1f24966-9f09-4d89-b352-c3c769831da3",
 												"exec": [
 													""
 												],
@@ -53,7 +53,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8fe86c37-9c18-49cc-ab23-f5ea963d5b9d",
+												"id": "53279bfc-ba45-4089-be1a-042d33c4fff7",
 												"exec": [
 													""
 												],
@@ -86,7 +86,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "95834783-2cb2-4ed6-a6b8-7a5406c5fd0e",
+												"id": "4408d5cb-337d-4d77-a583-b60bfae09ebb",
 												"exec": [
 													""
 												],
@@ -125,7 +125,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "db2ec88d-a01a-4f44-bb06-263b583427a5",
+												"id": "dfa89378-1287-4b11-943d-bf221eb370f9",
 												"exec": [
 													""
 												],
@@ -165,7 +165,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bcbf99f8-c8c7-4875-a44a-fd8a2ab41fdd",
+												"id": "b15ac98a-fe82-429e-b376-464401e623d5",
 												"exec": [
 													""
 												],
@@ -205,7 +205,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "26d046e0-a68b-4c74-a1d7-f05957d369d0",
+												"id": "e27c898e-6d5a-41b9-951c-3e31c6fcd7ae",
 												"exec": [
 													""
 												],
@@ -245,7 +245,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "dde0f463-5ff9-41e9-83de-647b7836020b",
+												"id": "fd9f4e0b-79af-4a0c-a017-a94eddb5b3f6",
 												"exec": [
 													""
 												],
@@ -290,7 +290,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "1506a2d8-ea05-4f0a-96e9-641c03793268",
+												"id": "36605d5b-3f1d-460c-86a6-e64670cd3ead",
 												"exec": [
 													""
 												],
@@ -336,7 +336,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b4b0dbd7-e221-46c4-8bf7-2b4984c6ba39",
+												"id": "8f22ff90-b3cd-4dee-b602-57f172962e36",
 												"exec": [
 													""
 												],
@@ -376,7 +376,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c4033858-03cf-4e05-9bea-febbac67d11a",
+												"id": "c0b4e892-1865-4523-9972-b7781584920d",
 												"exec": [
 													""
 												],
@@ -416,7 +416,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "46f9b63c-c690-4032-afd9-f360dcfc7695",
+												"id": "d62e193c-6d58-4adf-bd25-c4ee839a72af",
 												"exec": [
 													""
 												],
@@ -455,12 +455,627 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b24132f6-d2d8-4229-afbe-2149cfa32c6a",
+										"id": "5d0160b3-12b6-4e39-a9f9-c48663444ed1",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is not 401\", function () {",
 											"    pm.response.to.not.have.status(401);",
 											"});"
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "401 force login",
+							"item": [
+								{
+									"name": "-- prepare --",
+									"item": [
+										{
+											"name": "Enable Force Login",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "admin",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "admin",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"type": "text",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"authentication\": {\n\t\t\"forceLogin\": {\n\t\t\t\"enabled\": true\n\t\t}\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+													"host": [
+														"{{GRAVITEEIO_MGMT_URL}}"
+													],
+													"path": [
+														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
+														"DEFAULT",
+														"portal"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Tests",
+									"item": [
+										{
+											"name": "GET /apis",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "cceec87a-831b-409a-a29c-9d7ef89e41e5",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "POST /apis/_search",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "877529d8-59c5-455b-b2f5-bb9f117763e9",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/_search",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														"_search"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "6dca8465-a350-429d-8be1-f85d811e3acd",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/links",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "268855a3-207d-4d1a-ac7f-b790fa88e752",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/links",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"links"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/metrics",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f7f8cc66-01a2-48e5-97ae-78707f2be2aa",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/metrics",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"metrics"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/pages",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "bb4d8346-44b0-4294-8c2e-a8ee12c93aeb",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/pages",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"pages"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/pages/:pageId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "242a0f75-f0dc-4f0e-90b2-2b954c3a657a",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/pages/:pageId",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"pages",
+														":pageId"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														},
+														{
+															"key": "pageId",
+															"value": "PAGE"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/pages/:pageId/content",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "c0b428b3-39f2-4382-99a7-66cec77df95d",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/pages/:pageId/content",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"pages",
+														":pageId",
+														"content"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														},
+														{
+															"key": "pageId",
+															"value": "PAGE"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/picture",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "71224dd6-e5ff-4ff0-bb19-f0ef4d363757",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/picture",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"picture"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/plans",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "79ecc7a7-b65e-4898-817d-2d1f00c0b2f2",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/plans",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"plans"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /apis/:apiId/ratings",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "d769ddc1-19d1-49b4-8c90-e4d34996557c",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/apis/:apiId/ratings",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"apis",
+														":apiId",
+														"ratings"
+													],
+													"variable": [
+														{
+															"key": "apiId",
+															"value": "API"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "a623f0d4-eb86-41be-b3c5-3b868165d28f",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "fcd4845e-1462-4ebe-8bc6-4a01abf38f56",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {",
+													"    pm.response.to.have.status(401);",
+													"});"
+												]
+											}
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "-- clean --",
+									"item": [
+										{
+											"name": "Disable Force Login",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "admin",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "admin",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"type": "text",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"authentication\": {\n\t\t\"forceLogin\": {\n\t\t\t\"enabled\": false\n\t\t}\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+													"host": [
+														"{{GRAVITEEIO_MGMT_URL}}"
+													],
+													"path": [
+														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
+														"DEFAULT",
+														"portal"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ebb907c6-d0c1-4db6-8a13-e45d0bda8bd4",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "cdbbb157-be93-4d1e-9658-d8557d902d05",
+										"type": "text/javascript",
+										"exec": [
+											""
 										]
 									}
 								}
@@ -477,7 +1092,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "604acdc7-7dcc-41f1-9f86-eb99a5892153",
+												"id": "79b7c922-4a35-4bfe-99f6-31760a1d623a",
 												"exec": [
 													""
 												],
@@ -517,7 +1132,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "838321f1-20e5-4852-bdc7-f3eacba510c5",
+												"id": "0de1eca1-f3a1-4e79-ab15-55336877727d",
 												"exec": [
 													""
 												],
@@ -556,7 +1171,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "0f9bfd5e-e05b-4fb5-a912-1da1f508f2be",
+										"id": "60ebc059-79c8-41dc-9654-117aa37fb987",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -566,7 +1181,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6b286a59-db65-476a-9516-14a7719b2061",
+										"id": "005df1fd-94e6-41f0-bc41-cce6c62650fe",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 401\", function () {",
@@ -584,7 +1199,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9bba5029-e3a4-4720-a278-05c5192e112e",
+								"id": "92700135-8841-4e32-aa7c-c5d4e91d251b",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -594,7 +1209,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "bfbdd9c3-e092-46a1-84ab-189d1614a492",
+								"id": "28826fd4-fa6a-4e0f-8749-243f72a63884",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -614,7 +1229,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9500b1a7-ba84-437c-ae7a-6437c8cf9e84",
+										"id": "9c2182c6-6726-4bc1-8783-22d10a21da10",
 										"exec": [
 											""
 										],
@@ -646,7 +1261,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ebf76290-2f8f-46f4-8ffb-9a9091c6510c",
+										"id": "d6eb3e96-8cf9-487e-ba1b-3377c968c7b8",
 										"exec": [
 											""
 										],
@@ -678,7 +1293,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "876e0014-d3ea-4d6a-8fe9-0df9b3e27d46",
+										"id": "b3c07c88-7649-4258-b0fd-8f9fb2edb29a",
 										"exec": [
 											""
 										],
@@ -717,7 +1332,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "07901448-7fa2-49ec-973c-ac4f118eab87",
+										"id": "a0e881e1-94a5-421b-b2f9-fe1eea468ffe",
 										"exec": [
 											""
 										],
@@ -756,7 +1371,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "abaa55d5-059e-4716-b939-3f7e01402d83",
+										"id": "f07c6916-16c1-49c6-a241-00b6257fb76b",
 										"exec": [
 											""
 										],
@@ -795,7 +1410,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ffca300e-0057-4730-9592-d6d41ba61227",
+										"id": "1790ccdf-4925-47b1-a2c8-73da42ffd814",
 										"exec": [
 											""
 										],
@@ -835,7 +1450,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f64ff942-d4f4-442f-83ef-3f2e23245a4e",
+										"id": "53edf24f-6f92-41be-9209-86e27fc589f5",
 										"exec": [
 											""
 										],
@@ -875,7 +1490,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "daa19e0c-d50a-445e-9820-b614e54e4226",
+										"id": "c3248f63-aaea-4d02-82a4-d89aa74b6f05",
 										"exec": [
 											""
 										],
@@ -915,7 +1530,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "29fcc4ba-c04f-4355-8328-c6be39427153",
+										"id": "05914722-d138-4d85-a8c1-98f5e602ec59",
 										"exec": [
 											""
 										],
@@ -955,7 +1570,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "feb95848-41bf-4dda-9b8f-1e5e4719a4b1",
+										"id": "58f658b8-80a9-49bf-9127-68406748a52d",
 										"exec": [
 											""
 										],
@@ -995,7 +1610,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e174e069-4ee0-47a5-9735-42930f95491f",
+										"id": "683eac58-642f-499b-9399-816e1bc050ae",
 										"exec": [
 											""
 										],
@@ -1036,7 +1651,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "20d38d49-b50f-4faa-8000-fd40e24336a1",
+										"id": "923fab20-c6a8-4239-a13c-38717fa7c3e5",
 										"exec": [
 											""
 										],
@@ -1081,7 +1696,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "02d1165c-ca1c-407b-8a8c-dcdde9d255cb",
+										"id": "12c87ab2-b19b-41f3-8827-f2d4490f58ac",
 										"exec": [
 											""
 										],
@@ -1126,7 +1741,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4b2b8701-590a-483d-99af-92ff18b33635",
+										"id": "2fad3dd0-303f-4856-8b9c-0d471cf3a885",
 										"exec": [
 											""
 										],
@@ -1171,7 +1786,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "16823827-35c2-4fc1-8f54-8d4bd86b593b",
+										"id": "1e14ca7a-124e-47bf-a99d-2cb8ecb27ce7",
 										"exec": [
 											""
 										],
@@ -1211,7 +1826,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b405da30-8925-4139-bf90-3b4061fa074c",
+										"id": "3a743a67-ca1f-4962-a4d3-24065daf4c8d",
 										"exec": [
 											""
 										],
@@ -1251,7 +1866,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bc0dba69-9c79-45b0-8619-22a75de03df2",
+										"id": "21dd2a12-3e0b-4794-bf5d-172641a323e9",
 										"exec": [
 											""
 										],
@@ -1292,7 +1907,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3eab281c-1c79-4039-823e-0be04f454bc9",
+										"id": "8727d478-cf95-4b9e-ab40-75a6cd6b32c6",
 										"exec": [
 											""
 										],
@@ -1337,7 +1952,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bdf537a8-347c-4503-85f5-27268e449da8",
+										"id": "fe6334f9-fb2f-41c4-af4f-094be98953ab",
 										"exec": [
 											""
 										],
@@ -1377,7 +1992,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e90e2e67-4cca-480a-8a38-d86670b4f394",
+								"id": "e2905865-c230-4e2e-872e-f001524a7ed1",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1387,7 +2002,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "19778beb-6535-4358-9a1f-adc4b749ce24",
+								"id": "b4b2f262-6c1e-43ee-acf5-d87fdd1a9c01",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
@@ -1412,7 +2027,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "0650f2ee-6ca2-4405-bbc7-f75256a4533f",
+												"id": "581900ad-7f8a-4d60-b198-ea417ad9f227",
 												"exec": [
 													""
 												],
@@ -1452,7 +2067,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "0aa579b0-68b3-49ff-9c1b-45b58a96640e",
+												"id": "7f5ddf00-1688-45ae-ab49-df2d50fced48",
 												"exec": [
 													""
 												],
@@ -1492,7 +2107,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c85a6e72-2d36-4aaf-8f30-00cadcb53102",
+										"id": "d4c2ef33-4f86-4ac0-adb1-b391b16c9126",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1502,7 +2117,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "70993020-30e7-4328-b607-8abe12b7567f",
+										"id": "1677ebb9-2b23-4380-a1b8-927d9f78d83f",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is not 401\", function () {",
@@ -1524,7 +2139,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "3530d4f3-c73f-402c-b8d9-a91954b4c901",
+												"id": "d79abaa8-3510-46b7-9c2c-adb551c35652",
 												"exec": [
 													""
 												],
@@ -1557,7 +2172,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6fdbb90a-ba5c-4352-9f21-832bb792f93d",
+												"id": "20e23a3a-f95a-43fc-9106-e0c46e05bf76",
 												"exec": [
 													""
 												],
@@ -1589,7 +2204,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "4b214533-cfd5-4014-a4f3-a764fe5b53ca",
+										"id": "d967a172-ff15-4aec-b276-3113001e40db",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1599,7 +2214,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "598d851c-1e27-4018-ade3-200753cfd537",
+										"id": "70870d74-a6f4-40a0-8a34-87bca90b7b2c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 401\", function () {",
@@ -1625,7 +2240,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "599109d1-1b41-4c3e-869c-7c003725b2ea",
+										"id": "46f91d20-ace6-4e86-98be-b3a8bbea0c10",
 										"exec": [
 											""
 										],
@@ -1657,7 +2272,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "29e25509-c2a8-4bde-8a64-31aaeeb52427",
+										"id": "dfbe608a-922f-4595-b651-77b2e1834e3d",
 										"exec": [
 											""
 										],
@@ -1691,7 +2306,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b6f5ee5c-c9f1-45b4-934f-8d581817a413",
+										"id": "da1e0c00-e661-4912-beaf-3e862c4c353d",
 										"exec": [
 											""
 										],
@@ -1725,7 +2340,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1e6652d3-55cd-42eb-ae35-40521fab8481",
+										"id": "20cffed1-9836-43f9-bab2-5d287bed4db9",
 										"exec": [
 											""
 										],
@@ -1758,7 +2373,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b96c17dc-0ae5-490d-bf42-c13326a24063",
+										"id": "0c7cf245-d4ff-43b1-8e98-80a0a27f9381",
 										"exec": [
 											""
 										],
@@ -1798,7 +2413,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "28847a10-6b87-4bbb-9588-b6b3b4d58e2c",
+										"id": "ef72b7a8-22d0-47c9-a385-02b162c73c7a",
 										"exec": [
 											""
 										],
@@ -1831,7 +2446,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8e066e1f-855f-4521-a06b-0cdd6c7d4a73",
+										"id": "8281ba73-b7d5-4517-a195-62a68a96c9d5",
 										"exec": [
 											""
 										],
@@ -1863,7 +2478,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "c69e4ae3-2b3d-4df7-bb40-4bb2dcdeb6e1",
+								"id": "d621cc97-cd59-473f-9dfa-4e071bb57f14",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1873,7 +2488,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6cc394f5-a262-4eae-aabe-9b5e29687a6d",
+								"id": "77ac6c6c-97d4-482f-a244-5cdd0b741c14",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is not 401\", function () {",
@@ -1895,7 +2510,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e868c969-9590-40bf-bdda-6a23ad62e8a6",
+										"id": "61fae644-7efc-4687-8944-d26fb03adb70",
 										"exec": [
 											""
 										],
@@ -1927,7 +2542,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "92d8d04f-f2f2-4e54-8dd3-35c598c7cd89",
+										"id": "603eff38-1974-4b3a-8e14-c8a09c2c00dd",
 										"exec": [
 											""
 										],
@@ -1967,7 +2582,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "06bea537-37eb-4761-91c7-3195558ad5a0",
+								"id": "e81f3dbf-4ceb-452a-9b4e-4e77ff70439a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1977,7 +2592,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "dfe1124e-ecc4-45e0-ba7b-3858a3f475d4",
+								"id": "10789041-4ba6-4de5-9263-b398561bfd9e",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
@@ -1994,115 +2609,415 @@
 					"name": "pages",
 					"item": [
 						{
-							"name": "GET /pages",
+							"name": "not 401",
+							"item": [
+								{
+									"name": "GET /pages",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "03c6f2c2-3e5d-4802-bd47-f19311848d0b",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"pages"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /pages/:pageId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a397638c-6b23-45e2-b2de-6d5cb7783e60",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages/:pageId",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"pages",
+												":pageId"
+											],
+											"variable": [
+												{
+													"key": "pageId",
+													"value": "PAGE"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /pages/:pageI/content",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "126c8baa-25ba-4483-a217-28207475e7d9",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages/:pageId/content",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"pages",
+												":pageId",
+												"content"
+											],
+											"variable": [
+												{
+													"key": "pageId",
+													"value": "PAGE"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "db0ba257-498e-4485-be52-aace4ae86de0",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
 								{
 									"listen": "test",
 									"script": {
-										"id": "9eac8110-7f0f-4658-b3af-e561bba656f0",
+										"id": "20d27e2c-b3ae-458f-96ad-985f91e72549",
+										"type": "text/javascript",
 										"exec": [
-											""
-										],
-										"type": "text/javascript"
+											"pm.test(\"Status code is not 401\", function () {",
+											"    pm.response.to.not.have.status(401);",
+											"});"
+										]
 									}
 								}
 							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages",
-									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}"
-									],
-									"path": [
-										"portal",
-										"environments",
-										"DEFAULT",
-										"pages"
-									]
-								}
-							},
-							"response": []
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						},
 						{
-							"name": "GET /pages/:pageId",
-							"event": [
+							"name": "401 force login",
+							"item": [
 								{
-									"listen": "test",
-									"script": {
-										"id": "33facc7e-f4dd-42ea-ac39-ce99868cb5cf",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
+									"name": "-- prepare --",
+									"item": [
+										{
+											"name": "Enable Force Login",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "admin",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "admin",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"type": "text",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"authentication\": {\n\t\t\"forceLogin\": {\n\t\t\t\"enabled\": true\n\t\t}\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+													"host": [
+														"{{GRAVITEEIO_MGMT_URL}}"
+													],
+													"path": [
+														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
+														"DEFAULT",
+														"portal"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Tests",
+									"item": [
+										{
+											"name": "GET /pages",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "6bfea431-e468-484a-b92a-a16b6b8171e4",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"pages"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /pages/:pageId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "123121c8-d730-486c-b975-90f6de52a1ff",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages/:pageId",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"pages",
+														":pageId"
+													],
+													"variable": [
+														{
+															"key": "pageId",
+															"value": "PAGE"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /pages/:pageI/content",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "83e69fc0-5d3d-4c76-b7b6-207645fd1e96",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages/:pageId/content",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"pages",
+														":pageId",
+														"content"
+													],
+													"variable": [
+														{
+															"key": "pageId",
+															"value": "PAGE"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "b54eb94a-0889-498e-b778-7ed8e15c10ff",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "a5a6b60a-448e-45bc-bd2b-5bb4e7cfdb8b",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {",
+													"    pm.response.to.have.status(401);",
+													"});"
+												]
+											}
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "-- clean --",
+									"item": [
+										{
+											"name": "Disable Force Login",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "admin",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "admin",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"type": "text",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"authentication\": {\n\t\t\"forceLogin\": {\n\t\t\t\"enabled\": false\n\t\t}\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+													"host": [
+														"{{GRAVITEEIO_MGMT_URL}}"
+													],
+													"path": [
+														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
+														"DEFAULT",
+														"portal"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
 								}
 							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages/:pageId",
-									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}"
-									],
-									"path": [
-										"portal",
-										"environments",
-										"DEFAULT",
-										"pages",
-										":pageId"
-									],
-									"variable": [
-										{
-											"key": "pageId",
-											"value": "PAGE"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GET /pages/:pageI/content",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "fbd1fb0e-638a-431d-bb15-0ae42eb2c39d",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/pages/:pageId/content",
-									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}"
-									],
-									"path": [
-										"portal",
-										"environments",
-										"DEFAULT",
-										"pages",
-										":pageId",
-										"content"
-									],
-									"variable": [
-										{
-											"key": "pageId",
-											"value": "PAGE"
-										}
-									]
-								}
-							},
-							"response": []
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						}
 					],
 					"description": "Anonymous requests to /pages/... should not return 401",
@@ -2110,7 +3025,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "395e86cb-110b-4428-afe9-035a2d4f9034",
+								"id": "7746e935-7137-4b90-8f73-9f627cadce18",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2120,12 +3035,10 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1ab82548-17a8-40d8-86dc-1b5d0591143e",
+								"id": "1bfb9415-139d-44f4-b7f3-2c876fc3fbc1",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is not 401\", function () {",
-									"    pm.response.to.not.have.status(401);",
-									"});"
+									""
 								]
 							}
 						}
@@ -2142,7 +3055,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5f6ea39d-dd44-4db3-95b0-61b2b4ea0532",
+										"id": "b03cf126-70eb-42fa-876d-68bda9239524",
 										"exec": [
 											""
 										],
@@ -2174,7 +3087,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0a2792bd-e746-45d4-a516-e15f500d351a",
+										"id": "c557062f-b0ca-44f2-bcc6-8a90090d8d57",
 										"exec": [
 											""
 										],
@@ -2206,7 +3119,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b3240e5a-4f3a-4bda-a76b-fe378138af5d",
+										"id": "932d7c6f-2b3f-4fa4-a2f0-b0347d9aad08",
 										"exec": [
 											""
 										],
@@ -2245,7 +3158,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1d2584c9-c263-4619-8d1f-694260c3fa2c",
+										"id": "e33bbf9e-4f6c-42ae-aacf-fc38ca94ead2",
 										"exec": [
 											""
 										],
@@ -2285,7 +3198,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d4354c18-2531-4ebf-bfee-17943bfca962",
+										"id": "ee257cde-dafe-4175-849e-e9df500074d3",
 										"exec": [
 											""
 										],
@@ -2326,7 +3239,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "63322925-5c10-4353-8992-2dd6049ff9ff",
+										"id": "44fedaa2-1918-4083-b122-79d3d237e838",
 										"exec": [
 											""
 										],
@@ -2372,7 +3285,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "89c23a23-cfa0-47aa-b4d5-d4e84a472f5a",
+								"id": "f3a47ed5-13c3-4938-a486-b4ba59e7e9bd",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2382,7 +3295,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7b099b11-38b7-4596-8344-a4437aae1fbc",
+								"id": "1c618121-cbcc-44a0-8109-5e7233adaaa2",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
@@ -2424,7 +3337,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "72218167-c3b9-46d7-898b-8b6cc35b9869",
+								"id": "6e14bf96-6bae-4fd7-8261-abd79665dd55",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2434,7 +3347,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ce589aac-2e2b-456c-a95e-1028fb47a9de",
+								"id": "40211dfe-40be-4961-ac91-15216483fc37",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
@@ -2459,7 +3372,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5834f10e-854f-4d3e-a1bf-55978a06f115",
+												"id": "ded120fa-e8a8-4edf-bab0-32e480558f1a",
 												"exec": [
 													""
 												],
@@ -2508,7 +3421,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b229f85d-8842-41aa-98bc-abdd9b243949",
+												"id": "eab90798-49c9-44b5-9f26-e74d29797163",
 												"exec": [
 													""
 												],
@@ -2558,7 +3471,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "9f008316-b9a3-4348-85b1-8734bb6d59f4",
+												"id": "a8c2ac81-9c7f-472b-9b04-1c37dc6e5123",
 												"exec": [
 													""
 												],
@@ -2606,7 +3519,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e5536c9e-33a9-435e-b158-a7a75b5919ce",
+										"id": "a4482648-2499-4984-ba7b-e27cf09f6af3",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2616,7 +3529,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aca02b6d-59cf-4e3f-b4fe-b95a9ec86571",
+										"id": "ef073458-df43-45f9-867a-f94613d82797",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is not 401\", function () {",
@@ -2638,7 +3551,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "f15c2253-ab80-49a6-b163-a480d496abc1",
+												"id": "678423f6-57c2-4c7c-b1df-49dbf5e76d48",
 												"exec": [
 													""
 												],
@@ -2671,7 +3584,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "09113de4-a5aa-4fb0-a96a-0bd15da3ceca",
+												"id": "6f5ff6de-ec2e-484e-82d1-ba0aac2887d9",
 												"exec": [
 													""
 												],
@@ -2711,7 +3624,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bd64f748-f772-4012-97f8-054cd95a3ebc",
+												"id": "c358ad91-67cc-4522-befa-3645176e7df3",
 												"exec": [
 													""
 												],
@@ -2743,7 +3656,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8a0aef90-9fad-41b1-8f0b-f70c369ea355",
+												"id": "928d49ff-6b75-42ca-86ca-bd2de3171dc4",
 												"exec": [
 													""
 												],
@@ -2775,7 +3688,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8b228a6f-7f36-4e69-b36f-f67f384bdfad",
+												"id": "8bb7a7b8-e969-4a6b-a268-692c1350df29",
 												"exec": [
 													""
 												],
@@ -2808,7 +3721,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "fe138ff6-35a9-44ea-ab9f-402513eb02f8",
+												"id": "df371b0e-4f2a-4551-9773-64c21509f92f",
 												"exec": [
 													""
 												],
@@ -2841,7 +3754,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "88b80d52-7df6-42c3-9e39-46bb6b92256e",
+												"id": "934eb086-f283-49c1-9d54-f4c819901dd9",
 												"exec": [
 													""
 												],
@@ -2874,7 +3787,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8c47452d-12bb-4771-af75-3878e948adbe",
+												"id": "13a683b1-3b73-4122-a7d1-89cd1c929765",
 												"exec": [
 													""
 												],
@@ -2914,7 +3827,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "bc703883-d419-4c05-93da-9f6cdc9e2320",
+										"id": "aae1689d-3ecb-4e89-8cfe-691307c0ba96",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2924,7 +3837,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "412fe7a1-365a-4b17-a1df-9cbf08feb371",
+										"id": "ab238c73-1c31-45fe-b49e-739305919fa6",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 401\", function () {",
@@ -2945,115 +3858,437 @@
 					"name": "categories",
 					"item": [
 						{
-							"name": "GET /categories",
+							"name": "not 401",
+							"item": [
+								{
+									"name": "GET /categories",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fd06ef31-d143-47bf-bfec-b09ec85aa634",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"categories"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /categories/:categoryId",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "db3b977f-97de-4653-8291-8e0c79496b29",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"categories",
+												":categoryId"
+											],
+											"variable": [
+												{
+													"key": "categoryId",
+													"value": "CATEGORY"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /categories/:categoryId/picture",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a65d1d5-5d23-4716-8ad2-5f5bc10acbff",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId/picture",
+											"host": [
+												"{{GRAVITEEIO_PORTAL_URL}}"
+											],
+											"path": [
+												"portal",
+												"environments",
+												"DEFAULT",
+												"categories",
+												":categoryId",
+												"picture"
+											],
+											"variable": [
+												{
+													"key": "categoryId",
+													"value": "CATEGORY"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "409c6c1c-9bb6-4e3b-9171-9df78455ff5a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
 								{
 									"listen": "test",
 									"script": {
-										"id": "5772472d-5514-48ae-958d-5ac601e7c2c1",
+										"id": "e730ec21-5420-47f2-b752-59ef16053e78",
+										"type": "text/javascript",
 										"exec": [
-											""
-										],
-										"type": "text/javascript"
+											"pm.test(\"Status code is not 401\", function () {",
+											"    pm.response.to.not.have.status(401);",
+											"});"
+										]
 									}
 								}
 							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories",
-									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}"
-									],
-									"path": [
-										"portal",
-										"environments",
-										"DEFAULT",
-										"categories"
-									]
-								}
-							},
-							"response": []
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						},
 						{
-							"name": "GET /categories/:categoryId",
+							"name": "401 force login",
+							"item": [
+								{
+									"name": "-- prepare --",
+									"item": [
+										{
+											"name": "Enable Force Login",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "admin",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "admin",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"type": "text",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"authentication\": {\n\t\t\"forceLogin\": {\n\t\t\t\"enabled\": true\n\t\t}\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+													"host": [
+														"{{GRAVITEEIO_MGMT_URL}}"
+													],
+													"path": [
+														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
+														"DEFAULT",
+														"portal"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Tests",
+									"item": [
+										{
+											"name": "GET /categories",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "c1d9ce1e-7cdf-42d1-8d04-d14666b5bebf",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"categories"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /categories/:categoryId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "4fcc3fd8-127b-44f0-97a1-2131e6f71b50",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"categories",
+														":categoryId"
+													],
+													"variable": [
+														{
+															"key": "categoryId",
+															"value": "CATEGORY"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "GET /categories/:categoryId/picture",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "50e7fbb3-5a43-4abc-b7ab-bf1211ca1d73",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId/picture",
+													"host": [
+														"{{GRAVITEEIO_PORTAL_URL}}"
+													],
+													"path": [
+														"portal",
+														"environments",
+														"DEFAULT",
+														"categories",
+														":categoryId",
+														"picture"
+													],
+													"variable": [
+														{
+															"key": "categoryId",
+															"value": "CATEGORY"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "26abccb9-cc95-4c08-93e5-464138098162",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "132d0d72-1195-4678-8299-09e9be5a09d3",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 401\", function () {",
+													"    pm.response.to.have.status(401);",
+													"});"
+												]
+											}
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "-- clean --",
+									"item": [
+										{
+											"name": "Disable Force Login",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "admin",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "admin",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"type": "text",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"authentication\": {\n\t\t\"forceLogin\": {\n\t\t\t\"enabled\": false\n\t\t}\n\t}\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/portal",
+													"host": [
+														"{{GRAVITEEIO_MGMT_URL}}"
+													],
+													"path": [
+														"management",
+														"organizations",
+														"DEFAULT",
+														"environments",
+														"DEFAULT",
+														"portal"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								}
+							],
 							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "0f13f0de-5b47-48c0-8e13-7bed527c2e3a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
 								{
 									"listen": "test",
 									"script": {
-										"id": "dad6fb78-974c-4266-9932-781ffbab1f5f",
+										"id": "57423f1f-a48f-4eb3-a21b-d28a1192780f",
+										"type": "text/javascript",
 										"exec": [
 											""
-										],
-										"type": "text/javascript"
+										]
 									}
 								}
 							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId",
-									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}"
-									],
-									"path": [
-										"portal",
-										"environments",
-										"DEFAULT",
-										"categories",
-										":categoryId"
-									],
-									"variable": [
-										{
-											"key": "categoryId",
-											"value": "CATEGORY"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GET /categories/:categoryId/picture",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "f7dab4d8-b166-454f-902f-5aaaae29e573",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/categories/:categoryId/picture",
-									"host": [
-										"{{GRAVITEEIO_PORTAL_URL}}"
-									],
-									"path": [
-										"portal",
-										"environments",
-										"DEFAULT",
-										"categories",
-										":categoryId",
-										"picture"
-									],
-									"variable": [
-										{
-											"key": "categoryId",
-											"value": "CATEGORY"
-										}
-									]
-								}
-							},
-							"response": []
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						}
 					],
 					"description": "All anonymous requests to /categories/... should not return 401",
@@ -3061,7 +4296,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "98a600d0-2edb-4197-b181-a33a2647012e",
+								"id": "bdebcc6c-b570-445d-bc4c-8f5598c043e3",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3071,12 +4306,10 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8141c885-df67-4ed6-9436-61e9a45bee4c",
+								"id": "4ba74290-9af1-4049-b7ce-47346b35879a",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is not 401\", function () {",
-									"    pm.response.to.not.have.status(401);",
-									"});"
+									""
 								]
 							}
 						}
@@ -3102,7 +4335,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "fc957126-5b20-4fa0-9d06-66985e8659a3",
+										"id": "68bce65a-29a4-4b9a-9814-e8c0a8df6b94",
 										"exec": [
 											""
 										],
@@ -3134,7 +4367,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "eab7e03d-05a2-469a-883b-ddeb0294413c",
+										"id": "f57be8a0-719a-4098-ab57-d3621389b1a8",
 										"exec": [
 											""
 										],
@@ -3173,7 +4406,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0e183435-6eb3-41df-ad9f-b3bca0be7669",
+										"id": "93f69d87-1ea5-4863-89af-f60652ceed21",
 										"exec": [
 											""
 										],
@@ -3213,7 +4446,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a7fe432f-ecf3-4c55-88b1-2f919516535a",
+										"id": "bfbf7c8e-8e64-4b6a-9116-de5727da8797",
 										"exec": [
 											""
 										],
@@ -3253,7 +4486,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "97ab1a17-e9f8-4af6-8abd-139db6b95b6b",
+										"id": "e45be7c3-d925-4fc0-ae5b-080559cfe7c2",
 										"exec": [
 											""
 										],
@@ -3286,7 +4519,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "01098ea4-183d-4018-83fa-f262887d638a",
+										"id": "db22f25c-cd01-4ed2-aa7d-f3b0562ec109",
 										"exec": [
 											""
 										],
@@ -3326,7 +4559,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f704593d-47c7-4324-a844-e1994bbabcb0",
+										"id": "107f83ef-aad2-47db-a8b7-731f9bd38819",
 										"exec": [
 											""
 										],
@@ -3371,7 +4604,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bf27d283-cd53-43e9-9ce8-5b3b837677b1",
+										"id": "1cac56c1-0a8c-4f81-9ced-dba2a32cb62c",
 										"exec": [
 											""
 										],
@@ -3417,7 +4650,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "443f22e7-5b22-46cd-b990-9c781dc1c9d6",
+										"id": "9e704efa-9f34-4eaf-87a7-22afdd07926b",
 										"exec": [
 											""
 										],
@@ -3457,7 +4690,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5ec51b56-b0bd-44cd-878c-bfd1189a4f94",
+										"id": "f7be0ac0-61e4-4184-bc83-598e2cbdf0b5",
 										"exec": [
 											""
 										],
@@ -3497,7 +4730,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9a6d4b3b-0ba7-4f9a-a82e-5486ea6caf5f",
+										"id": "3b5dd8ee-5296-4dcb-8df2-014e755f7af3",
 										"exec": [
 											""
 										],
@@ -3537,7 +4770,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0fa58260-94b8-4b94-8a99-1d5c3ad9b352",
+										"id": "1fb5c4d4-a7fd-4a83-8b46-05e313205879",
 										"exec": [
 											""
 										],
@@ -3577,7 +4810,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "29341d2c-afcc-49e8-8196-e0e46640a992",
+										"id": "721184f7-fc4f-434e-b918-3090d25dc29d",
 										"exec": [
 											""
 										],
@@ -3616,7 +4849,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "fe2693a3-cc29-473f-9afc-4ae888c903f5",
+								"id": "30df909b-068a-408f-8224-b4ab884dd64e",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3626,7 +4859,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7945dead-6b2d-41f4-9f37-4f870b3f3ce1",
+								"id": "4d457e85-5857-4c48-b386-6fe27b802cc8",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3646,7 +4879,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5a6a617e-5dc8-4378-86cf-328fdf93abe4",
+										"id": "5d028c3b-ce14-4fd7-bf76-002082c6afca",
 										"exec": [
 											""
 										],
@@ -3678,7 +4911,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c59de270-e1f6-466e-bcd7-901ae4a0a5be",
+										"id": "f6193ead-e35a-475c-9230-0733b997c84a",
 										"exec": [
 											""
 										],
@@ -3710,7 +4943,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "109378d4-3a76-4516-b4c4-2ce0bcd061d9",
+										"id": "4b90b41d-cf4d-42f6-adf0-ec61dff5400a",
 										"exec": [
 											""
 										],
@@ -3749,7 +4982,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7cff5937-bfa4-46d5-945e-b3643288b46a",
+										"id": "385f8516-85a9-4eae-bd8d-fd27768521ce",
 										"exec": [
 											""
 										],
@@ -3788,7 +5021,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1c13bcba-8191-43d7-baee-17140dac5084",
+										"id": "6288f033-9db9-4472-b32f-f6e96502b47f",
 										"exec": [
 											""
 										],
@@ -3827,7 +5060,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e95352d3-af60-43cd-b39b-32f31ab1bd2a",
+										"id": "c19945e7-b7a2-4220-9bd1-d0019fd482cc",
 										"exec": [
 											""
 										],
@@ -3867,7 +5100,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8a29bb66-d82b-456a-a026-c4db0e36ecba",
+										"id": "a4456697-c69a-4286-81da-38c49e697184",
 										"exec": [
 											""
 										],
@@ -3907,7 +5140,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5dad3259-8337-4741-9ed5-50b47c4052bf",
+										"id": "ff2a756d-c21b-4eb8-a654-8bed5599e6a8",
 										"exec": [
 											""
 										],
@@ -3947,7 +5180,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b868de53-8e7a-488d-bb4c-4f618db7ac93",
+										"id": "3c2241da-20ff-4daa-a32e-e24297cc07f4",
 										"exec": [
 											""
 										],
@@ -3987,7 +5220,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a5f37d1a-2152-444f-aea9-770caa8b5ace",
+										"id": "174f99b3-7f08-4c0b-adae-950f8da9d742",
 										"exec": [
 											""
 										],
@@ -4027,7 +5260,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1f9f20b1-2156-4908-a237-48574b0a9765",
+										"id": "14c06253-fc7e-4a71-a119-039303aa5a37",
 										"exec": [
 											""
 										],
@@ -4068,7 +5301,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1ceffed5-3367-4532-88bd-895c82a1c4b9",
+										"id": "e3844806-cf56-4003-90c7-6e64b70378ef",
 										"exec": [
 											""
 										],
@@ -4113,7 +5346,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9237a3f0-592d-45b1-a606-f616dd1f693f",
+										"id": "bc8caa15-8e46-421c-9e87-454768419028",
 										"exec": [
 											""
 										],
@@ -4158,7 +5391,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "61f2e357-edd9-4376-bdc4-0d9294552899",
+										"id": "7a337d3f-f92e-433f-b08f-816e5677e94f",
 										"exec": [
 											""
 										],
@@ -4203,7 +5436,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ef0cec11-d607-4703-8783-a92357f02876",
+										"id": "575e8d5a-a3ad-4507-8c29-2af8c84e9047",
 										"exec": [
 											""
 										],
@@ -4243,7 +5476,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c56a025b-aa31-401e-8a8a-424620247e8d",
+										"id": "39f4b039-26a7-4c69-819c-d536c0cc6686",
 										"exec": [
 											""
 										],
@@ -4283,7 +5516,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ddf5af7a-d674-442c-8806-2b8b83e6526b",
+										"id": "d189b2ad-61a8-4203-a326-5cc2f65a3baa",
 										"exec": [
 											""
 										],
@@ -4324,7 +5557,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "cc390956-06b9-44df-b082-77b447f29cd1",
+										"id": "e9133519-d615-455d-8697-55e61de6fcbe",
 										"exec": [
 											""
 										],
@@ -4369,7 +5602,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d97380ca-a3f3-42a5-9a2f-5d57b1b1e278",
+										"id": "a13b4f35-c423-47c9-a92a-4356d343b313",
 										"exec": [
 											""
 										],
@@ -4408,7 +5641,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "ef0a59e1-ac12-4c86-a715-8553a22d3a55",
+								"id": "c6bb9718-f6ef-4ea4-b744-007bb7406c8b",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4418,7 +5651,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4884421c-26b6-46f7-b462-40ba932a2b1d",
+								"id": "e539b1ae-c8f7-491c-a46f-ae97a6fe877b",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4438,7 +5671,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8b4edbba-b40e-4004-bb5f-f253f3419ab3",
+										"id": "e3582bc2-6271-4324-81da-1860b879dfce",
 										"exec": [
 											""
 										],
@@ -4471,7 +5704,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "53228d54-2402-4ae6-a3cb-a97c97438311",
+										"id": "c0c575c7-c12e-4b24-a17e-4593281ddb28",
 										"exec": [
 											""
 										],
@@ -4504,7 +5737,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b98bed7e-83ba-4a13-968b-f0cc6094e151",
+										"id": "bb6210bf-27a3-4c4b-8ea4-f2522d7af96b",
 										"exec": [
 											""
 										],
@@ -4544,7 +5777,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b86a6f7e-8ce2-42e8-91ff-05bef66223f9",
+										"id": "4967d42b-a716-4e74-be70-a54748809257",
 										"exec": [
 											""
 										],
@@ -4592,7 +5825,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2782fc45-0a66-4043-ac67-53ed35f260b3",
+										"id": "923d970f-c970-4399-a21a-15b4660619d1",
 										"exec": [
 											""
 										],
@@ -4624,7 +5857,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "007fb18a-8fea-4d26-ba92-4e3230051f36",
+										"id": "6374e382-c17f-471f-8373-646b234e11bc",
 										"exec": [
 											""
 										],
@@ -4658,7 +5891,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "79415d24-4f68-439a-a65a-ed000c175daa",
+										"id": "f5db0b7d-3d4e-4c5d-8a1d-e890507712a9",
 										"exec": [
 											""
 										],
@@ -4692,7 +5925,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4fd7480a-a7a0-4740-9176-d68a9fcd9a7b",
+										"id": "0f033ac5-38c6-4367-af33-64ceb1aef079",
 										"exec": [
 											""
 										],
@@ -4725,7 +5958,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b097f8ea-ff5b-4076-a7d8-78a89b060694",
+										"id": "7027d2ce-7341-4585-9440-f9a753eb03d8",
 										"exec": [
 											""
 										],
@@ -4757,7 +5990,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6d06be37-6adf-4b4c-a5d5-19952579d8c5",
+										"id": "48357700-4147-4ace-af24-a27862860d2d",
 										"exec": [
 											""
 										],
@@ -4797,7 +6030,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "cb82efad-f13c-44e3-b382-75ff4cc1a860",
+										"id": "9f836862-37fc-4542-b50f-d4ba2ec42250",
 										"exec": [
 											""
 										],
@@ -4829,7 +6062,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "f85f2128-1ab6-44a1-87e3-f8c2f79cdcea",
+								"id": "8e7b7864-2d88-416c-8a2f-ed9134594d8c",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4839,7 +6072,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2248a604-ec02-4cc9-ab29-1383758205ad",
+								"id": "db4c3f4d-81e7-4308-b11b-be54a1c8f811",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4859,7 +6092,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f542adfe-e904-4715-8e23-968ece3a20ef",
+										"id": "cf8e9b33-7496-4417-a3bf-f8c38da7ae0d",
 										"exec": [
 											""
 										],
@@ -4891,7 +6124,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "fd48b90c-dd05-4af2-ba12-455e1db1deea",
+										"id": "bfbef3c6-c804-4a40-bd55-1ae4ab506e2d",
 										"exec": [
 											""
 										],
@@ -4930,7 +6163,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "36a43d62-09fd-40e3-8656-13720dcb2a0e",
+								"id": "b1916aea-474d-403f-a6da-988958d48571",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4940,7 +6173,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9a2acfac-c44b-4f25-b6bf-990ff9e86fc5",
+								"id": "a2bf82fe-1b4e-47ff-aa46-68f4d05d90e1",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4960,7 +6193,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b6e14688-fdb6-40b6-ac0e-b7c2bda446ae",
+										"id": "cd1d5d8d-dfc0-426f-a954-0f85642a9bd1",
 										"exec": [
 											""
 										],
@@ -4992,7 +6225,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "94dcfeb0-796f-4935-8685-a049d0ef7eac",
+										"id": "b95aada9-228b-4276-bd0b-e700a2e20115",
 										"exec": [
 											""
 										],
@@ -5031,7 +6264,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b040e881-d31e-4380-a89b-a5f79d87777d",
+										"id": "671ec956-699d-481b-acf2-af5148442253",
 										"exec": [
 											""
 										],
@@ -5070,7 +6303,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e0daac09-8743-4720-85bf-5028ff3afc7d",
+								"id": "98effaac-5df1-4c18-86d3-aa7b89f8cd6c",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5080,7 +6313,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "946dfe93-2e45-4ecc-adc6-f135fb99e496",
+								"id": "3ca02c29-51b1-40cc-992a-a3ba2cdc4d2a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5100,7 +6333,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0885d18b-8dbd-4346-8fae-ccb68ce5681f",
+										"id": "c984b77e-8992-4b3e-a946-3a1f06dc64d5",
 										"exec": [
 											""
 										],
@@ -5132,7 +6365,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c19f543a-178b-4386-a0af-8176156954df",
+										"id": "31166493-8f81-47d4-a733-9dd66f7ca552",
 										"exec": [
 											""
 										],
@@ -5164,7 +6397,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "49f26e15-e8ed-4d44-bab8-3d94f835df0a",
+										"id": "d723045b-4df6-4057-af3d-44be89313f2a",
 										"exec": [
 											""
 										],
@@ -5203,7 +6436,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c820bc2b-c899-46c3-9836-b6bd86833e27",
+										"id": "19568450-1a36-432d-8b8c-7725f6ef816e",
 										"exec": [
 											""
 										],
@@ -5243,7 +6476,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "22592a74-9e33-4038-8f69-e862168f3774",
+										"id": "99167dd7-620d-40bf-8482-47772e6e37d3",
 										"exec": [
 											""
 										],
@@ -5284,7 +6517,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "86ba49bf-5539-4236-a0de-2251b507f73d",
+										"id": "6beb6a0b-bd03-4429-bfc3-e6ae83d55998",
 										"exec": [
 											""
 										],
@@ -5329,7 +6562,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "8b1ecc2a-5221-44d0-8733-34986ffcf2e0",
+								"id": "a2dbede4-dd1d-4791-83d7-786e28910f8e",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5339,7 +6572,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2aa644c6-b268-485d-ad53-3c216e628a54",
+								"id": "a512846a-ec5f-4111-8a0d-a98f5d10ab3d",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5359,7 +6592,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "285a6224-9e29-47df-8ccd-5a9d9b0f315c",
+										"id": "ec8e6de4-d1c8-4bd7-b0db-41db8969cc04",
 										"exec": [
 											""
 										],
@@ -5392,7 +6625,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e01d4b70-34ac-45a9-9a0f-02488eda94c7",
+										"id": "0d12e9fa-30fa-4aee-8683-72dea2cb10e3",
 										"exec": [
 											""
 										],
@@ -5432,7 +6665,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "13d9887a-82c4-413b-8c42-238abb146ad4",
+										"id": "0747e58f-47d5-4479-a2a3-5e4577ce6ee4",
 										"exec": [
 											""
 										],
@@ -5481,7 +6714,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "eb34e13c-de5d-4ff9-9918-c06741f4c930",
+										"id": "cb3c72c3-2093-4c55-9895-d90efe2be62e",
 										"exec": [
 											""
 										],
@@ -5531,7 +6764,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f7c5b372-7ccd-4cf0-b768-12840cd9ca9b",
+										"id": "e6b308e0-0252-48f4-a596-ed71f94ca506",
 										"exec": [
 											""
 										],
@@ -5580,7 +6813,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "90dba9f3-80dd-4d82-bc8c-c784baca07c6",
+										"id": "27160f0a-78ec-4dd9-aeb3-a6d1aa4bde2f",
 										"exec": [
 											""
 										],
@@ -5612,7 +6845,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ba049df4-d464-421a-9a69-80fe24694b69",
+										"id": "0da1622b-9cd8-47fd-8bcc-3e19ff5fc311",
 										"exec": [
 											""
 										],
@@ -5644,7 +6877,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6004c27f-ae4d-4712-9f70-6856452a09c0",
+										"id": "9ab36afd-14e6-44a8-93ac-8f1969fe3326",
 										"exec": [
 											""
 										],
@@ -5677,7 +6910,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ff02b0b3-484a-404c-bf1d-5229a8963fa6",
+										"id": "72370752-406a-4945-ad21-5ac6fcf9162d",
 										"exec": [
 											""
 										],
@@ -5710,7 +6943,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b0b3f2c3-c640-4833-8fd5-1213d3d7dbc7",
+										"id": "142c40a4-7037-4da3-8f74-6070978459bd",
 										"exec": [
 											""
 										],
@@ -5743,7 +6976,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "27317d12-70cf-4988-b800-1b7136965970",
+										"id": "aa9e7000-b907-4035-b38d-912844062968",
 										"exec": [
 											""
 										],
@@ -5782,7 +7015,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "25835456-63ea-472a-bfdb-9af8979350b7",
+								"id": "2441fec5-e8f9-4d2e-b865-6b92a5c51f60",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5792,7 +7025,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "568708d2-4522-4a3b-86a5-25e8351d57b7",
+								"id": "d0733933-4d25-4ab2-a09b-3679eb930bcd",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5831,7 +7064,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "184b01dd-b153-4ac6-bc66-83b34fbca0b6",
+								"id": "b5130c5a-38ad-4736-8fcb-b92bef7d699a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5841,7 +7074,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8064fc28-fad2-4c4e-840f-cf9942e99cf2",
+								"id": "ccc57003-3778-4d33-b27d-c4a372040049",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5861,7 +7094,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5f8633d8-b026-4769-9b40-16a5b09d5196",
+										"id": "fb8be9a3-51e0-4ff8-972d-9b3bfff4ee13",
 										"exec": [
 											""
 										],
@@ -5893,7 +7126,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "731bd514-1771-4290-8709-8908dd0995f0",
+										"id": "d107f544-750b-403c-a60b-2cbe5558de9b",
 										"exec": [
 											""
 										],
@@ -5932,7 +7165,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "09a2beaf-a809-4f66-ade9-129f7306f320",
+										"id": "cae1d321-c130-4524-bc02-827631bae824",
 										"exec": [
 											""
 										],
@@ -5971,7 +7204,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e242c6a4-5f4f-498c-b72d-7ca510e9fba5",
+								"id": "96f88a6e-8b1a-4b62-8b06-a6de4f997315",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5981,7 +7214,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a82f89c6-1560-4266-910c-497cb96909c9",
+								"id": "43a69b54-58ab-4388-ab1f-7343f4208486",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -6013,7 +7246,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "876367c8-7718-4fff-8ac8-dd8d9e38fa10",
+						"id": "6191b21d-296f-4b1d-9033-8411db6be229",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -6023,7 +7256,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "125a4bc7-8c57-4aba-a499-04d45c89f6ac",
+						"id": "436ba659-b7f2-4c00-91be-8b27670b3dc0",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is not 401\", function () {",
@@ -6040,7 +7273,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "cae1746d-eaae-4440-8ee4-5f9b7b763e44",
+				"id": "5ab322cb-5aa5-4337-b064-f70ddb4a828e",
 				"type": "text/javascript",
 				"exec": [
 					"if(!pm.environment.get('X-Xsrf-Token')) {",
@@ -6060,7 +7293,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "eb98744c-7607-4df5-b290-49875edfe637",
+				"id": "74702fbd-c63a-45ef-91d9-4fc2b38c6102",
 				"type": "text/javascript",
 				"exec": [
 					""
