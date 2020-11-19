@@ -4010,13 +4010,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -4064,13 +4066,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -4734,13 +4738,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/configuration/rolescopes/ENVIRONMENT/roles/USER",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"configuration",
 												"rolescopes",
@@ -6470,13 +6476,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/search/users/?q=application1",
+											"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/search/users/?q=application1",
 											"host": [
 												"{{GRAVITEEIO_MGMT_URL}}"
 											],
 											"path": [
 												"management",
 												"organizations",
+												"DEFAULT",
+												"environments",
 												"DEFAULT",
 												"search",
 												"users",
