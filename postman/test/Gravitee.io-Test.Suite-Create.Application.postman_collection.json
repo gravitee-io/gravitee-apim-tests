@@ -137,6 +137,20 @@
 		},
 		{
 			"name": "GET Application",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0d7cf901-60a4-4ce5-9b48-42dcd6432a39",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
