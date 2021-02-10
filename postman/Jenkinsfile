@@ -3,7 +3,7 @@ node() {
         def nodeHome = tool 'NodeJS7'
         withEnv(["PATH+NODE=${nodeHome}/bin"]) {
             stage("Clean mongodb") {
-                sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:3.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
+                sh "docker run -i --link demo_nightly_mongodb_1:mongo --rm mongo:4.2 sh -c \"exec mongo demo_nightly_mongodb_1/gravitee --eval 'db.dropDatabase();'\""
             }
 
             stage("Restart the management-api") {
