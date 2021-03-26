@@ -358,6 +358,51 @@
 					"response": []
 				},
 				{
+					"name": "Publish plan",
+					"event": {
+						"listen": "test",
+						"script": {
+							"type": "text/javascript",
+							"exec": [
+								"tests[\"Status code is 200\"] = responseCode.code === 200;"
+							],
+							"id": "746e85d8-15e7-4e0d-bfb9-c34972c57c7b"
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{AUTHORIZATION_API1}}"
+							}
+						],
+						"url": {
+							"raw": "{{GRAVITEEIO_MGMT_URL}}/management/organizations/DEFAULT/environments/DEFAULT/apis/{{API_ID}}/plans/{{PLAN_ID}}/_publish",
+							"host": [
+								"{{GRAVITEEIO_MGMT_URL}}"
+							],
+							"path": [
+								"management",
+								"organizations",
+								"DEFAULT",
+								"environments",
+								"DEFAULT",
+								"apis",
+								"{{API_ID}}",
+								"plans",
+								"{{PLAN_ID}}",
+								"_publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Check State - Not synchronized",
 					"event": [
 						{
