@@ -28,15 +28,13 @@
 				"url": {
 					"raw": "{{GRAVITEEIO_PORTAL_URL}}/portal/environments/DEFAULT/configuration",
 					"host": [
-						"{{GRAVITEEIO_MGMT_URL}}"
+						"{{GRAVITEEIO_PORTAL_URL}}"
 					],
 					"path": [
-						"management",
-						"organizations",
-						"DEFAULT",
+						"portal",
 						"environments",
 						"DEFAULT",
-						"portal"
+						"configuration"
 					]
 				}
 			},
